@@ -49,7 +49,7 @@ namespace Software_Development_Capstone
                 else
                 {
                     Logging.AddToLog("AuthLog.txt", $"Failed log in attempt. Username: {textbox_username.Text}");
-                    MessageBox.Show("Login Failed");
+                    MessageBox.Show("Login Failed\nExpected: " + password.ElementAt(0) + "\nEntered hash: " + Utils.GetSha1(textbox_password.Text));
                 }
 
                 textbox_password.Text = "";

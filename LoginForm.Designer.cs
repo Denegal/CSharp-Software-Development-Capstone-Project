@@ -111,12 +111,12 @@
             this.label_welcome.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_welcome.Location = new System.Drawing.Point(0, 0);
             this.label_welcome.Name = "label_welcome";
-            this.label_welcome.Size = new System.Drawing.Size(960, 179);
+            this.label_welcome.Size = new System.Drawing.Size(960, 124);
             this.label_welcome.TabIndex = 7;
             this.label_welcome.Text = "Welcome, please login to access this application";
             this.label_welcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Login_Form
+            // LoginForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoSize = true;
@@ -132,7 +132,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Login_Form";
+            this.Name = "LoginForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Login";

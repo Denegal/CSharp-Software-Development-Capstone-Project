@@ -23,7 +23,7 @@ namespace Backend_Logic
                     result.Append(by.ToString("x2"));
                 }
 
-                return result.ToString();
+                return result.ToString().ToUpper();
             }
         }
     }
