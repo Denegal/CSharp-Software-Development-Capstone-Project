@@ -103,5 +103,15 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Backend_DB\Backend_DB.csproj">
+      <Project>{0098f740-cc8e-48a6-80ca-76deae794cfb}</Project>
+      <Name>Backend_DB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Backend_Logic\Backend_Logic.csproj">
+      <Project>{43189f09-7992-4c69-8bee-6a7a17ef1c4d}</Project>
+      <Name>Backend_Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
