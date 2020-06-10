@@ -123,7 +123,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LoginForm.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>

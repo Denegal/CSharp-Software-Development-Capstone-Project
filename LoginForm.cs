@@ -36,7 +36,7 @@ namespace Software_Development_Capstone
             {
                 IEnumerable<string> password = from users in context.Users where users.UserName == textbox_username.Text select users.PasswordHash;
 
-                
+
                 if (password.Count() > 0 && password.ElementAt(0) == Utils.GetSha1(textbox_password.Text))
                 {
 
