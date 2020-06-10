@@ -33,5 +33,16 @@ namespace Software_Development_Capstone.Properties {
                 return ((string)(this["DBConnection"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"I:\\School\\WGU\\Visual Studio\\" +
+            "source\\repos\\Backend_DB\\Database.mdf\";Integrated Security=True")]
+        public string DatabaseConnection {
+            get {
+                return ((string)(this["DatabaseConnection"]));
+            }
+        }
     }
 }
