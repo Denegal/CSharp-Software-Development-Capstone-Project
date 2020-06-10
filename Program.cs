@@ -12,6 +12,10 @@ namespace Software_Development_Capstone
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        /// 
+
+        public static string LoggedinUser;
+
         [STAThread]
         static void Main()
         {
