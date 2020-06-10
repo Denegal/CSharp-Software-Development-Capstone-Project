@@ -17,9 +17,8 @@ namespace Software_Development_Capstone
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Main());
 
-            
         }
     }
 }
