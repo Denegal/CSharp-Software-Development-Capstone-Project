@@ -13,4 +13,10 @@
     <PackageReference Include="coverlet.collector" Version="1.2.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Backend_DB\Backend_DB.csproj" />
+    <ProjectReference Include="..\Backend_Logic\Backend_Logic.csproj" />
+    <ProjectReference Include="..\Software_Development_Capstone.csproj" />
+  </ItemGroup>
+
 </Project>

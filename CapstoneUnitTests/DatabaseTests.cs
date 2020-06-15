@@ -3,11 +3,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace CapstoneUnitTests
 {
     [TestClass]
-    public class UnitTest1
+    public class DatabaseTests
     {
-        [TestMethod]
-        public void TestMethod1()
-        {
-        }
+        
     }
 }
