@@ -32,6 +32,7 @@ namespace Backend_DB
         public int MedicalCare { get; set; }
         public string MedicalHistory { get; set; }
         public string LName { get; set; }
+        public int ClassCredit { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Income> Incomes { get; set; }

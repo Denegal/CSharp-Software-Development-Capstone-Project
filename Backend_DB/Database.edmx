@@ -21,6 +21,7 @@
           <Property Name="MedicalCare" Type="int" Nullable="false" />
           <Property Name="MedicalHistory" Type="varchar" MaxLength="50" />
           <Property Name="LName" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="ClassCredit" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Expense">
           <Key>
@@ -93,6 +94,7 @@
           <Property Name="MedicalHistory" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="LName" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Incomes" Relationship="Self.FK_Income_Client" FromRole="Clients" ToRole="Income" />
+          <Property Name="ClassCredit" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="Expense">
           <Key>
@@ -154,6 +156,7 @@
           <EntitySetMapping Name="Clients">
             <EntityTypeMapping TypeName="DBModel.Client">
               <MappingFragment StoreEntitySet="Clients">
+                <ScalarProperty Name="ClassCredit" ColumnName="ClassCredit" />
                 <ScalarProperty Name="ClientId" ColumnName="ClientId" />
                 <ScalarProperty Name="FName" ColumnName="FName" />
                 <ScalarProperty Name="Phone" ColumnName="Phone" />
