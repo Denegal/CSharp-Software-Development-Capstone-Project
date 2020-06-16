@@ -81,6 +81,7 @@
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(984, 661);
             this.Controls.Add(this.menu_bar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menu_bar;
             this.MinimumSize = new System.Drawing.Size(1000, 700);

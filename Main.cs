@@ -35,7 +35,17 @@ namespace Software_Development_Capstone
             }
 
             WindowState = FormWindowState.Maximized;
+            MinimumSize = new System.Drawing.Size(1920, 1080);
+
+
             menu_bar.Enabled = true;
+
+            HomePageForm homePage = new HomePageForm();
+
+            homePage.MdiParent = this;
+            homePage.PerformAutoScale();
+            homePage.Show();
+
         }
 
     }
