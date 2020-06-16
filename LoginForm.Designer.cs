@@ -39,12 +39,12 @@
             // 
             // button_login
             // 
-            this.button_login.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_login.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button_login.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button_login.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button_login.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button_login.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_login.Location = new System.Drawing.Point(427, 299);
+            this.button_login.Location = new System.Drawing.Point(426, 289);
             this.button_login.Name = "button_login";
             this.button_login.Size = new System.Drawing.Size(124, 37);
             this.button_login.TabIndex = 0;
@@ -54,18 +54,18 @@
             // 
             // textbox_username
             // 
-            this.textbox_username.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textbox_username.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textbox_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textbox_username.Location = new System.Drawing.Point(427, 192);
+            this.textbox_username.Location = new System.Drawing.Point(426, 182);
             this.textbox_username.Name = "textbox_username";
             this.textbox_username.Size = new System.Drawing.Size(204, 29);
             this.textbox_username.TabIndex = 1;
             // 
             // label_username
             // 
-            this.label_username.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label_username.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_username.Location = new System.Drawing.Point(216, 192);
+            this.label_username.Location = new System.Drawing.Point(215, 182);
             this.label_username.Name = "label_username";
             this.label_username.Size = new System.Drawing.Size(188, 24);
             this.label_username.TabIndex = 3;
@@ -74,9 +74,9 @@
             // 
             // label_password
             // 
-            this.label_password.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label_password.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_password.Location = new System.Drawing.Point(220, 237);
+            this.label_password.Location = new System.Drawing.Point(219, 227);
             this.label_password.Name = "label_password";
             this.label_password.Size = new System.Drawing.Size(184, 24);
             this.label_password.TabIndex = 5;
@@ -85,9 +85,9 @@
             // 
             // textbox_password
             // 
-            this.textbox_password.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textbox_password.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textbox_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textbox_password.Location = new System.Drawing.Point(427, 237);
+            this.textbox_password.Location = new System.Drawing.Point(426, 227);
             this.textbox_password.Name = "textbox_password";
             this.textbox_password.PasswordChar = '*';
             this.textbox_password.Size = new System.Drawing.Size(204, 29);
@@ -99,21 +99,22 @@
             this.label_message.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label_message.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_message.ForeColor = System.Drawing.Color.Red;
-            this.label_message.Location = new System.Drawing.Point(0, 349);
+            this.label_message.Location = new System.Drawing.Point(0, 366);
             this.label_message.Name = "label_message";
-            this.label_message.Size = new System.Drawing.Size(960, 110);
+            this.label_message.Size = new System.Drawing.Size(960, 93);
             this.label_message.TabIndex = 6;
             this.label_message.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label_welcome
             // 
-            this.label_welcome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label_welcome.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label_welcome.AutoSize = true;
             this.label_welcome.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_welcome.Location = new System.Drawing.Point(0, 0);
+            this.label_welcome.Location = new System.Drawing.Point(390, 9);
             this.label_welcome.Name = "label_welcome";
-            this.label_welcome.Size = new System.Drawing.Size(960, 124);
+            this.label_welcome.Size = new System.Drawing.Size(253, 32);
             this.label_welcome.TabIndex = 7;
-            this.label_welcome.Text = "Welcome, please login to access this application";
+            this.label_welcome.Text = "MC2 Pilates Login";
             this.label_welcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LoginForm

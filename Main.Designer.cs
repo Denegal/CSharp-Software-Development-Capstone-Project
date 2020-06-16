@@ -28,37 +28,77 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.menu_bar = new System.Windows.Forms.MenuStrip();
+            this.homepageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.financeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.managementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_bar.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // menu_bar
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(289, 162);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(251, 31);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Login Successsful";
-            this.label1.Visible = false;
+            this.menu_bar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.menu_bar.Enabled = false;
+            this.menu_bar.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menu_bar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.homepageToolStripMenuItem,
+            this.clientsToolStripMenuItem,
+            this.financeToolStripMenuItem,
+            this.managementToolStripMenuItem});
+            this.menu_bar.Location = new System.Drawing.Point(0, 0);
+            this.menu_bar.Name = "menu_bar";
+            this.menu_bar.Size = new System.Drawing.Size(984, 28);
+            this.menu_bar.TabIndex = 3;
+            // 
+            // homepageToolStripMenuItem
+            // 
+            this.homepageToolStripMenuItem.Name = "homepageToolStripMenuItem";
+            this.homepageToolStripMenuItem.Size = new System.Drawing.Size(101, 24);
+            this.homepageToolStripMenuItem.Text = "Homepage";
+            // 
+            // clientsToolStripMenuItem
+            // 
+            this.clientsToolStripMenuItem.Name = "clientsToolStripMenuItem";
+            this.clientsToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
+            this.clientsToolStripMenuItem.Text = "Clients";
+            // 
+            // financeToolStripMenuItem
+            // 
+            this.financeToolStripMenuItem.Name = "financeToolStripMenuItem";
+            this.financeToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
+            this.financeToolStripMenuItem.Text = "Finance";
+            // 
+            // managementToolStripMenuItem
+            // 
+            this.managementToolStripMenuItem.Name = "managementToolStripMenuItem";
+            this.managementToolStripMenuItem.Size = new System.Drawing.Size(119, 24);
+            this.managementToolStripMenuItem.Text = "Management";
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.ClientSize = new System.Drawing.Size(984, 661);
+            this.Controls.Add(this.menu_bar);
             this.IsMdiContainer = true;
+            this.MainMenuStrip = this.menu_bar;
+            this.MinimumSize = new System.Drawing.Size(1000, 700);
             this.Name = "Main";
-            this.Text = "Form1";
+            this.Text = "MC2 Pilates";
+            this.menu_bar.ResumeLayout(false);
+            this.menu_bar.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MenuStrip menu_bar;
+        private System.Windows.Forms.ToolStripMenuItem homepageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clientsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem financeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem managementToolStripMenuItem;
     }
 }
 

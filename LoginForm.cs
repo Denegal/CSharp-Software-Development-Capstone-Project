@@ -57,6 +57,5 @@ namespace Software_Development_Capstone
                 textbox_username.Enabled = true;
             }
         }
-
     }
 }

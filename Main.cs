@@ -34,7 +34,9 @@ namespace Software_Development_Capstone
                 return;
             }
 
-            label1.Visible = true;
+            WindowState = FormWindowState.Maximized;
+            menu_bar.Enabled = true;
         }
+
     }
 }
