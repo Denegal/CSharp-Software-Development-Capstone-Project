@@ -113,7 +113,7 @@
             this.button_checkin.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.button_checkin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_checkin.ForeColor = System.Drawing.Color.White;
-            this.button_checkin.Location = new System.Drawing.Point(438, 791);
+            this.button_checkin.Location = new System.Drawing.Point(472, 794);
             this.button_checkin.Name = "button_checkin";
             this.button_checkin.Size = new System.Drawing.Size(178, 87);
             this.button_checkin.TabIndex = 4;
@@ -128,7 +128,7 @@
             this.button_prepaid.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.button_prepaid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_prepaid.ForeColor = System.Drawing.Color.White;
-            this.button_prepaid.Location = new System.Drawing.Point(639, 791);
+            this.button_prepaid.Location = new System.Drawing.Point(707, 794);
             this.button_prepaid.Name = "button_prepaid";
             this.button_prepaid.Size = new System.Drawing.Size(182, 87);
             this.button_prepaid.TabIndex = 5;
@@ -171,7 +171,7 @@
             this.dataView_Clients.RowTemplate.Height = 35;
             this.dataView_Clients.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataView_Clients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataView_Clients.Size = new System.Drawing.Size(916, 598);
+            this.dataView_Clients.Size = new System.Drawing.Size(968, 598);
             this.dataView_Clients.TabIndex = 6;
             // 
             // button1
@@ -183,7 +183,7 @@
             this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(239, 791);
+            this.button1.Location = new System.Drawing.Point(251, 794);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(178, 87);
             this.button1.TabIndex = 7;
