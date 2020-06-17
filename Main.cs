@@ -34,9 +34,7 @@ namespace Software_Development_Capstone
                 return;
             }
 
-            WindowState = FormWindowState.Maximized;
-            MinimumSize = new System.Drawing.Size(1920, 1080);
-
+            MinimumSize = new System.Drawing.Size(1200, 1000);
 
             menu_bar.Enabled = true;
 

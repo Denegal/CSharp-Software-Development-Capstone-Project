@@ -84,6 +84,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menu_bar;
+            this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1000, 700);
             this.Name = "Main";
             this.Text = "MC2 Pilates";

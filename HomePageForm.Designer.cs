@@ -51,7 +51,7 @@
             this.Title_Logo.Location = new System.Drawing.Point(0, 0);
             this.Title_Logo.Margin = new System.Windows.Forms.Padding(0);
             this.Title_Logo.Name = "Title_Logo";
-            this.Title_Logo.Size = new System.Drawing.Size(1901, 117);
+            this.Title_Logo.Size = new System.Drawing.Size(1181, 117);
             this.Title_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Title_Logo.TabIndex = 0;
             this.Title_Logo.TabStop = false;
@@ -65,9 +65,9 @@
             this.button_Clients.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.button_Clients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Clients.ForeColor = System.Drawing.Color.White;
-            this.button_Clients.Location = new System.Drawing.Point(1486, 201);
+            this.button_Clients.Location = new System.Drawing.Point(844, 232);
             this.button_Clients.Name = "button_Clients";
-            this.button_Clients.Size = new System.Drawing.Size(325, 168);
+            this.button_Clients.Size = new System.Drawing.Size(253, 103);
             this.button_Clients.TabIndex = 1;
             this.button_Clients.UseVisualStyleBackColor = true;
             // 
@@ -80,9 +80,9 @@
             this.button_Finance.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.button_Finance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Finance.ForeColor = System.Drawing.Color.White;
-            this.button_Finance.Location = new System.Drawing.Point(1486, 429);
+            this.button_Finance.Location = new System.Drawing.Point(844, 373);
             this.button_Finance.Name = "button_Finance";
-            this.button_Finance.Size = new System.Drawing.Size(325, 163);
+            this.button_Finance.Size = new System.Drawing.Size(253, 98);
             this.button_Finance.TabIndex = 2;
             this.button_Finance.UseVisualStyleBackColor = true;
             // 
@@ -95,9 +95,9 @@
             this.button_Management.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.button_Management.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Management.ForeColor = System.Drawing.Color.White;
-            this.button_Management.Location = new System.Drawing.Point(1486, 652);
+            this.button_Management.Location = new System.Drawing.Point(844, 515);
             this.button_Management.Name = "button_Management";
-            this.button_Management.Size = new System.Drawing.Size(325, 174);
+            this.button_Management.Size = new System.Drawing.Size(253, 109);
             this.button_Management.TabIndex = 3;
             this.button_Management.UseVisualStyleBackColor = true;
             // 
@@ -110,9 +110,9 @@
             this.button_checkin.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.button_checkin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_checkin.ForeColor = System.Drawing.Color.White;
-            this.button_checkin.Location = new System.Drawing.Point(622, 884);
+            this.button_checkin.Location = new System.Drawing.Point(288, 791);
             this.button_checkin.Name = "button_checkin";
-            this.button_checkin.Size = new System.Drawing.Size(204, 114);
+            this.button_checkin.Size = new System.Drawing.Size(178, 87);
             this.button_checkin.TabIndex = 4;
             this.button_checkin.UseVisualStyleBackColor = true;
             // 
@@ -125,9 +125,9 @@
             this.button_prepaid.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.button_prepaid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_prepaid.ForeColor = System.Drawing.Color.White;
-            this.button_prepaid.Location = new System.Drawing.Point(941, 884);
+            this.button_prepaid.Location = new System.Drawing.Point(489, 791);
             this.button_prepaid.Name = "button_prepaid";
-            this.button_prepaid.Size = new System.Drawing.Size(208, 114);
+            this.button_prepaid.Size = new System.Drawing.Size(182, 87);
             this.button_prepaid.TabIndex = 5;
             this.button_prepaid.UseVisualStyleBackColor = true;
             // 
@@ -144,11 +144,11 @@
             this.dataView_Clients.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataView_Clients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataView_Clients.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dataView_Clients.Location = new System.Drawing.Point(200, 165);
+            this.dataView_Clients.Location = new System.Drawing.Point(71, 165);
             this.dataView_Clients.MultiSelect = false;
             this.dataView_Clients.Name = "dataView_Clients";
             this.dataView_Clients.ReadOnly = true;
-            this.dataView_Clients.Size = new System.Drawing.Size(1018, 678);
+            this.dataView_Clients.Size = new System.Drawing.Size(616, 598);
             this.dataView_Clients.TabIndex = 6;
             // 
             // button1
@@ -160,9 +160,9 @@
             this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(291, 884);
+            this.button1.Location = new System.Drawing.Point(89, 791);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(204, 114);
+            this.button1.Size = new System.Drawing.Size(178, 87);
             this.button1.TabIndex = 7;
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -171,7 +171,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(116)))), ((int)(((byte)(235)))));
-            this.ClientSize = new System.Drawing.Size(1900, 1037);
+            this.ClientSize = new System.Drawing.Size(1180, 957);
             this.ControlBox = false;
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataView_Clients);
