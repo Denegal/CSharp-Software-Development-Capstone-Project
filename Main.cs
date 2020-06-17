@@ -34,7 +34,7 @@ namespace Software_Development_Capstone
                 return;
             }
 
-            MinimumSize = new System.Drawing.Size(1200, 1000);
+            MinimumSize = new System.Drawing.Size(1500, 1000);
 
             menu_bar.Enabled = true;
 
