@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FinanceForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Title_Logo = new System.Windows.Forms.PictureBox();
             this.label_FinanceList = new System.Windows.Forms.Label();
             this.button_SaveReport = new System.Windows.Forms.Button();
@@ -60,6 +60,7 @@
             this.texbox_AFrom = new System.Windows.Forms.TextBox();
             this.textbox_ATo = new System.Windows.Forms.TextBox();
             this.combobox_Type = new System.Windows.Forms.ComboBox();
+            this.label_Total = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Title_Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataView_Finance)).BeginInit();
             this.box_Search.SuspendLayout();
@@ -114,39 +115,41 @@
             this.dataView_Finance.AllowUserToDeleteRows = false;
             this.dataView_Finance.AllowUserToResizeColumns = false;
             this.dataView_Finance.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.dataView_Finance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            this.dataView_Finance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dataView_Finance.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataView_Finance.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataView_Finance.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataView_Finance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataView_Finance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataView_Finance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataView_Finance.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dataView_Finance.Location = new System.Drawing.Point(47, 237);
+            this.dataView_Finance.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
             this.dataView_Finance.MultiSelect = false;
             this.dataView_Finance.Name = "dataView_Finance";
             this.dataView_Finance.ReadOnly = true;
             this.dataView_Finance.RowHeadersVisible = false;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataView_Finance.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataView_Finance.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dataView_Finance.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataView_Finance.RowTemplate.DividerHeight = 2;
             this.dataView_Finance.RowTemplate.Height = 35;
             this.dataView_Finance.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataView_Finance.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataView_Finance.Size = new System.Drawing.Size(892, 573);
+            this.dataView_Finance.Size = new System.Drawing.Size(892, 480);
             this.dataView_Finance.TabIndex = 10;
+            this.dataView_Finance.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataView_Finance_CellFormatting);
             // 
             // button_RemoveIncome
             // 
@@ -230,7 +233,7 @@
             this.box_Search.Controls.Add(this.label_DFrom);
             this.box_Search.Controls.Add(this.label_Date);
             this.box_Search.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.box_Search.Location = new System.Drawing.Point(956, 237);
+            this.box_Search.Location = new System.Drawing.Point(993, 237);
             this.box_Search.Name = "box_Search";
             this.box_Search.Size = new System.Drawing.Size(464, 480);
             this.box_Search.TabIndex = 15;
@@ -463,6 +466,21 @@
             this.combobox_Type.Size = new System.Drawing.Size(157, 28);
             this.combobox_Type.TabIndex = 33;
             // 
+            // label_Total
+            // 
+            this.label_Total.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label_Total.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Total.Location = new System.Drawing.Point(47, 717);
+            this.label_Total.Margin = new System.Windows.Forms.Padding(0);
+            this.label_Total.MaximumSize = new System.Drawing.Size(892, 62);
+            this.label_Total.MinimumSize = new System.Drawing.Size(892, 62);
+            this.label_Total.Name = "label_Total";
+            this.label_Total.Size = new System.Drawing.Size(892, 62);
+            this.label_Total.TabIndex = 20;
+            this.label_Total.Text = "Total:   $ 0";
+            this.label_Total.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // FinanceForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -470,6 +488,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(116)))), ((int)(((byte)(235)))));
             this.ClientSize = new System.Drawing.Size(1455, 932);
             this.ControlBox = false;
+            this.Controls.Add(this.label_Total);
             this.Controls.Add(this.button_RemoveIncome);
             this.Controls.Add(this.button_AddIncome);
             this.Controls.Add(this.button_AddExpense);
@@ -485,6 +504,7 @@
             this.Name = "FinanceForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Finances";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.Title_Logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataView_Finance)).EndInit();
@@ -527,5 +547,6 @@
         private System.Windows.Forms.Label label_ATo;
         private System.Windows.Forms.Label label_DTo;
         private System.Windows.Forms.Label label_AFrom;
+        private System.Windows.Forms.Label label_Total;
     }
 }

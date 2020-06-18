@@ -15,12 +15,12 @@ namespace Backend_DB
     public partial class Finance
     {
         public int FinanceId { get; set; }
-        public int Income { get; set; }
         public System.DateTime FinanceDate { get; set; }
         public decimal Amount { get; set; }
         public string Desc { get; set; }
         public string Type { get; set; }
         public Nullable<int> Client { get; set; }
+        public string IncomeOrExpense { get; set; }
     
         public virtual Client Client1 { get; set; }
     }

@@ -84,7 +84,7 @@ namespace Software_Development_Capstone
 
         private void financeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (this.ActiveMdiChild.GetType().ToString() == "Software_Development_Capstone.ClientsForm")
+            if (this.ActiveMdiChild.GetType().ToString() == "Software_Development_Capstone.FinanceForm")
             {
                 return;
             }
@@ -93,11 +93,9 @@ namespace Software_Development_Capstone
                 this.ActiveMdiChild.Close();
             }
 
-            ClientsForm clientspage = new ClientsForm(this);
-
-            clientspage.MdiParent = this;
-            clientspage.PerformAutoScale();
-            clientspage.Show();
+            FinanceForm financepage = new FinanceForm(this) { MdiParent = this };
+            financepage.PerformAutoScale();
+            financepage.Show();
         }
     }
 }

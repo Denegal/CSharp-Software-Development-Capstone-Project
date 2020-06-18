@@ -422,6 +422,7 @@
             this.Name = "ClientsForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Clients";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.Title_Logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataView_Clients)).EndInit();

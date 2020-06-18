@@ -28,112 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePageForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.Title_Logo = new System.Windows.Forms.PictureBox();
-            this.button_Clients = new System.Windows.Forms.Button();
-            this.button_Finance = new System.Windows.Forms.Button();
-            this.button_Management = new System.Windows.Forms.Button();
-            this.button_checkin = new System.Windows.Forms.Button();
-            this.button_prepaid = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePageForm));
             this.dataView_Clients = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.Title_Logo)).BeginInit();
+            this.button_prepaid = new System.Windows.Forms.Button();
+            this.button_checkin = new System.Windows.Forms.Button();
+            this.button_Management = new System.Windows.Forms.Button();
+            this.button_Finance = new System.Windows.Forms.Button();
+            this.button_Clients = new System.Windows.Forms.Button();
+            this.Title_Logo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataView_Clients)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Title_Logo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Title_Logo
-            // 
-            this.Title_Logo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Title_Logo.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.Title_Logo.Image = ((System.Drawing.Image)(resources.GetObject("Title_Logo.Image")));
-            this.Title_Logo.InitialImage = ((System.Drawing.Image)(resources.GetObject("Title_Logo.InitialImage")));
-            this.Title_Logo.Location = new System.Drawing.Point(0, 0);
-            this.Title_Logo.Margin = new System.Windows.Forms.Padding(0);
-            this.Title_Logo.Name = "Title_Logo";
-            this.Title_Logo.Size = new System.Drawing.Size(1431, 117);
-            this.Title_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Title_Logo.TabIndex = 0;
-            this.Title_Logo.TabStop = false;
-            // 
-            // button_Clients
-            // 
-            this.button_Clients.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_Clients.AutoSize = true;
-            this.button_Clients.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Clients.BackgroundImage")));
-            this.button_Clients.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_Clients.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button_Clients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Clients.ForeColor = System.Drawing.Color.White;
-            this.button_Clients.Location = new System.Drawing.Point(1094, 182);
-            this.button_Clients.Name = "button_Clients";
-            this.button_Clients.Size = new System.Drawing.Size(253, 103);
-            this.button_Clients.TabIndex = 1;
-            this.button_Clients.UseVisualStyleBackColor = true;
-            this.button_Clients.Click += new System.EventHandler(this.button_Clients_Click);
-            // 
-            // button_Finance
-            // 
-            this.button_Finance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_Finance.AutoSize = true;
-            this.button_Finance.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Finance.BackgroundImage")));
-            this.button_Finance.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_Finance.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button_Finance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Finance.ForeColor = System.Drawing.Color.White;
-            this.button_Finance.Location = new System.Drawing.Point(1094, 323);
-            this.button_Finance.Name = "button_Finance";
-            this.button_Finance.Size = new System.Drawing.Size(253, 98);
-            this.button_Finance.TabIndex = 2;
-            this.button_Finance.UseVisualStyleBackColor = true;
-            // 
-            // button_Management
-            // 
-            this.button_Management.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_Management.AutoSize = true;
-            this.button_Management.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Management.BackgroundImage")));
-            this.button_Management.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_Management.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button_Management.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Management.ForeColor = System.Drawing.Color.White;
-            this.button_Management.Location = new System.Drawing.Point(1094, 465);
-            this.button_Management.Name = "button_Management";
-            this.button_Management.Size = new System.Drawing.Size(253, 109);
-            this.button_Management.TabIndex = 3;
-            this.button_Management.UseVisualStyleBackColor = true;
-            // 
-            // button_checkin
-            // 
-            this.button_checkin.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button_checkin.AutoSize = true;
-            this.button_checkin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_checkin.BackgroundImage")));
-            this.button_checkin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_checkin.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button_checkin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_checkin.ForeColor = System.Drawing.Color.White;
-            this.button_checkin.Location = new System.Drawing.Point(447, 744);
-            this.button_checkin.Name = "button_checkin";
-            this.button_checkin.Size = new System.Drawing.Size(178, 87);
-            this.button_checkin.TabIndex = 4;
-            this.button_checkin.UseVisualStyleBackColor = true;
-            // 
-            // button_prepaid
-            // 
-            this.button_prepaid.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button_prepaid.AutoSize = true;
-            this.button_prepaid.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_prepaid.BackgroundImage")));
-            this.button_prepaid.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_prepaid.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button_prepaid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_prepaid.ForeColor = System.Drawing.Color.White;
-            this.button_prepaid.Location = new System.Drawing.Point(682, 744);
-            this.button_prepaid.Name = "button_prepaid";
-            this.button_prepaid.Size = new System.Drawing.Size(182, 87);
-            this.button_prepaid.TabIndex = 5;
-            this.button_prepaid.UseVisualStyleBackColor = true;
             // 
             // dataView_Clients
             // 
@@ -190,6 +99,98 @@
             this.button1.TabIndex = 7;
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // button_prepaid
+            // 
+            this.button_prepaid.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button_prepaid.AutoSize = true;
+            this.button_prepaid.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_prepaid.BackgroundImage")));
+            this.button_prepaid.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_prepaid.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_prepaid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_prepaid.ForeColor = System.Drawing.Color.White;
+            this.button_prepaid.Location = new System.Drawing.Point(682, 744);
+            this.button_prepaid.Name = "button_prepaid";
+            this.button_prepaid.Size = new System.Drawing.Size(182, 87);
+            this.button_prepaid.TabIndex = 5;
+            this.button_prepaid.UseVisualStyleBackColor = true;
+            // 
+            // button_checkin
+            // 
+            this.button_checkin.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button_checkin.AutoSize = true;
+            this.button_checkin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_checkin.BackgroundImage")));
+            this.button_checkin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_checkin.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_checkin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_checkin.ForeColor = System.Drawing.Color.White;
+            this.button_checkin.Location = new System.Drawing.Point(447, 744);
+            this.button_checkin.Name = "button_checkin";
+            this.button_checkin.Size = new System.Drawing.Size(178, 87);
+            this.button_checkin.TabIndex = 4;
+            this.button_checkin.UseVisualStyleBackColor = true;
+            // 
+            // button_Management
+            // 
+            this.button_Management.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_Management.AutoSize = true;
+            this.button_Management.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Management.BackgroundImage")));
+            this.button_Management.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_Management.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_Management.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Management.ForeColor = System.Drawing.Color.White;
+            this.button_Management.Location = new System.Drawing.Point(1094, 465);
+            this.button_Management.Name = "button_Management";
+            this.button_Management.Size = new System.Drawing.Size(253, 109);
+            this.button_Management.TabIndex = 3;
+            this.button_Management.UseVisualStyleBackColor = true;
+            // 
+            // button_Finance
+            // 
+            this.button_Finance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_Finance.AutoSize = true;
+            this.button_Finance.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Finance.BackgroundImage")));
+            this.button_Finance.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_Finance.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_Finance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Finance.ForeColor = System.Drawing.Color.White;
+            this.button_Finance.Location = new System.Drawing.Point(1094, 323);
+            this.button_Finance.Name = "button_Finance";
+            this.button_Finance.Size = new System.Drawing.Size(253, 98);
+            this.button_Finance.TabIndex = 2;
+            this.button_Finance.UseVisualStyleBackColor = true;
+            this.button_Finance.Click += new System.EventHandler(this.button_Finance_Click);
+            // 
+            // button_Clients
+            // 
+            this.button_Clients.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_Clients.AutoSize = true;
+            this.button_Clients.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Clients.BackgroundImage")));
+            this.button_Clients.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_Clients.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_Clients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Clients.ForeColor = System.Drawing.Color.White;
+            this.button_Clients.Location = new System.Drawing.Point(1094, 182);
+            this.button_Clients.Name = "button_Clients";
+            this.button_Clients.Size = new System.Drawing.Size(253, 103);
+            this.button_Clients.TabIndex = 1;
+            this.button_Clients.UseVisualStyleBackColor = true;
+            this.button_Clients.Click += new System.EventHandler(this.button_Clients_Click);
+            // 
+            // Title_Logo
+            // 
+            this.Title_Logo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Title_Logo.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Title_Logo.Image = ((System.Drawing.Image)(resources.GetObject("Title_Logo.Image")));
+            this.Title_Logo.InitialImage = ((System.Drawing.Image)(resources.GetObject("Title_Logo.InitialImage")));
+            this.Title_Logo.Location = new System.Drawing.Point(0, 0);
+            this.Title_Logo.Margin = new System.Windows.Forms.Padding(0);
+            this.Title_Logo.Name = "Title_Logo";
+            this.Title_Logo.Size = new System.Drawing.Size(1431, 117);
+            this.Title_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Title_Logo.TabIndex = 0;
+            this.Title_Logo.TabStop = false;
+            // 
             // HomePageForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -213,8 +214,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "HomePageForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.Title_Logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataView_Clients)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Title_Logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

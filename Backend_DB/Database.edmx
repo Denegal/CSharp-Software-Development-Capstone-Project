@@ -28,7 +28,7 @@
             <PropertyRef Name="FinanceId" />
           </Key>
           <Property Name="FinanceId" Type="int" Nullable="false" />
-          <Property Name="Income" Type="int" Nullable="false" />
+          <Property Name="IncomeOrExpense" Type="varchar" MaxLength="7" Nullable="false" />
           <Property Name="FinanceDate" Type="date" Nullable="false" />
           <Property Name="Amount" Type="decimal" Precision="8" Scale="2" Nullable="false" />
           <Property Name="Desc" Type="varchar" MaxLength="50" />
@@ -109,13 +109,13 @@
             <PropertyRef Name="FinanceId" />
           </Key>
           <Property Name="FinanceId" Type="Int32" Nullable="false" />
-          <Property Name="Income" Type="Int32" Nullable="false" />
           <Property Name="FinanceDate" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Amount" Type="Decimal" Nullable="false" Precision="8" Scale="2" />
           <Property Name="Desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Type" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="Client" Type="Int32" />
           <NavigationProperty Name="Client1" Relationship="DBModel.FK_Finance_Client" FromRole="Finance" ToRole="Client" />
+          <Property Name="IncomeOrExpense" Type="String" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="FK_Finance_Client">
           <End Type="DBModel.Client" Role="Client" Multiplicity="0..1" />
@@ -166,12 +166,12 @@
           <EntitySetMapping Name="Finances">
             <EntityTypeMapping TypeName="DBModel.Finance">
               <MappingFragment StoreEntitySet="Finance">
+                <ScalarProperty Name="IncomeOrExpense" ColumnName="IncomeOrExpense" />
                 <ScalarProperty Name="Client" ColumnName="Client" />
                 <ScalarProperty Name="Type" ColumnName="Type" />
                 <ScalarProperty Name="Desc" ColumnName="Desc" />
                 <ScalarProperty Name="Amount" ColumnName="Amount" />
                 <ScalarProperty Name="FinanceDate" ColumnName="FinanceDate" />
-                <ScalarProperty Name="Income" ColumnName="Income" />
                 <ScalarProperty Name="FinanceId" ColumnName="FinanceId" />
               </MappingFragment>
             </EntityTypeMapping>

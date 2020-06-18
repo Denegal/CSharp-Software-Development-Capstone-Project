@@ -17,30 +17,17 @@ namespace Backend_Logic
         public bool Pregnant { get; set; }
         public bool MedicalCare { get; set; }
         public int Credits { get; set; }
-        public string this[int i]
-        {
-            get
-            {
-                switch (i)
-                {
-                    case 1:
-                        return Last;
-
-                    case 2:
-                        return Phone;
-                    
-                    case 3:
-                        return Email;
-                    
-                    case 8:
-                        return Credits.ToString();
-
-                    default:
-                        return First;
-                }
-            }
-        }
+        
     }
 
+    public class FinanceList
+    {
+        public string IncomeOrExpense { get; set; }
+        public decimal Amount { get; set; }
+        public DateTime Date { get; set; }
+        public string Type { get; set; }
+        public string Desc { get; set; }
+        public string Client { get; set; }
 
+    }
 }

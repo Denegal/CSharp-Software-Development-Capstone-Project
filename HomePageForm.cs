@@ -84,5 +84,10 @@ namespace Software_Development_Capstone
         {
             parent.clientsToolStripMenuItem.PerformClick();
         }
+
+        private void button_Finance_Click(object sender, EventArgs e)
+        {
+            parent.financeToolStripMenuItem.PerformClick();
+        }
     }
 }

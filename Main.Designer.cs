@@ -33,6 +33,9 @@
             this.clientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.financeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.managementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_bar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,10 +45,10 @@
             this.menu_bar.Enabled = false;
             this.menu_bar.Font = new System.Drawing.Font("Tempus Sans ITC", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menu_bar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.managementToolStripMenuItem,
             this.homepageToolStripMenuItem,
             this.clientsToolStripMenuItem,
-            this.financeToolStripMenuItem,
-            this.managementToolStripMenuItem});
+            this.financeToolStripMenuItem});
             this.menu_bar.Location = new System.Drawing.Point(0, 0);
             this.menu_bar.Name = "menu_bar";
             this.menu_bar.Size = new System.Drawing.Size(984, 28);
@@ -74,9 +77,31 @@
             // 
             // managementToolStripMenuItem
             // 
+            this.managementToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.logoutToolStripMenuItem,
+            this.changePasswordToolStripMenuItem,
+            this.logoutToolStripMenuItem1});
             this.managementToolStripMenuItem.Name = "managementToolStripMenuItem";
-            this.managementToolStripMenuItem.Size = new System.Drawing.Size(119, 24);
-            this.managementToolStripMenuItem.Text = "Management";
+            this.managementToolStripMenuItem.Size = new System.Drawing.Size(48, 24);
+            this.managementToolStripMenuItem.Text = "File";
+            // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(206, 24);
+            this.logoutToolStripMenuItem.Text = "Add User";
+            // 
+            // changePasswordToolStripMenuItem
+            // 
+            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(206, 24);
+            this.changePasswordToolStripMenuItem.Text = "Change Password";
+            // 
+            // logoutToolStripMenuItem1
+            // 
+            this.logoutToolStripMenuItem1.Name = "logoutToolStripMenuItem1";
+            this.logoutToolStripMenuItem1.Size = new System.Drawing.Size(206, 24);
+            this.logoutToolStripMenuItem1.Text = "Logout";
             // 
             // Main
             // 
@@ -104,6 +129,9 @@
         public System.Windows.Forms.ToolStripMenuItem clientsToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem financeToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem managementToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem1;
     }
 }
 

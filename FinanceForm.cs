@@ -1,4 +1,6 @@
-﻿using Backend_Logic;
+﻿using Backend_DB;
+using Backend_Logic;
+using MySqlX.XDevAPI.Relational;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -46,24 +48,51 @@ namespace Software_Development_Capstone
             //      statement with orderby clause.
             using (var context = new Backend_DB.DBEntities())
             {
-                var finances = from income in context.Finances
-                               orderby income.FinanceDate
-                               select new ClientList
+                var finances = from finance in context.Finances
+                               join clients in context.Clients on finance.Client equals clients.ClientId
+                               orderby finance.FinanceDate
+                               select new FinanceList
                                {
-                                   
+                                   IncomeOrExpense = finance.IncomeOrExpense,
+                                   Date = finance.FinanceDate,
+                                   Amount = finance.Amount,
+                                   Desc = finance.Desc,   
+                                   Client = finance.Client == null ? "" : finance.Client1.FName + " " + finance.Client1.LName,
+
                                };
 
                 var results = finances.ToList();
 
                 // Sample data. REMOVE FOR PRODUCTION
-                var sample1 = new ClientList { First = "Jane", Last = "Doe", Phone = "(111) 111-1111", Email = "JDow@sample.com", Waiver = true, Injuries = false, MedicalCare = false, Pregnant = false, Credits = 0 };
-                var sample2 = new ClientList { First = "John", Last = "Doe", Phone = "(111) 222-2222", Email = "JohnD@sample.com", Waiver = true, Injuries = true, MedicalCare = false, Pregnant = false, Credits = 2 };
+                var sample1 = new FinanceList { IncomeOrExpense = "Income", Date = new DateTime(2020, 6, 14), Amount = decimal.Parse("35.00"), Desc = "In home reformer class", Client = "Jane Doe", Type = "Classes" };
+                var sample2 = new FinanceList { IncomeOrExpense = "Expense", Date = new DateTime(2020, 6, 16), Amount = decimal.Parse("-40.00"), Desc = "Private with Chris", Client = "", Type = "Education" };
 
                 results.Add(sample1);
                 results.Add(sample2);
 
                 dataView_Finance.DataSource = results;
+
+                decimal total = new decimal();
+                foreach (DataGridViewRow row in dataView_Finance.Rows)
+                {
+                    total += decimal.Parse(row.Cells[1].Value.ToString());
+                }
+                label_Total.Text = "Total:   $ " + total;
             }
+        }
+
+        // Cell formating to make expenses red and income green
+        private void dataView_Finance_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+                if (dataView_Finance.Rows[e.RowIndex].Cells[0].Value.ToString() == "Expense")
+                {
+                    e.CellStyle.ForeColor = Color.Red;
+                }
+                else
+                {
+                    e.CellStyle.ForeColor = Color.DarkGreen;
+                }
+
         }
     }
 }
