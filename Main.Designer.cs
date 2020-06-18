@@ -99,10 +99,10 @@
 
         #endregion
         private System.Windows.Forms.MenuStrip menu_bar;
-        private System.Windows.Forms.ToolStripMenuItem homepageToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem clientsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem financeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem managementToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem homepageToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem clientsToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem financeToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem managementToolStripMenuItem;
     }
 }
 

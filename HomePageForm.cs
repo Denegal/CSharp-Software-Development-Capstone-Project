@@ -15,10 +15,14 @@ namespace Software_Development_Capstone
 {
     public partial class HomePageForm : Form
     {
+        Main parent = new Main();
 
-        public HomePageForm()
+        // Constructor sets the parent as the main form and initializes the datagridview
+        public HomePageForm(Main Parent)
         {
             InitializeComponent();
+
+            parent = Parent;
 
             Update_datagrid();
 
@@ -35,6 +39,7 @@ namespace Software_Development_Capstone
 
             dataView_Clients.AutoResizeColumns();
         }
+
 
         private void Update_datagrid()
         {
@@ -74,9 +79,10 @@ namespace Software_Development_Capstone
                 
         }
 
+        // Clients button calls the programs menu bar item for the clients page
         private void button_Clients_Click(object sender, EventArgs e)
         {
-
+            parent.clientsToolStripMenuItem.PerformClick();
         }
     }
 }

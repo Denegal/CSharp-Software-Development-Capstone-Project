@@ -14,13 +14,17 @@ namespace Software_Development_Capstone
 {
     public partial class ClientsForm : Form
     {
+        Main parent = new Main();
+
         private bool WaiverChecked = false;
         private bool MedicalChecked = false;
         private bool PregnantChecked = false;
 
-        public ClientsForm()
+        public ClientsForm(Main Parent)
         {
             InitializeComponent();
+
+            parent = Parent;
 
             Update_datagrid();
 

@@ -38,7 +38,7 @@ namespace Software_Development_Capstone
 
             menu_bar.Enabled = true;
 
-            HomePageForm homePage = new HomePageForm();
+            HomePageForm homePage = new HomePageForm(this);
 
             homePage.MdiParent = this;
             homePage.PerformAutoScale();
@@ -57,7 +57,7 @@ namespace Software_Development_Capstone
                 this.ActiveMdiChild.Close();
             }
 
-            HomePageForm homePage = new HomePageForm();
+            HomePageForm homePage = new HomePageForm(this);
 
             homePage.MdiParent = this;
             homePage.PerformAutoScale();
@@ -75,7 +75,7 @@ namespace Software_Development_Capstone
                 this.ActiveMdiChild.Close();
             }
 
-            ClientsForm clientspage = new ClientsForm();
+            ClientsForm clientspage = new ClientsForm(this);
 
             clientspage.MdiParent = this;
             clientspage.PerformAutoScale();
