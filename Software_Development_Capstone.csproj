@@ -131,6 +131,12 @@
     <Compile Include="ClientsForm.Designer.cs">
       <DependentUpon>ClientsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FinanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FinanceForm.Designer.cs">
+      <DependentUpon>FinanceForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="HomePageForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ClientsForm.resx">
       <DependentUpon>ClientsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FinanceForm.resx">
+      <DependentUpon>FinanceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomePageForm.resx">
       <DependentUpon>HomePageForm.cs</DependentUpon>

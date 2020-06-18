@@ -12,12 +12,16 @@ namespace Backend_DB
     using System;
     using System.Collections.Generic;
     
-    public partial class Expense
+    public partial class Finance
     {
-        public int ExpenseId { get; set; }
+        public int FinanceId { get; set; }
+        public int Income { get; set; }
+        public System.DateTime FinanceDate { get; set; }
         public decimal Amount { get; set; }
-        public System.DateTime ExpenseDate { get; set; }
         public string Desc { get; set; }
-        public string ExpenseType { get; set; }
+        public string Type { get; set; }
+        public Nullable<int> Client { get; set; }
+    
+        public virtual Client Client1 { get; set; }
     }
 }

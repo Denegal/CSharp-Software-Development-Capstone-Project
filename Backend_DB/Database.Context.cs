@@ -26,8 +26,7 @@ namespace Backend_DB
         }
     
         public virtual DbSet<Client> Clients { get; set; }
-        public virtual DbSet<Expense> Expenses { get; set; }
-        public virtual DbSet<Income> Incomes { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Finance> Finances { get; set; }
     }
 }

@@ -1,0 +1,69 @@
+﻿using Backend_Logic;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Software_Development_Capstone
+{
+    public partial class FinanceForm : Form
+    {
+        Main parent = new Main();
+
+        public FinanceForm(Main Parent)
+        {
+            InitializeComponent();
+
+            Update_datagrid();
+
+            dataView_Finance.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            /*
+            dataView_Finance.Columns[0].FillWeight = 80;
+            dataView_Finance.Columns[1].FillWeight = 80;
+            dataView_Finance.Columns[2].FillWeight = 80;
+            dataView_Finance.Columns[3].FillWeight = 125;
+            dataView_Finance.Columns[4].FillWeight = 50;
+            dataView_Finance.Columns[5].FillWeight = 50;
+            dataView_Finance.Columns[6].FillWeight = 75;
+            dataView_Finance.Columns[7].FillWeight = 80;
+            dataView_Finance.Columns[8].FillWeight = 75;
+            */
+
+            dataView_Finance.AutoResizeColumns();
+
+        }
+
+        private void Update_datagrid()
+        {
+            //TODO: Look at making list sortable when dataview column headers are clicked
+            //      by sending header name or index to function. Possibly have to use switch
+            //      statement with orderby clause.
+            using (var context = new Backend_DB.DBEntities())
+            {
+                var finances = from income in context.Finances
+                               orderby income.FinanceDate
+                               select new ClientList
+                               {
+                                   
+                               };
+
+                var results = finances.ToList();
+
+                // Sample data. REMOVE FOR PRODUCTION
+                var sample1 = new ClientList { First = "Jane", Last = "Doe", Phone = "(111) 111-1111", Email = "JDow@sample.com", Waiver = true, Injuries = false, MedicalCare = false, Pregnant = false, Credits = 0 };
+                var sample2 = new ClientList { First = "John", Last = "Doe", Phone = "(111) 222-2222", Email = "JohnD@sample.com", Waiver = true, Injuries = true, MedicalCare = false, Pregnant = false, Credits = 2 };
+
+                results.Add(sample1);
+                results.Add(sample2);
+
+                dataView_Finance.DataSource = results;
+            }
+        }
+    }
+}

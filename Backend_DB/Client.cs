@@ -17,7 +17,7 @@ namespace Backend_DB
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Client()
         {
-            this.Incomes = new HashSet<Income>();
+            this.Finances = new HashSet<Finance>();
         }
     
         public int ClientId { get; set; }
@@ -35,6 +35,6 @@ namespace Backend_DB
         public int ClassCredit { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Income> Incomes { get; set; }
+        public virtual ICollection<Finance> Finances { get; set; }
     }
 }

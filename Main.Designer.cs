@@ -70,6 +70,7 @@
             this.financeToolStripMenuItem.Name = "financeToolStripMenuItem";
             this.financeToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
             this.financeToolStripMenuItem.Text = "Finance";
+            this.financeToolStripMenuItem.Click += new System.EventHandler(this.financeToolStripMenuItem_Click);
             // 
             // managementToolStripMenuItem
             // 

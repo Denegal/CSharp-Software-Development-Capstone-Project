@@ -81,5 +81,23 @@ namespace Software_Development_Capstone
             clientspage.PerformAutoScale();
             clientspage.Show();
         }
+
+        private void financeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.ActiveMdiChild.GetType().ToString() == "Software_Development_Capstone.ClientsForm")
+            {
+                return;
+            }
+            else
+            {
+                this.ActiveMdiChild.Close();
+            }
+
+            ClientsForm clientspage = new ClientsForm(this);
+
+            clientspage.MdiParent = this;
+            clientspage.PerformAutoScale();
+            clientspage.Show();
+        }
     }
 }

@@ -23,25 +23,17 @@
           <Property Name="LName" Type="nchar" MaxLength="20" Nullable="false" />
           <Property Name="ClassCredit" Type="int" Nullable="false" />
         </EntityType>
-        <EntityType Name="Expense">
+        <EntityType Name="Finance">
           <Key>
-            <PropertyRef Name="ExpenseId" />
+            <PropertyRef Name="FinanceId" />
           </Key>
-          <Property Name="ExpenseId" Type="int" Nullable="false" />
-          <Property Name="Amount" Type="decimal" Precision="6" Scale="2" Nullable="false" />
-          <Property Name="ExpenseDate" Type="date" Nullable="false" />
-          <Property Name="Desc" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="ExpenseType" Type="varchar" MaxLength="20" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Income">
-          <Key>
-            <PropertyRef Name="IncomeId" />
-          </Key>
-          <Property Name="IncomeId" Type="int" Nullable="false" />
-          <Property Name="Client" Type="int" Nullable="false" />
-          <Property Name="Amount" Type="decimal" Precision="4" Scale="2" Nullable="false" />
-          <Property Name="IncomeDate" Type="date" Nullable="false" />
+          <Property Name="FinanceId" Type="int" Nullable="false" />
+          <Property Name="Income" Type="int" Nullable="false" />
+          <Property Name="FinanceDate" Type="date" Nullable="false" />
+          <Property Name="Amount" Type="decimal" Precision="8" Scale="2" Nullable="false" />
           <Property Name="Desc" Type="varchar" MaxLength="50" />
+          <Property Name="Type" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Client" Type="int" />
         </EntityType>
         <EntityType Name="Users">
           <Key>
@@ -51,26 +43,25 @@
           <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="PasswordHash" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <Association Name="FK_Income_Client">
-          <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
-          <End Role="Income" Type="Self.Income" Multiplicity="*" />
+        <Association Name="FK_Finance_Client">
+          <End Role="Clients" Type="Self.Clients" Multiplicity="0..1" />
+          <End Role="Finance" Type="Self.Finance" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Clients">
               <PropertyRef Name="ClientId" />
             </Principal>
-            <Dependent Role="Income">
+            <Dependent Role="Finance">
               <PropertyRef Name="Client" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="DBModelStoreContainer">
           <EntitySet Name="Clients" EntityType="Self.Clients" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Expense" EntityType="Self.Expense" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Income" EntityType="Self.Income" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Finance" EntityType="Self.Finance" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_Income_Client" Association="Self.FK_Income_Client">
+          <AssociationSet Name="FK_Finance_Client" Association="Self.FK_Finance_Client">
             <End Role="Clients" EntitySet="Clients" />
-            <End Role="Income" EntitySet="Income" />
+            <End Role="Finance" EntitySet="Finance" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -93,51 +84,17 @@
           <Property Name="MedicalCare" Type="Int32" Nullable="false" />
           <Property Name="MedicalHistory" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="LName" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Incomes" Relationship="Self.FK_Income_Client" FromRole="Clients" ToRole="Income" />
           <Property Name="ClassCredit" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Finances" Relationship="DBModel.FK_Finance_Client" FromRole="Client" ToRole="Finance" />
         </EntityType>
-        <EntityType Name="Expense">
-          <Key>
-            <PropertyRef Name="ExpenseId" />
-          </Key>
-          <Property Name="ExpenseId" Type="Int32" Nullable="false" />
-          <Property Name="Amount" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
-          <Property Name="ExpenseDate" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="Desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ExpenseType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Income">
-          <Key>
-            <PropertyRef Name="IncomeId" />
-          </Key>
-          <Property Name="IncomeId" Type="Int32" Nullable="false" />
-          <Property Name="Client" Type="Int32" Nullable="false" />
-          <Property Name="Amount" Type="Decimal" Precision="4" Scale="2" Nullable="false" />
-          <Property Name="IncomeDate" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="Desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Client1" Relationship="Self.FK_Income_Client" FromRole="Income" ToRole="Clients" />
-        </EntityType>
-        <Association Name="FK_Income_Client">
-          <End Role="Clients" Type="Self.Client" Multiplicity="1" />
-          <End Role="Income" Type="Self.Income" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Clients">
-              <PropertyRef Name="ClientId" />
-            </Principal>
-            <Dependent Role="Income">
-              <PropertyRef Name="Client" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="DBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Clients" EntityType="Self.Client" />
-          <EntitySet Name="Expenses" EntityType="Self.Expense" />
-          <EntitySet Name="Incomes" EntityType="Self.Income" />
-          <AssociationSet Name="FK_Income_Client" Association="Self.FK_Income_Client">
-            <End Role="Clients" EntitySet="Clients" />
-            <End Role="Income" EntitySet="Incomes" />
-          </AssociationSet>
           <EntitySet Name="Users" EntityType="DBModel.User" />
+          <EntitySet Name="Finances" EntityType="DBModel.Finance" />
+          <AssociationSet Name="FK_Finance_Client" Association="DBModel.FK_Finance_Client">
+            <End Role="Client" EntitySet="Clients" />
+            <End Role="Finance" EntitySet="Finances" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="User">
           <Key>
@@ -147,6 +104,31 @@
           <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="PasswordHash" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="Finance">
+          <Key>
+            <PropertyRef Name="FinanceId" />
+          </Key>
+          <Property Name="FinanceId" Type="Int32" Nullable="false" />
+          <Property Name="Income" Type="Int32" Nullable="false" />
+          <Property Name="FinanceDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Amount" Type="Decimal" Nullable="false" Precision="8" Scale="2" />
+          <Property Name="Desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Type" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Client" Type="Int32" />
+          <NavigationProperty Name="Client1" Relationship="DBModel.FK_Finance_Client" FromRole="Finance" ToRole="Client" />
+        </EntityType>
+        <Association Name="FK_Finance_Client">
+          <End Type="DBModel.Client" Role="Client" Multiplicity="0..1" />
+          <End Type="DBModel.Finance" Role="Finance" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Client">
+              <PropertyRef Name="ClientId" />
+            </Principal>
+            <Dependent Role="Finance">
+              <PropertyRef Name="Client" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -172,34 +154,25 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Expenses">
-            <EntityTypeMapping TypeName="DBModel.Expense">
-              <MappingFragment StoreEntitySet="Expense">
-                <ScalarProperty Name="ExpenseId" ColumnName="ExpenseId" />
-                <ScalarProperty Name="Amount" ColumnName="Amount" />
-                <ScalarProperty Name="ExpenseDate" ColumnName="ExpenseDate" />
-                <ScalarProperty Name="Desc" ColumnName="Desc" />
-                <ScalarProperty Name="ExpenseType" ColumnName="ExpenseType" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Incomes">
-            <EntityTypeMapping TypeName="DBModel.Income">
-              <MappingFragment StoreEntitySet="Income">
-                <ScalarProperty Name="IncomeId" ColumnName="IncomeId" />
-                <ScalarProperty Name="Client" ColumnName="Client" />
-                <ScalarProperty Name="Amount" ColumnName="Amount" />
-                <ScalarProperty Name="IncomeDate" ColumnName="IncomeDate" />
-                <ScalarProperty Name="Desc" ColumnName="Desc" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="DBModel.User">
               <MappingFragment StoreEntitySet="Users">
                 <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Finances">
+            <EntityTypeMapping TypeName="DBModel.Finance">
+              <MappingFragment StoreEntitySet="Finance">
+                <ScalarProperty Name="Client" ColumnName="Client" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Desc" ColumnName="Desc" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="FinanceDate" ColumnName="FinanceDate" />
+                <ScalarProperty Name="Income" ColumnName="Income" />
+                <ScalarProperty Name="FinanceId" ColumnName="FinanceId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
