@@ -46,5 +46,40 @@ namespace Software_Development_Capstone
 
         }
 
+        private void homepageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.ActiveMdiChild.GetType().ToString() == "Software_Development_Capstone.HomePageForm")
+            {
+                return;
+            }
+            else
+            {
+                this.ActiveMdiChild.Close();
+            }
+
+            HomePageForm homePage = new HomePageForm();
+
+            homePage.MdiParent = this;
+            homePage.PerformAutoScale();
+            homePage.Show();
+        }
+
+        private void clientsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.ActiveMdiChild.GetType().ToString() == "Software_Development_Capstone.ClientsForm")
+            {
+                return;
+            }
+            else
+            {
+                this.ActiveMdiChild.Close();
+            }
+
+            ClientsForm clientspage = new ClientsForm();
+
+            clientspage.MdiParent = this;
+            clientspage.PerformAutoScale();
+            clientspage.Show();
+        }
     }
 }

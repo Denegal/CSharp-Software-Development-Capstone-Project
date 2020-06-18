@@ -56,12 +56,14 @@
             this.homepageToolStripMenuItem.Name = "homepageToolStripMenuItem";
             this.homepageToolStripMenuItem.Size = new System.Drawing.Size(101, 24);
             this.homepageToolStripMenuItem.Text = "Homepage";
+            this.homepageToolStripMenuItem.Click += new System.EventHandler(this.homepageToolStripMenuItem_Click);
             // 
             // clientsToolStripMenuItem
             // 
             this.clientsToolStripMenuItem.Name = "clientsToolStripMenuItem";
             this.clientsToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
             this.clientsToolStripMenuItem.Text = "Clients";
+            this.clientsToolStripMenuItem.Click += new System.EventHandler(this.clientsToolStripMenuItem_Click);
             // 
             // financeToolStripMenuItem
             // 
