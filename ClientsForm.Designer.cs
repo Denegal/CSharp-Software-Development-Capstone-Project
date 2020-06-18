@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientsForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Title_Logo = new System.Windows.Forms.PictureBox();
             this.dataView_Clients = new System.Windows.Forms.DataGridView();
             this.button_SaveReport = new System.Windows.Forms.Button();
@@ -85,23 +85,23 @@
             this.dataView_Clients.AllowUserToDeleteRows = false;
             this.dataView_Clients.AllowUserToResizeColumns = false;
             this.dataView_Clients.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dataView_Clients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            this.dataView_Clients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dataView_Clients.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataView_Clients.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataView_Clients.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataView_Clients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataView_Clients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dataView_Clients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataView_Clients.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dataView_Clients.Location = new System.Drawing.Point(47, 237);
@@ -109,8 +109,8 @@
             this.dataView_Clients.Name = "dataView_Clients";
             this.dataView_Clients.ReadOnly = true;
             this.dataView_Clients.RowHeadersVisible = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataView_Clients.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataView_Clients.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dataView_Clients.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataView_Clients.RowTemplate.DividerHeight = 2;
             this.dataView_Clients.RowTemplate.Height = 35;
@@ -202,23 +202,25 @@
             // 
             // checkbox_Pregnant
             // 
-            this.checkbox_Pregnant.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("checkbox_Pregnant.BackgroundImage")));
+            this.checkbox_Pregnant.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.empty_checkbox;
             this.checkbox_Pregnant.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.checkbox_Pregnant.Location = new System.Drawing.Point(220, 325);
             this.checkbox_Pregnant.Name = "checkbox_Pregnant";
             this.checkbox_Pregnant.Size = new System.Drawing.Size(41, 41);
             this.checkbox_Pregnant.TabIndex = 21;
             this.checkbox_Pregnant.TabStop = false;
+            this.checkbox_Pregnant.Click += new System.EventHandler(this.checkbox_Pregnant_Click);
             // 
             // checkbox_Medical
             // 
-            this.checkbox_Medical.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("checkbox_Medical.BackgroundImage")));
+            this.checkbox_Medical.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.empty_checkbox;
             this.checkbox_Medical.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.checkbox_Medical.Location = new System.Drawing.Point(221, 271);
             this.checkbox_Medical.Name = "checkbox_Medical";
             this.checkbox_Medical.Size = new System.Drawing.Size(41, 41);
             this.checkbox_Medical.TabIndex = 20;
             this.checkbox_Medical.TabStop = false;
+            this.checkbox_Medical.Click += new System.EventHandler(this.checkbox_Medical_Click);
             // 
             // checkbox_Waiver
             // 
@@ -229,6 +231,7 @@
             this.checkbox_Waiver.Size = new System.Drawing.Size(41, 41);
             this.checkbox_Waiver.TabIndex = 19;
             this.checkbox_Waiver.TabStop = false;
+            this.checkbox_Waiver.Click += new System.EventHandler(this.checkbox_Waiver_Click);
             // 
             // button_Search
             // 

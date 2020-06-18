@@ -73,6 +73,7 @@
             this.button_Clients.Size = new System.Drawing.Size(253, 103);
             this.button_Clients.TabIndex = 1;
             this.button_Clients.UseVisualStyleBackColor = true;
+            this.button_Clients.Click += new System.EventHandler(this.button_Clients_Click);
             // 
             // button_Finance
             // 
