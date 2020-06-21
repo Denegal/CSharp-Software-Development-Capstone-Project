@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.label_Title = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.group_Client = new System.Windows.Forms.GroupBox();
             this.textbox_Email = new System.Windows.Forms.TextBox();
@@ -69,15 +69,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.checkbox_History)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // label_Title
             // 
-            this.label1.Font = new System.Drawing.Font("Tempus Sans ITC", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(893, 71);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "New Client";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Title.Font = new System.Drawing.Font("Tempus Sans ITC", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Title.Location = new System.Drawing.Point(0, 22);
+            this.label_Title.Name = "label_Title";
+            this.label_Title.Size = new System.Drawing.Size(893, 71);
+            this.label_Title.TabIndex = 1;
+            this.label_Title.Text = "New Client";
+            this.label_Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
@@ -474,7 +474,7 @@
             this.Controls.Add(this.button_Cancel);
             this.Controls.Add(this.button_Save);
             this.Controls.Add(this.group_Client);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label_Title);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
@@ -498,7 +498,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_Title;
         private System.Windows.Forms.GroupBox group_Client;
         private System.Windows.Forms.TextBox textbox_Email;
         private System.Windows.Forms.Label label_FName;
