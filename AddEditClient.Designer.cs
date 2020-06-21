@@ -259,6 +259,7 @@
             this.checkbox_Pregnant.Size = new System.Drawing.Size(41, 41);
             this.checkbox_Pregnant.TabIndex = 43;
             this.checkbox_Pregnant.TabStop = false;
+            this.checkbox_Pregnant.Click += new System.EventHandler(this.checkbox_Pregnant_Click);
             // 
             // checkbox_Medical
             // 
@@ -269,6 +270,7 @@
             this.checkbox_Medical.Size = new System.Drawing.Size(41, 41);
             this.checkbox_Medical.TabIndex = 42;
             this.checkbox_Medical.TabStop = false;
+            this.checkbox_Medical.Click += new System.EventHandler(this.checkbox_Medical_Click);
             // 
             // checkbox_Waiver
             // 
@@ -279,6 +281,7 @@
             this.checkbox_Waiver.Size = new System.Drawing.Size(41, 41);
             this.checkbox_Waiver.TabIndex = 41;
             this.checkbox_Waiver.TabStop = false;
+            this.checkbox_Waiver.Click += new System.EventHandler(this.checkbox_Waiver_Click);
             // 
             // label_Pregnant
             // 
@@ -328,6 +331,7 @@
             this.checkbox_Injury.Size = new System.Drawing.Size(41, 41);
             this.checkbox_Injury.TabIndex = 45;
             this.checkbox_Injury.TabStop = false;
+            this.checkbox_Injury.Click += new System.EventHandler(this.checkbox_Injury_Click);
             // 
             // label_Injuries
             // 
@@ -344,6 +348,7 @@
             // 
             // textbox_Injuries
             // 
+            this.textbox_Injuries.Enabled = false;
             this.textbox_Injuries.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textbox_Injuries.Location = new System.Drawing.Point(107, 328);
             this.textbox_Injuries.Multiline = true;
@@ -354,6 +359,7 @@
             // 
             // textbox_MedicalHistory
             // 
+            this.textbox_MedicalHistory.Enabled = false;
             this.textbox_MedicalHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textbox_MedicalHistory.Location = new System.Drawing.Point(107, 475);
             this.textbox_MedicalHistory.Multiline = true;
@@ -371,6 +377,7 @@
             this.checkbox_History.Size = new System.Drawing.Size(41, 41);
             this.checkbox_History.TabIndex = 48;
             this.checkbox_History.TabStop = false;
+            this.checkbox_History.Click += new System.EventHandler(this.checkbox_History_Click);
             // 
             // label_MedicalHistory
             // 
@@ -387,6 +394,7 @@
             // 
             // combo_History
             // 
+            this.combo_History.Enabled = false;
             this.combo_History.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combo_History.FormattingEnabled = true;
             this.combo_History.Items.AddRange(new object[] {
@@ -412,6 +420,7 @@
             // 
             // button_Add
             // 
+            this.button_Add.Enabled = false;
             this.button_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Add.Location = new System.Drawing.Point(594, 431);
             this.button_Add.Name = "button_Add";
@@ -419,9 +428,11 @@
             this.button_Add.TabIndex = 51;
             this.button_Add.Text = "Add";
             this.button_Add.UseVisualStyleBackColor = true;
+            this.button_Add.Click += new System.EventHandler(this.button_Add_Click);
             // 
             // button_Remove
             // 
+            this.button_Remove.Enabled = false;
             this.button_Remove.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Remove.Location = new System.Drawing.Point(678, 431);
             this.button_Remove.Name = "button_Remove";
@@ -429,6 +440,7 @@
             this.button_Remove.TabIndex = 52;
             this.button_Remove.Text = "Remove";
             this.button_Remove.UseVisualStyleBackColor = true;
+            this.button_Remove.Click += new System.EventHandler(this.button_Remove_Click);
             // 
             // button_Save
             // 
@@ -446,6 +458,7 @@
             this.button_Save.TabIndex = 15;
             this.button_Save.Text = "Save Button\r\nPlaceholder";
             this.button_Save.UseVisualStyleBackColor = false;
+            this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
             // 
             // button_Cancel
             // 
@@ -463,14 +476,15 @@
             this.button_Cancel.TabIndex = 16;
             this.button_Cancel.Text = "Cancel Button\r\nPlaceholder";
             this.button_Cancel.UseVisualStyleBackColor = false;
+            this.button_Cancel.Click += new System.EventHandler(this.button_Cancel_Click);
             // 
             // AddEditClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(116)))), ((int)(((byte)(235)))));
+            this.CancelButton = this.button_Cancel;
             this.ClientSize = new System.Drawing.Size(894, 794);
-            this.ControlBox = false;
             this.Controls.Add(this.button_Cancel);
             this.Controls.Add(this.button_Save);
             this.Controls.Add(this.group_Client);
@@ -481,7 +495,7 @@
             this.MinimizeBox = false;
             this.Name = "AddEditClient";
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.group_Client.ResumeLayout(false);
             this.group_Client.PerformLayout();

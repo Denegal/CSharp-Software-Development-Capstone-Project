@@ -28,23 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientsForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.Title_Logo = new System.Windows.Forms.PictureBox();
             this.dataView_Clients = new System.Windows.Forms.DataGridView();
-            this.button_SaveReport = new System.Windows.Forms.Button();
             this.label_ClientList = new System.Windows.Forms.Label();
             this.box_Search = new System.Windows.Forms.GroupBox();
             this.textbox_Email = new System.Windows.Forms.TextBox();
             this.textbox_Phone = new System.Windows.Forms.TextBox();
             this.textbox_LName = new System.Windows.Forms.TextBox();
             this.textbox_FName = new System.Windows.Forms.TextBox();
-            this.checkbox_Pregnant = new System.Windows.Forms.PictureBox();
-            this.checkbox_Medical = new System.Windows.Forms.PictureBox();
-            this.checkbox_Waiver = new System.Windows.Forms.PictureBox();
-            this.button_Search = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -52,32 +46,23 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label_FName = new System.Windows.Forms.Label();
-            this.button_RemoveClient = new System.Windows.Forms.Button();
-            this.button_EditClient = new System.Windows.Forms.Button();
-            this.button_ViewClient = new System.Windows.Forms.Button();
             this.button_AddClient = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.Title_Logo)).BeginInit();
+            this.button_ViewClient = new System.Windows.Forms.Button();
+            this.button_EditClient = new System.Windows.Forms.Button();
+            this.button_RemoveClient = new System.Windows.Forms.Button();
+            this.checkbox_Pregnant = new System.Windows.Forms.PictureBox();
+            this.checkbox_Medical = new System.Windows.Forms.PictureBox();
+            this.checkbox_Waiver = new System.Windows.Forms.PictureBox();
+            this.button_Search = new System.Windows.Forms.Button();
+            this.button_SaveReport = new System.Windows.Forms.Button();
+            this.Title_Logo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataView_Clients)).BeginInit();
             this.box_Search.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkbox_Pregnant)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkbox_Medical)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkbox_Waiver)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Title_Logo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Title_Logo
-            // 
-            this.Title_Logo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Title_Logo.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.Title_Logo.Image = ((System.Drawing.Image)(resources.GetObject("Title_Logo.Image")));
-            this.Title_Logo.InitialImage = ((System.Drawing.Image)(resources.GetObject("Title_Logo.InitialImage")));
-            this.Title_Logo.Location = new System.Drawing.Point(0, 0);
-            this.Title_Logo.Margin = new System.Windows.Forms.Padding(0);
-            this.Title_Logo.Name = "Title_Logo";
-            this.Title_Logo.Size = new System.Drawing.Size(1456, 117);
-            this.Title_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Title_Logo.TabIndex = 1;
-            this.Title_Logo.TabStop = false;
             // 
             // dataView_Clients
             // 
@@ -85,23 +70,23 @@
             this.dataView_Clients.AllowUserToDeleteRows = false;
             this.dataView_Clients.AllowUserToResizeColumns = false;
             this.dataView_Clients.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dataView_Clients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            this.dataView_Clients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dataView_Clients.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataView_Clients.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataView_Clients.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataView_Clients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataView_Clients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dataView_Clients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataView_Clients.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dataView_Clients.Location = new System.Drawing.Point(47, 237);
@@ -109,8 +94,8 @@
             this.dataView_Clients.Name = "dataView_Clients";
             this.dataView_Clients.ReadOnly = true;
             this.dataView_Clients.RowHeadersVisible = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataView_Clients.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataView_Clients.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dataView_Clients.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataView_Clients.RowTemplate.DividerHeight = 2;
             this.dataView_Clients.RowTemplate.Height = 35;
@@ -118,21 +103,6 @@
             this.dataView_Clients.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataView_Clients.Size = new System.Drawing.Size(892, 573);
             this.dataView_Clients.TabIndex = 7;
-            // 
-            // button_SaveReport
-            // 
-            this.button_SaveReport.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button_SaveReport.AutoSize = true;
-            this.button_SaveReport.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_SaveReport.BackgroundImage")));
-            this.button_SaveReport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_SaveReport.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button_SaveReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_SaveReport.ForeColor = System.Drawing.Color.White;
-            this.button_SaveReport.Location = new System.Drawing.Point(383, 816);
-            this.button_SaveReport.Name = "button_SaveReport";
-            this.button_SaveReport.Size = new System.Drawing.Size(178, 87);
-            this.button_SaveReport.TabIndex = 8;
-            this.button_SaveReport.UseVisualStyleBackColor = true;
             // 
             // label_ClientList
             // 
@@ -199,55 +169,6 @@
             this.textbox_FName.Name = "textbox_FName";
             this.textbox_FName.Size = new System.Drawing.Size(195, 31);
             this.textbox_FName.TabIndex = 22;
-            // 
-            // checkbox_Pregnant
-            // 
-            this.checkbox_Pregnant.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.empty_checkbox;
-            this.checkbox_Pregnant.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.checkbox_Pregnant.Location = new System.Drawing.Point(220, 300);
-            this.checkbox_Pregnant.Name = "checkbox_Pregnant";
-            this.checkbox_Pregnant.Size = new System.Drawing.Size(41, 41);
-            this.checkbox_Pregnant.TabIndex = 21;
-            this.checkbox_Pregnant.TabStop = false;
-            this.checkbox_Pregnant.Click += new System.EventHandler(this.checkbox_Pregnant_Click);
-            // 
-            // checkbox_Medical
-            // 
-            this.checkbox_Medical.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.empty_checkbox;
-            this.checkbox_Medical.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.checkbox_Medical.Location = new System.Drawing.Point(221, 246);
-            this.checkbox_Medical.Name = "checkbox_Medical";
-            this.checkbox_Medical.Size = new System.Drawing.Size(41, 41);
-            this.checkbox_Medical.TabIndex = 20;
-            this.checkbox_Medical.TabStop = false;
-            this.checkbox_Medical.Click += new System.EventHandler(this.checkbox_Medical_Click);
-            // 
-            // checkbox_Waiver
-            // 
-            this.checkbox_Waiver.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.empty_checkbox;
-            this.checkbox_Waiver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.checkbox_Waiver.Location = new System.Drawing.Point(221, 195);
-            this.checkbox_Waiver.Name = "checkbox_Waiver";
-            this.checkbox_Waiver.Size = new System.Drawing.Size(41, 41);
-            this.checkbox_Waiver.TabIndex = 19;
-            this.checkbox_Waiver.TabStop = false;
-            this.checkbox_Waiver.Click += new System.EventHandler(this.checkbox_Waiver_Click);
-            // 
-            // button_Search
-            // 
-            this.button_Search.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button_Search.AutoSize = true;
-            this.button_Search.BackColor = System.Drawing.Color.Transparent;
-            this.button_Search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Search.BackgroundImage")));
-            this.button_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_Search.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Search.ForeColor = System.Drawing.Color.White;
-            this.button_Search.Location = new System.Drawing.Point(195, 354);
-            this.button_Search.Name = "button_Search";
-            this.button_Search.Size = new System.Drawing.Size(178, 87);
-            this.button_Search.TabIndex = 18;
-            this.button_Search.UseVisualStyleBackColor = false;
             // 
             // label6
             // 
@@ -340,35 +261,21 @@
             this.label_FName.Text = "First Name:";
             this.label_FName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // button_RemoveClient
+            // button_AddClient
             // 
-            this.button_RemoveClient.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button_RemoveClient.AutoSize = true;
-            this.button_RemoveClient.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_RemoveClient.BackgroundImage")));
-            this.button_RemoveClient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_RemoveClient.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button_RemoveClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_RemoveClient.ForeColor = System.Drawing.Color.White;
-            this.button_RemoveClient.Location = new System.Drawing.Point(1244, 816);
-            this.button_RemoveClient.Name = "button_RemoveClient";
-            this.button_RemoveClient.Size = new System.Drawing.Size(178, 87);
-            this.button_RemoveClient.TabIndex = 11;
-            this.button_RemoveClient.UseVisualStyleBackColor = true;
-            // 
-            // button_EditClient
-            // 
-            this.button_EditClient.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button_EditClient.AutoSize = true;
-            this.button_EditClient.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_EditClient.BackgroundImage")));
-            this.button_EditClient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_EditClient.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button_EditClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_EditClient.ForeColor = System.Drawing.Color.White;
-            this.button_EditClient.Location = new System.Drawing.Point(1244, 723);
-            this.button_EditClient.Name = "button_EditClient";
-            this.button_EditClient.Size = new System.Drawing.Size(178, 87);
-            this.button_EditClient.TabIndex = 12;
-            this.button_EditClient.UseVisualStyleBackColor = true;
+            this.button_AddClient.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button_AddClient.AutoSize = true;
+            this.button_AddClient.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_AddClient.BackgroundImage")));
+            this.button_AddClient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_AddClient.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_AddClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_AddClient.ForeColor = System.Drawing.Color.White;
+            this.button_AddClient.Location = new System.Drawing.Point(1043, 816);
+            this.button_AddClient.Name = "button_AddClient";
+            this.button_AddClient.Size = new System.Drawing.Size(178, 87);
+            this.button_AddClient.TabIndex = 14;
+            this.button_AddClient.UseVisualStyleBackColor = true;
+            this.button_AddClient.Click += new System.EventHandler(this.button_AddClient_Click);
             // 
             // button_ViewClient
             // 
@@ -385,20 +292,116 @@
             this.button_ViewClient.TabIndex = 13;
             this.button_ViewClient.UseVisualStyleBackColor = true;
             // 
-            // button_AddClient
+            // button_EditClient
             // 
-            this.button_AddClient.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button_AddClient.AutoSize = true;
-            this.button_AddClient.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_AddClient.BackgroundImage")));
-            this.button_AddClient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_AddClient.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button_AddClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_AddClient.ForeColor = System.Drawing.Color.White;
-            this.button_AddClient.Location = new System.Drawing.Point(1043, 816);
-            this.button_AddClient.Name = "button_AddClient";
-            this.button_AddClient.Size = new System.Drawing.Size(178, 87);
-            this.button_AddClient.TabIndex = 14;
-            this.button_AddClient.UseVisualStyleBackColor = true;
+            this.button_EditClient.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button_EditClient.AutoSize = true;
+            this.button_EditClient.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_EditClient.BackgroundImage")));
+            this.button_EditClient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_EditClient.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_EditClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_EditClient.ForeColor = System.Drawing.Color.White;
+            this.button_EditClient.Location = new System.Drawing.Point(1244, 723);
+            this.button_EditClient.Name = "button_EditClient";
+            this.button_EditClient.Size = new System.Drawing.Size(178, 87);
+            this.button_EditClient.TabIndex = 12;
+            this.button_EditClient.UseVisualStyleBackColor = true;
+            this.button_EditClient.Click += new System.EventHandler(this.button_EditClient_Click);
+            // 
+            // button_RemoveClient
+            // 
+            this.button_RemoveClient.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button_RemoveClient.AutoSize = true;
+            this.button_RemoveClient.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_RemoveClient.BackgroundImage")));
+            this.button_RemoveClient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_RemoveClient.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_RemoveClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_RemoveClient.ForeColor = System.Drawing.Color.White;
+            this.button_RemoveClient.Location = new System.Drawing.Point(1244, 816);
+            this.button_RemoveClient.Name = "button_RemoveClient";
+            this.button_RemoveClient.Size = new System.Drawing.Size(178, 87);
+            this.button_RemoveClient.TabIndex = 11;
+            this.button_RemoveClient.UseVisualStyleBackColor = true;
+            this.button_RemoveClient.Click += new System.EventHandler(this.button_RemoveClient_Click);
+            // 
+            // checkbox_Pregnant
+            // 
+            this.checkbox_Pregnant.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.empty_checkbox;
+            this.checkbox_Pregnant.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkbox_Pregnant.Location = new System.Drawing.Point(220, 300);
+            this.checkbox_Pregnant.Name = "checkbox_Pregnant";
+            this.checkbox_Pregnant.Size = new System.Drawing.Size(41, 41);
+            this.checkbox_Pregnant.TabIndex = 21;
+            this.checkbox_Pregnant.TabStop = false;
+            this.checkbox_Pregnant.Click += new System.EventHandler(this.checkbox_Pregnant_Click);
+            // 
+            // checkbox_Medical
+            // 
+            this.checkbox_Medical.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.empty_checkbox;
+            this.checkbox_Medical.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkbox_Medical.Location = new System.Drawing.Point(221, 246);
+            this.checkbox_Medical.Name = "checkbox_Medical";
+            this.checkbox_Medical.Size = new System.Drawing.Size(41, 41);
+            this.checkbox_Medical.TabIndex = 20;
+            this.checkbox_Medical.TabStop = false;
+            this.checkbox_Medical.Click += new System.EventHandler(this.checkbox_Medical_Click);
+            // 
+            // checkbox_Waiver
+            // 
+            this.checkbox_Waiver.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.empty_checkbox;
+            this.checkbox_Waiver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkbox_Waiver.Location = new System.Drawing.Point(221, 195);
+            this.checkbox_Waiver.Name = "checkbox_Waiver";
+            this.checkbox_Waiver.Size = new System.Drawing.Size(41, 41);
+            this.checkbox_Waiver.TabIndex = 19;
+            this.checkbox_Waiver.TabStop = false;
+            this.checkbox_Waiver.Click += new System.EventHandler(this.checkbox_Waiver_Click);
+            // 
+            // button_Search
+            // 
+            this.button_Search.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button_Search.AutoSize = true;
+            this.button_Search.BackColor = System.Drawing.Color.Transparent;
+            this.button_Search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Search.BackgroundImage")));
+            this.button_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_Search.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Search.ForeColor = System.Drawing.Color.White;
+            this.button_Search.Location = new System.Drawing.Point(195, 354);
+            this.button_Search.Name = "button_Search";
+            this.button_Search.Size = new System.Drawing.Size(178, 87);
+            this.button_Search.TabIndex = 18;
+            this.button_Search.UseVisualStyleBackColor = false;
+            // 
+            // button_SaveReport
+            // 
+            this.button_SaveReport.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button_SaveReport.AutoSize = true;
+            this.button_SaveReport.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_SaveReport.BackgroundImage")));
+            this.button_SaveReport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_SaveReport.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_SaveReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_SaveReport.ForeColor = System.Drawing.Color.White;
+            this.button_SaveReport.Location = new System.Drawing.Point(383, 816);
+            this.button_SaveReport.Name = "button_SaveReport";
+            this.button_SaveReport.Size = new System.Drawing.Size(178, 87);
+            this.button_SaveReport.TabIndex = 8;
+            this.button_SaveReport.UseVisualStyleBackColor = true;
+            // 
+            // Title_Logo
+            // 
+            this.Title_Logo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Title_Logo.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.Title_Logo.Image = ((System.Drawing.Image)(resources.GetObject("Title_Logo.Image")));
+            this.Title_Logo.InitialImage = ((System.Drawing.Image)(resources.GetObject("Title_Logo.InitialImage")));
+            this.Title_Logo.Location = new System.Drawing.Point(0, 0);
+            this.Title_Logo.Margin = new System.Windows.Forms.Padding(0);
+            this.Title_Logo.Name = "Title_Logo";
+            this.Title_Logo.Size = new System.Drawing.Size(1456, 117);
+            this.Title_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Title_Logo.TabIndex = 1;
+            this.Title_Logo.TabStop = false;
             // 
             // ClientsForm
             // 
@@ -424,13 +427,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Clients";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.Title_Logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataView_Clients)).EndInit();
             this.box_Search.ResumeLayout(false);
             this.box_Search.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkbox_Pregnant)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkbox_Medical)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkbox_Waiver)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Title_Logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -67,11 +67,13 @@ namespace Software_Development_Capstone
                 var results = clients.ToList();
 
                 // Sample data. REMOVE FOR PRODUCTION
+                /*
                 var sample1 = new ClientList { First = "Jane", Last = "Doe", Phone = "(111) 111-1111", Email = "JDow@sample.com", Waiver = true, Injuries = false, MedicalCare = false, Pregnant = false, Credits = 0 };
                 var sample2 = new ClientList { First = "John", Last = "Doe", Phone = "(111) 222-2222", Email = "JohnD@sample.com", Waiver = true, Injuries = true, MedicalCare = false, Pregnant = false, Credits = 2 };
 
                 results.Add(sample1);
                 results.Add(sample2);
+                */
 
                 dataView_Clients.DataSource = results;
             }

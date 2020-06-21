@@ -115,6 +115,7 @@
             this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(1000, 700);
             this.Name = "Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MC2 Pilates";
             this.menu_bar.ResumeLayout(false);
             this.menu_bar.PerformLayout();
