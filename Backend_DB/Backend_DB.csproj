@@ -117,7 +117,7 @@
       <DependentUpon>Database.edmx</DependentUpon>
     </Content>
     <Content Include="Database.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Database.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -125,7 +125,7 @@
       <LastGenOutput>Database.cs</LastGenOutput>
     </Content>
     <Content Include="Database_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
   </ItemGroup>
