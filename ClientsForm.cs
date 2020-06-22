@@ -133,6 +133,7 @@ namespace Software_Development_Capstone
         {
             this.Enabled = true;
             parent.Enabled = true;
+            Update_datagrid();
         }
 
         private void button_EditClient_Click(object sender, EventArgs e)

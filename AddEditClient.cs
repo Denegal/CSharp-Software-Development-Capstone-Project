@@ -56,16 +56,18 @@ namespace Software_Development_Capstone
                 if (modify_client.Pregnant == 1) { checkbox_Pregnant.BackgroundImage = Software_Development_Capstone.Properties.Resources.checked_checkbox; PregnantChecked = true; }
                 if (modify_client.MedicalCare == 1) { checkbox_Medical.BackgroundImage = Software_Development_Capstone.Properties.Resources.checked_checkbox; MedicalChecked = true; }
 
-                if (modify_client.Injuries != null)
+                if (modify_client.Injuries != "")
                 {
                     InjuryChecked = true;
+                    checkbox_Injury.BackgroundImage = Software_Development_Capstone.Properties.Resources.checked_checkbox;
                     textbox_Injuries.Enabled = true;
                     textbox_Injuries.Text = modify_client.Injuries;
                 }
 
-                if (modify_client.MedicalHistory != null)
+                if (modify_client.MedicalHistory != "")
                 {
                     MedicalChecked = true;
+                    checkbox_History.BackgroundImage = Software_Development_Capstone.Properties.Resources.checked_checkbox;
                     combo_History.Enabled = true;
                     button_Add.Enabled = true;
                     button_Remove.Enabled = true;
@@ -156,7 +158,7 @@ namespace Software_Development_Capstone
         {
             if (combo_History.SelectedItem != null && !textbox_MedicalHistory.Text.Contains(combo_History.SelectedItem.ToString()))
             {
-                textbox_MedicalHistory.Text += combo_History.SelectedItem.ToString() + "\n";
+                textbox_MedicalHistory.Text += combo_History.SelectedItem.ToString() + "\r\n";
             }
         }
 
@@ -164,7 +166,7 @@ namespace Software_Development_Capstone
         {
             if (combo_History.SelectedItem != null && textbox_MedicalHistory.Text.Contains(combo_History.SelectedItem.ToString()))
             {
-                textbox_MedicalHistory.Text.Replace(combo_History.SelectedItem.ToString() + "\n","");
+                textbox_MedicalHistory.Text = textbox_MedicalHistory.Text.Replace(combo_History.SelectedItem.ToString() + "\r\n","");
             }
         }
 
@@ -254,8 +256,8 @@ namespace Software_Development_Capstone
             // Check to ensure that Phone fields only have integer values
             try
             {
-                int.Parse(textbox_Phone.Text);
-                int.Parse(textbox_EContactPhone.Text);
+                long.Parse(textbox_Phone.Text);
+                long.Parse(textbox_EContactPhone.Text);
             }
             catch
             {
