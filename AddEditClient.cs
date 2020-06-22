@@ -256,7 +256,10 @@ namespace Software_Development_Capstone
             // Check to ensure that Phone fields only have integer values
             try
             {
-                long.Parse(textbox_Phone.Text);
+                if (textbox_Phone.Text != "")
+                {
+                    long.Parse(textbox_Phone.Text);
+                }
                 long.Parse(textbox_EContactPhone.Text);
             }
             catch
@@ -268,6 +271,12 @@ namespace Software_Development_Capstone
             if (textbox_Email.Text != "" && !validEmail(textbox_Email.Text))
             {
                 throw new ArgumentException("Email not valid.");
+            }
+
+            // Check to make sure either phone OR email is provided
+            if (textbox_Phone.Text == "" && textbox_Email.Text == "")
+            {
+                throw new MissingFieldException("Either Phone or Email must be provided.");
             }
 
 
