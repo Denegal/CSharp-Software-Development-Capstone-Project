@@ -5,7 +5,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -236,9 +238,68 @@ namespace Software_Development_Capstone
             this.Close();
         }
 
+        // Validate all the fields in the form to ensure it can be added to the database without issue.
         private void validate_form()
         {
+
+            // Check if any required fields were left blank
+            if (textbox_FName.Text == "" || textbox_LName.Text == "" || textbox_EContact.Text == "" || textbox_EContactPhone.Text == "")
+            {
+                throw new MissingFieldException("Client First and Last Name, and Emergency Contact information are required.");
+            }
+
+            // Check to ensure that Phone fields only have integer values
+            try
+            {
+                int.Parse(textbox_Phone.Text);
+                int.Parse(textbox_EContactPhone.Text);
+            }
+            catch
+            {
+                throw new ArgumentException("Phone or Emergency Contact Phone field not valid. Please ensure field contains only numbers. Ex: 1234567890");
+            }
+
+            if (!validEmail(textbox_Email.Text))
+            {
+                throw new ArgumentException("Email not valid.");
+            }
+
+
             return;
+        }
+
+        private bool validEmail(string entry)
+        {
+            // MicrosoftDocs recommended RegEx expression to check for valid email address.
+            // Taken from: https://docs.microsoft.com/en-us/dotnet/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format
+            try
+            {
+                return Regex.IsMatch(entry,
+                    @"^(?("")("".+?(?<!\\)""@)|(([0-9a-z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-z])@))" +
+                    @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-z][-0-9a-z]*[0-9a-z]*\.)+[a-z0-9][\-a-z0-9]{0,22}[a-z0-9]))$",
+                    RegexOptions.IgnoreCase, TimeSpan.FromMilliseconds(500));
+            }
+            catch (RegexMatchTimeoutException)
+            {
+                return false;
+            }
+        }
+
+        // Only allow numbers to be put into the phone fields
+        private void textbox_Phone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void textbox_EContactPhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
