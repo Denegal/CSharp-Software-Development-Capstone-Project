@@ -77,6 +77,7 @@ namespace Software_Development_Capstone
 
         }
 
+        // Code for enabling checkbox functionality
         private void checkbox_Waiver_Click(object sender, EventArgs e)
         {
             if (WaiverChecked)
@@ -148,6 +149,8 @@ namespace Software_Development_Capstone
             button_Add.Enabled = HistoryChecked;
             button_Remove.Enabled = HistoryChecked;
         }
+        // End of code for enabling checkbox functionality
+
 
         private void button_Add_Click(object sender, EventArgs e)
         {
@@ -256,10 +259,11 @@ namespace Software_Development_Capstone
             }
             catch
             {
-                throw new ArgumentException("Phone or Emergency Contact Phone field not valid. Please ensure field contains only numbers. Ex: 1234567890");
+                throw new ArgumentException("Phone or Emergency Contact Phone field is not valid. Please ensure field contains only numbers. Ex: 1234567890");
             }
 
-            if (!validEmail(textbox_Email.Text))
+            // Check to ensure that the email field is valid IF it is not empty
+            if (textbox_Email.Text != "" && !validEmail(textbox_Email.Text))
             {
                 throw new ArgumentException("Email not valid.");
             }
