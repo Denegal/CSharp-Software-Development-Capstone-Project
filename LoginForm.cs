@@ -57,5 +57,13 @@ namespace Software_Development_Capstone
                 textbox_username.Enabled = true;
             }
         }
+
+        private void textbox_password_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Convert.ToInt32(e.KeyChar) == 13)
+            {
+                button_login_Click(sender, new EventArgs());
+            }
+        }
     }
 }
