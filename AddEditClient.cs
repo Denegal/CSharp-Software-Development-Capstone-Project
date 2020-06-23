@@ -66,7 +66,7 @@ namespace Software_Development_Capstone
 
                 if (modify_client.MedicalHistory != "")
                 {
-                    MedicalChecked = true;
+                    HistoryChecked = true;
                     checkbox_History.BackgroundImage = Software_Development_Capstone.Properties.Resources.checked_checkbox;
                     combo_History.Enabled = true;
                     button_Add.Enabled = true;
