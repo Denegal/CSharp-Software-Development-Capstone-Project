@@ -42,7 +42,7 @@ namespace Software_Development_Capstone
             dataView_Clients.AutoResizeColumns();
         }
 
-        private void Update_datagrid()
+        private void Update_datagrid(bool filter=false)
         {
 
             //TODO: Look at making list sortable when dataview column headers are clicked
@@ -67,14 +67,20 @@ namespace Software_Development_Capstone
 
                 var results = clients.ToList();
 
-                // Sample data. REMOVE FOR PRODUCTION
-                /*
-                var sample1 = new ClientList { First = "Jane", Last = "Doe", Phone = "(111) 111-1111", Email = "JDow@sample.com", Waiver = true, Injuries = false, MedicalCare = false, Pregnant = false, Credits = 0 };
-                var sample2 = new ClientList { First = "John", Last = "Doe", Phone = "(111) 222-2222", Email = "JohnD@sample.com", Waiver = true, Injuries = true, MedicalCare = false, Pregnant = false, Credits = 2 };
+                // if filtering results, edit the list before updating the dataview
+                // use of lambda functions here greatly decreases the code size and increases readability
+                // each line can be read as 'remove all clients where the client does not contain what is being searched for'.
+                if (filter)
+                {
+                    if (textbox_FName.Text != "") { results.RemoveAll(client => !client.First.ToLower().Contains(textbox_FName.Text.ToLower())); }
+                    if (textbox_LName.Text != "") { results.RemoveAll(client => !client.Last.ToLower().Contains(textbox_LName.Text.ToLower())); }
+                    if (textbox_Phone.Text != "") { results.RemoveAll(client => !client.Phone.Contains(textbox_Phone.Text)); }
+                    if (textbox_Email.Text != "") { results.RemoveAll(client => !client.Email.ToLower().Contains(textbox_Email.Text.ToLower())); }
+                    if (WaiverChecked) { results.RemoveAll(client => !client.Waiver); }
+                    if (PregnantChecked) { results.RemoveAll(client => !client.Pregnant); }
+                    if (MedicalChecked) { results.RemoveAll(client => !client.MedicalCare); }
+                }
 
-                results.Add(sample1);
-                results.Add(sample2);
-                */
 
                 dataView_Clients.DataSource = results;
             }
@@ -191,5 +197,7 @@ namespace Software_Development_Capstone
             this.Enabled = false;
             parent.Enabled = false;
         }
+
+        private void button_Search_Click(object sender, EventArgs e) => Update_datagrid(true);
     }
 }

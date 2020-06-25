@@ -218,6 +218,7 @@
             this.button_Search.Size = new System.Drawing.Size(178, 87);
             this.button_Search.TabIndex = 18;
             this.button_Search.UseVisualStyleBackColor = false;
+            this.button_Search.Click += new System.EventHandler(this.button_Search_Click);
             // 
             // label6
             // 
