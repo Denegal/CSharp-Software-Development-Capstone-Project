@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FinanceForm));
             this.label_FinanceList = new System.Windows.Forms.Label();
             this.dataView_Finance = new System.Windows.Forms.DataGridView();
@@ -44,6 +44,9 @@
             this.label_DTo = new System.Windows.Forms.Label();
             this.label_AFrom = new System.Windows.Forms.Label();
             this.textbox_Desc = new System.Windows.Forms.TextBox();
+            this.checkbox_Expense = new System.Windows.Forms.PictureBox();
+            this.checkbox_Income = new System.Windows.Forms.PictureBox();
+            this.button_Search = new System.Windows.Forms.Button();
             this.label_Type = new System.Windows.Forms.Label();
             this.label_Expense = new System.Windows.Forms.Label();
             this.label_Income = new System.Windows.Forms.Label();
@@ -54,10 +57,7 @@
             this.label_Total = new System.Windows.Forms.Label();
             this.button_AddIncome = new System.Windows.Forms.Button();
             this.button_AddExpense = new System.Windows.Forms.Button();
-            this.button_RemoveExpense = new System.Windows.Forms.Button();
-            this.checkbox_Expense = new System.Windows.Forms.PictureBox();
-            this.checkbox_Income = new System.Windows.Forms.PictureBox();
-            this.button_Search = new System.Windows.Forms.Button();
+            this.button_Remove = new System.Windows.Forms.Button();
             this.button_SaveReport = new System.Windows.Forms.Button();
             this.Title_Logo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataView_Finance)).BeginInit();
@@ -84,23 +84,23 @@
             this.dataView_Finance.AllowUserToDeleteRows = false;
             this.dataView_Finance.AllowUserToResizeColumns = false;
             this.dataView_Finance.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            this.dataView_Finance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dataView_Finance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataView_Finance.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataView_Finance.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataView_Finance.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataView_Finance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataView_Finance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataView_Finance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataView_Finance.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dataView_Finance.Location = new System.Drawing.Point(47, 237);
@@ -109,8 +109,8 @@
             this.dataView_Finance.Name = "dataView_Finance";
             this.dataView_Finance.ReadOnly = true;
             this.dataView_Finance.RowHeadersVisible = false;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataView_Finance.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataView_Finance.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataView_Finance.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataView_Finance.RowTemplate.DividerHeight = 2;
             this.dataView_Finance.RowTemplate.Height = 35;
@@ -142,7 +142,7 @@
             this.box_Search.Controls.Add(this.label_DFrom);
             this.box_Search.Controls.Add(this.label_Date);
             this.box_Search.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.box_Search.Location = new System.Drawing.Point(993, 237);
+            this.box_Search.Location = new System.Drawing.Point(979, 237);
             this.box_Search.Name = "box_Search";
             this.box_Search.Size = new System.Drawing.Size(464, 480);
             this.box_Search.TabIndex = 15;
@@ -247,6 +247,42 @@
             this.textbox_Desc.Name = "textbox_Desc";
             this.textbox_Desc.Size = new System.Drawing.Size(271, 31);
             this.textbox_Desc.TabIndex = 25;
+            // 
+            // checkbox_Expense
+            // 
+            this.checkbox_Expense.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.empty_checkbox;
+            this.checkbox_Expense.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkbox_Expense.Location = new System.Drawing.Point(388, 16);
+            this.checkbox_Expense.Name = "checkbox_Expense";
+            this.checkbox_Expense.Size = new System.Drawing.Size(41, 41);
+            this.checkbox_Expense.TabIndex = 20;
+            this.checkbox_Expense.TabStop = false;
+            // 
+            // checkbox_Income
+            // 
+            this.checkbox_Income.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.empty_checkbox;
+            this.checkbox_Income.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkbox_Income.Location = new System.Drawing.Point(166, 16);
+            this.checkbox_Income.Name = "checkbox_Income";
+            this.checkbox_Income.Size = new System.Drawing.Size(41, 41);
+            this.checkbox_Income.TabIndex = 19;
+            this.checkbox_Income.TabStop = false;
+            // 
+            // button_Search
+            // 
+            this.button_Search.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button_Search.AutoSize = true;
+            this.button_Search.BackColor = System.Drawing.Color.Transparent;
+            this.button_Search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Search.BackgroundImage")));
+            this.button_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_Search.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Search.ForeColor = System.Drawing.Color.White;
+            this.button_Search.Location = new System.Drawing.Point(280, 365);
+            this.button_Search.Name = "button_Search";
+            this.button_Search.Size = new System.Drawing.Size(178, 87);
+            this.button_Search.TabIndex = 18;
+            this.button_Search.UseVisualStyleBackColor = false;
             // 
             // label_Type
             // 
@@ -386,57 +422,21 @@
             this.button_AddExpense.UseVisualStyleBackColor = true;
             this.button_AddExpense.Click += new System.EventHandler(this.button_AddExpense_Click);
             // 
-            // button_RemoveExpense
+            // button_Remove
             // 
-            this.button_RemoveExpense.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button_RemoveExpense.AutoSize = true;
-            this.button_RemoveExpense.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_RemoveExpense.BackgroundImage")));
-            this.button_RemoveExpense.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_RemoveExpense.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button_RemoveExpense.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_RemoveExpense.ForeColor = System.Drawing.Color.White;
-            this.button_RemoveExpense.Location = new System.Drawing.Point(1140, 816);
-            this.button_RemoveExpense.Name = "button_RemoveExpense";
-            this.button_RemoveExpense.Size = new System.Drawing.Size(178, 87);
-            this.button_RemoveExpense.TabIndex = 16;
-            this.button_RemoveExpense.UseVisualStyleBackColor = true;
-            this.button_RemoveExpense.Click += new System.EventHandler(this.button_RemoveExpense_Click);
-            // 
-            // checkbox_Expense
-            // 
-            this.checkbox_Expense.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.empty_checkbox;
-            this.checkbox_Expense.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.checkbox_Expense.Location = new System.Drawing.Point(388, 16);
-            this.checkbox_Expense.Name = "checkbox_Expense";
-            this.checkbox_Expense.Size = new System.Drawing.Size(41, 41);
-            this.checkbox_Expense.TabIndex = 20;
-            this.checkbox_Expense.TabStop = false;
-            // 
-            // checkbox_Income
-            // 
-            this.checkbox_Income.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.empty_checkbox;
-            this.checkbox_Income.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.checkbox_Income.Location = new System.Drawing.Point(166, 16);
-            this.checkbox_Income.Name = "checkbox_Income";
-            this.checkbox_Income.Size = new System.Drawing.Size(41, 41);
-            this.checkbox_Income.TabIndex = 19;
-            this.checkbox_Income.TabStop = false;
-            // 
-            // button_Search
-            // 
-            this.button_Search.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button_Search.AutoSize = true;
-            this.button_Search.BackColor = System.Drawing.Color.Transparent;
-            this.button_Search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Search.BackgroundImage")));
-            this.button_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_Search.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Search.ForeColor = System.Drawing.Color.White;
-            this.button_Search.Location = new System.Drawing.Point(280, 365);
-            this.button_Search.Name = "button_Search";
-            this.button_Search.Size = new System.Drawing.Size(178, 87);
-            this.button_Search.TabIndex = 18;
-            this.button_Search.UseVisualStyleBackColor = false;
+            this.button_Remove.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button_Remove.AutoSize = true;
+            this.button_Remove.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Remove.BackgroundImage")));
+            this.button_Remove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_Remove.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_Remove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Remove.ForeColor = System.Drawing.Color.White;
+            this.button_Remove.Location = new System.Drawing.Point(1140, 816);
+            this.button_Remove.Name = "button_Remove";
+            this.button_Remove.Size = new System.Drawing.Size(178, 87);
+            this.button_Remove.TabIndex = 16;
+            this.button_Remove.UseVisualStyleBackColor = true;
+            this.button_Remove.Click += new System.EventHandler(this.button_Remove_Click);
             // 
             // button_SaveReport
             // 
@@ -478,7 +478,7 @@
             this.Controls.Add(this.label_Total);
             this.Controls.Add(this.button_AddIncome);
             this.Controls.Add(this.button_AddExpense);
-            this.Controls.Add(this.button_RemoveExpense);
+            this.Controls.Add(this.button_Remove);
             this.Controls.Add(this.box_Search);
             this.Controls.Add(this.label_FinanceList);
             this.Controls.Add(this.button_SaveReport);
@@ -511,7 +511,7 @@
         private System.Windows.Forms.DataGridView dataView_Finance;
         private System.Windows.Forms.Button button_AddIncome;
         private System.Windows.Forms.Button button_AddExpense;
-        private System.Windows.Forms.Button button_RemoveExpense;
+        private System.Windows.Forms.Button button_Remove;
         private System.Windows.Forms.GroupBox box_Search;
         private System.Windows.Forms.TextBox textbox_Desc;
         private System.Windows.Forms.PictureBox checkbox_Expense;

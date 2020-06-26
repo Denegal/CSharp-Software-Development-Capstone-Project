@@ -55,7 +55,7 @@ namespace Software_Development_Capstone
                                select new FinanceList
                                {
                                    ID = finance.FinanceId,
-                                   IncomeOrExpense = finance.IncomeOrExpense,
+                                   IncomeExpense = finance.IncomeOrExpense,
                                    Date = finance.FinanceDate,
                                    Amount = finance.Amount,
                                    Type = finance.Type,
@@ -71,7 +71,7 @@ namespace Software_Development_Capstone
                 decimal total = new decimal();
                 foreach (DataGridViewRow row in dataView_Finance.Rows)
                 {
-                    total += decimal.Parse(row.Cells[1].Value.ToString());
+                    total += decimal.Parse(row.Cells[2].Value.ToString());
                 }
                 label_Total.Text = "Total:   $ " + total;
             }
@@ -117,7 +117,7 @@ namespace Software_Development_Capstone
             parent.Enabled = false;
         }
 
-        private void button_RemoveExpense_Click(object sender, EventArgs e)
+        private void button_Remove_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show($"Are you sure you wish to remove the selected financial transaction? This action cannot be undone.", "Remove Finance", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
