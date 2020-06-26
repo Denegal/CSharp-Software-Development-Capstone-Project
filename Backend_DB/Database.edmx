@@ -27,7 +27,7 @@
           <Key>
             <PropertyRef Name="FinanceId" />
           </Key>
-          <Property Name="FinanceId" Type="int" Nullable="false" />
+          <Property Name="FinanceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IncomeOrExpense" Type="varchar" MaxLength="7" Nullable="false" />
           <Property Name="FinanceDate" Type="date" Nullable="false" />
           <Property Name="Amount" Type="decimal" Precision="8" Scale="2" Nullable="false" />
@@ -39,7 +39,7 @@
           <Key>
             <PropertyRef Name="UserId" />
           </Key>
-          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="PasswordHash" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
@@ -72,7 +72,7 @@
           <Key>
             <PropertyRef Name="ClientId" />
           </Key>
-          <Property Name="ClientId" Type="Int32" Nullable="false" />
+          <Property Name="ClientId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="FName" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Phone" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="Email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
@@ -100,7 +100,7 @@
           <Key>
             <PropertyRef Name="UserId" />
           </Key>
-          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="PasswordHash" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
@@ -108,7 +108,7 @@
           <Key>
             <PropertyRef Name="FinanceId" />
           </Key>
-          <Property Name="FinanceId" Type="Int32" Nullable="false" />
+          <Property Name="FinanceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="FinanceDate" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Amount" Type="Decimal" Nullable="false" Precision="8" Scale="2" />
           <Property Name="Desc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />

@@ -49,26 +49,22 @@ namespace Software_Development_Capstone
             using (var context = new Backend_DB.DBEntities())
             {
                 var finances = from finance in context.Finances
-                               join clients in context.Clients on finance.Client equals clients.ClientId
+                               join clients in context.Clients on finance.Client equals clients.ClientId into clients
+                               from Client in clients.DefaultIfEmpty()
                                orderby finance.FinanceDate
                                select new FinanceList
                                {
+                                   ID = finance.FinanceId,
                                    IncomeOrExpense = finance.IncomeOrExpense,
                                    Date = finance.FinanceDate,
                                    Amount = finance.Amount,
+                                   Type = finance.Type,
                                    Desc = finance.Desc,   
                                    Client = finance.Client == null ? "" : finance.Client1.FName + " " + finance.Client1.LName,
 
                                };
 
                 var results = finances.ToList();
-
-                // Sample data. REMOVE FOR PRODUCTION
-                var sample1 = new FinanceList { IncomeOrExpense = "Income", Date = new DateTime(2020, 6, 14), Amount = decimal.Parse("35.00"), Desc = "In home reformer class", Client = "Jane Doe", Type = "Classes" };
-                var sample2 = new FinanceList { IncomeOrExpense = "Expense", Date = new DateTime(2020, 6, 16), Amount = decimal.Parse("-40.00"), Desc = "Private with Chris", Client = "", Type = "Education" };
-
-                results.Add(sample1);
-                results.Add(sample2);
 
                 dataView_Finance.DataSource = results;
 
@@ -93,6 +89,50 @@ namespace Software_Development_Capstone
                     e.CellStyle.ForeColor = Color.DarkGreen;
                 }
 
+        }
+
+        private void button_AddIncome_Click(object sender, EventArgs e)
+        {
+
+            AddIncomeExpense addincomeform = new AddIncomeExpense(true);
+            addincomeform.Show(this);
+            addincomeform.FormClosed += new FormClosedEventHandler(EnableForm);
+            this.Enabled = false;
+            parent.Enabled = false;
+        }
+
+        private void EnableForm(object sender, FormClosedEventArgs e)
+        {
+            this.Enabled = true;
+            parent.Enabled = true;
+            Update_datagrid();
+        }
+
+        private void button_AddExpense_Click(object sender, EventArgs e)
+        {
+            AddIncomeExpense addexpenseform = new AddIncomeExpense(false);
+            addexpenseform.Show(this);
+            addexpenseform.FormClosed += new FormClosedEventHandler(EnableForm);
+            this.Enabled = false;
+            parent.Enabled = false;
+        }
+
+        private void button_RemoveExpense_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show($"Are you sure you wish to remove the selected financial transaction? This action cannot be undone.", "Remove Finance", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Yes)
+            {
+                using (var context = new Backend_DB.DBEntities())
+                {
+                    var removeid = int.Parse(dataView_Finance.SelectedCells[0].Value.ToString());
+                    
+                    var removeFinance = (from finance in context.Finances where finance.FinanceId == removeid select finance).First();
+                    context.Finances.Remove(removeFinance);
+                    context.SaveChanges();
+                    Update_datagrid();
+                }
+            }
         }
     }
 }
