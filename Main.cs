@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace Software_Development_Capstone
@@ -96,6 +97,46 @@ namespace Software_Development_Capstone
             FinanceForm financepage = new FinanceForm(this) { MdiParent = this };
             financepage.PerformAutoScale();
             financepage.Show();
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            this.ActiveMdiChild.Enabled = false;
+            menu_bar.Enabled = false;
+
+            ChangePasswordForm changepass = new ChangePasswordForm();
+            changepass.MdiParent = this;
+            changepass.Show();
+
+            changepass.FormClosed += new FormClosedEventHandler(EnableForm);
+        }
+
+        private void EnableForm(object sender, FormClosedEventArgs e)
+        {
+            this.ActiveMdiChild.Enabled = true;
+            menu_bar.Enabled = true;
+        }
+
+        private void logoutToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            //close any child form except the login form.
+            foreach (Form child in MdiChildren)
+            {
+                if (child != loginform)
+                {
+                    child.Close();
+                }
+            }
+
+            menu_bar.Enabled = false;
+            Program.LoggedinUser = null;
+
+            MinimumSize = new System.Drawing.Size(1000, 700);
+            Size = new System.Drawing.Size(1000, 700);
+
+            loginform.WindowState = FormWindowState.Maximized;
+            loginform.Show();
         }
     }
 }

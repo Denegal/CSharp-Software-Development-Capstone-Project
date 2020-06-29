@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChangePasswordForm));
             this.label_Title = new System.Windows.Forms.Label();
             this.group_Client = new System.Windows.Forms.GroupBox();
+            this.textbox_NewPass2 = new System.Windows.Forms.TextBox();
+            this.label_NewPass2 = new System.Windows.Forms.Label();
             this.label_OldPaass = new System.Windows.Forms.Label();
             this.textbox_NewPass1 = new System.Windows.Forms.TextBox();
             this.textbox_LName = new System.Windows.Forms.TextBox();
             this.label_NewPass1 = new System.Windows.Forms.Label();
             this.textbox_OldPass = new System.Windows.Forms.TextBox();
-            this.label_NewPass2 = new System.Windows.Forms.Label();
-            this.textbox_NewPass2 = new System.Windows.Forms.TextBox();
             this.button_Save = new System.Windows.Forms.Button();
             this.button_Cancel = new System.Windows.Forms.Button();
             this.group_Client.SuspendLayout();
@@ -45,6 +45,7 @@
             // 
             // label_Title
             // 
+            this.label_Title.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.label_Title.Font = new System.Drawing.Font("Tempus Sans ITC", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Title.Location = new System.Drawing.Point(0, 0);
             this.label_Title.Name = "label_Title";
@@ -68,6 +69,31 @@
             this.group_Client.TabIndex = 3;
             this.group_Client.TabStop = false;
             // 
+            // textbox_NewPass2
+            // 
+            this.textbox_NewPass2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textbox_NewPass2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textbox_NewPass2.Location = new System.Drawing.Point(218, 116);
+            this.textbox_NewPass2.MaxLength = 10;
+            this.textbox_NewPass2.Name = "textbox_NewPass2";
+            this.textbox_NewPass2.PasswordChar = '*';
+            this.textbox_NewPass2.Size = new System.Drawing.Size(247, 31);
+            this.textbox_NewPass2.TabIndex = 34;
+            this.textbox_NewPass2.UseSystemPasswordChar = true;
+            // 
+            // label_NewPass2
+            // 
+            this.label_NewPass2.AutoSize = true;
+            this.label_NewPass2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_NewPass2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_NewPass2.Location = new System.Drawing.Point(10, 116);
+            this.label_NewPass2.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            this.label_NewPass2.Name = "label_NewPass2";
+            this.label_NewPass2.Size = new System.Drawing.Size(202, 25);
+            this.label_NewPass2.TabIndex = 33;
+            this.label_NewPass2.Text = "Retype Password:";
+            this.label_NewPass2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // label_OldPaass
             // 
             this.label_OldPaass.AutoSize = true;
@@ -85,7 +111,7 @@
             // 
             this.textbox_NewPass1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textbox_NewPass1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textbox_NewPass1.Location = new System.Drawing.Point(210, 79);
+            this.textbox_NewPass1.Location = new System.Drawing.Point(218, 79);
             this.textbox_NewPass1.MaxLength = 10;
             this.textbox_NewPass1.Name = "textbox_NewPass1";
             this.textbox_NewPass1.PasswordChar = '*';
@@ -118,38 +144,13 @@
             // textbox_OldPass
             // 
             this.textbox_OldPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textbox_OldPass.Location = new System.Drawing.Point(210, 16);
+            this.textbox_OldPass.Location = new System.Drawing.Point(218, 16);
             this.textbox_OldPass.MaxLength = 15;
             this.textbox_OldPass.Name = "textbox_OldPass";
             this.textbox_OldPass.PasswordChar = '*';
             this.textbox_OldPass.Size = new System.Drawing.Size(247, 31);
             this.textbox_OldPass.TabIndex = 30;
             this.textbox_OldPass.UseSystemPasswordChar = true;
-            // 
-            // label_NewPass2
-            // 
-            this.label_NewPass2.AutoSize = true;
-            this.label_NewPass2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_NewPass2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label_NewPass2.Location = new System.Drawing.Point(10, 116);
-            this.label_NewPass2.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
-            this.label_NewPass2.Name = "label_NewPass2";
-            this.label_NewPass2.Size = new System.Drawing.Size(202, 25);
-            this.label_NewPass2.TabIndex = 33;
-            this.label_NewPass2.Text = "Retype Password:";
-            this.label_NewPass2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // textbox_NewPass2
-            // 
-            this.textbox_NewPass2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textbox_NewPass2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textbox_NewPass2.Location = new System.Drawing.Point(210, 116);
-            this.textbox_NewPass2.MaxLength = 10;
-            this.textbox_NewPass2.Name = "textbox_NewPass2";
-            this.textbox_NewPass2.PasswordChar = '*';
-            this.textbox_NewPass2.Size = new System.Drawing.Size(247, 31);
-            this.textbox_NewPass2.TabIndex = 34;
-            this.textbox_NewPass2.UseSystemPasswordChar = true;
             // 
             // button_Save
             // 
@@ -187,7 +188,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(116)))), ((int)(((byte)(235)))));
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(502, 351);
             this.ControlBox = false;
             this.Controls.Add(this.button_Save);
