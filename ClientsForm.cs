@@ -186,7 +186,7 @@ namespace Software_Development_Capstone
 
             using (var context = new Backend_DB.DBEntities())
             {
-                var firstname = dataView_Clients.SelectedCells[0].Value.ToString();
+                var firstname = dataView_Clients.SelectedCells[1].Value.ToString();
                 var lastname = dataView_Clients.SelectedCells[1].Value.ToString();
                 id = (from clients in context.Clients where clients.FName == firstname && clients.LName == lastname select clients).First().ClientId;
             }

@@ -36,7 +36,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button_prepaid = new System.Windows.Forms.Button();
             this.button_checkin = new System.Windows.Forms.Button();
-            this.button_Management = new System.Windows.Forms.Button();
             this.button_Finance = new System.Windows.Forms.Button();
             this.button_Clients = new System.Windows.Forms.Button();
             this.Title_Logo = new System.Windows.Forms.PictureBox();
@@ -129,21 +128,6 @@
             this.button_checkin.TabIndex = 4;
             this.button_checkin.UseVisualStyleBackColor = true;
             // 
-            // button_Management
-            // 
-            this.button_Management.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_Management.AutoSize = true;
-            this.button_Management.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Management.BackgroundImage")));
-            this.button_Management.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_Management.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button_Management.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Management.ForeColor = System.Drawing.Color.White;
-            this.button_Management.Location = new System.Drawing.Point(1094, 465);
-            this.button_Management.Name = "button_Management";
-            this.button_Management.Size = new System.Drawing.Size(253, 109);
-            this.button_Management.TabIndex = 3;
-            this.button_Management.UseVisualStyleBackColor = true;
-            // 
             // button_Finance
             // 
             this.button_Finance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -202,7 +186,6 @@
             this.Controls.Add(this.dataView_Clients);
             this.Controls.Add(this.button_prepaid);
             this.Controls.Add(this.button_checkin);
-            this.Controls.Add(this.button_Management);
             this.Controls.Add(this.button_Finance);
             this.Controls.Add(this.button_Clients);
             this.Controls.Add(this.Title_Logo);
@@ -226,7 +209,6 @@
         private System.Windows.Forms.PictureBox Title_Logo;
         private System.Windows.Forms.Button button_Clients;
         private System.Windows.Forms.Button button_Finance;
-        private System.Windows.Forms.Button button_Management;
         private System.Windows.Forms.Button button_checkin;
         private System.Windows.Forms.Button button_prepaid;
         private System.Windows.Forms.DataGridView dataView_Clients;
