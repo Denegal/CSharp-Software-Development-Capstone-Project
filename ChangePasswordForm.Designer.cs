@@ -196,8 +196,11 @@
             this.Controls.Add(this.group_Client);
             this.Controls.Add(this.label_Title);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Location = new System.Drawing.Point(500, 500);
+            this.MaximumSize = new System.Drawing.Size(508, 357);
             this.Name = "ChangePasswordForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.TopMost = true;
             this.group_Client.ResumeLayout(false);
             this.group_Client.PerformLayout();
             this.ResumeLayout(false);

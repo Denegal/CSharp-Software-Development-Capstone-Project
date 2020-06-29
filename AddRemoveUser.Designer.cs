@@ -210,8 +210,11 @@
             this.Controls.Add(this.group_User);
             this.Controls.Add(this.label_Title);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Location = new System.Drawing.Point(50, 100);
+            this.MaximumSize = new System.Drawing.Size(508, 357);
             this.Name = "AddRemoveUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.TopMost = true;
             this.group_User.ResumeLayout(false);
             this.group_User.PerformLayout();
             this.ResumeLayout(false);

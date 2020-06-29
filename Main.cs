@@ -114,11 +114,15 @@ namespace Software_Development_Capstone
 
         private void EnableForm(object sender, FormClosedEventArgs e)
         {
-            this.ActiveMdiChild.Enabled = true;
+            HomePageForm homePage = new HomePageForm(this);
+
+            homePage.MdiParent = this;
+            homePage.PerformAutoScale();
+            homePage.Show();
             menu_bar.Enabled = true;
         }
 
-        private void logoutToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //close any child form except the login form.
             foreach (Form child in MdiChildren)
@@ -139,13 +143,20 @@ namespace Software_Development_Capstone
             loginform.Show();
         }
 
-        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        private void addUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.ActiveMdiChild.Enabled = false;
+            foreach (Form child in MdiChildren)
+            {
+                if (child != loginform)
+                {
+                    child.Close();
+                }
+            }
             menu_bar.Enabled = false;
 
             AddRemoveUser adduser = new AddRemoveUser();
             adduser.MdiParent = this;
+            adduser.WindowState = FormWindowState.Normal;
             adduser.Show();
 
             adduser.FormClosed += new FormClosedEventHandler(EnableForm);
@@ -153,14 +164,21 @@ namespace Software_Development_Capstone
 
         private void removeUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.ActiveMdiChild.Enabled = false;
+            foreach (Form child in MdiChildren)
+            {
+                if (child != loginform)
+                {
+                    child.Close();
+                }
+            }
             menu_bar.Enabled = false;
 
-            AddRemoveUser adduser = new AddRemoveUser(true);
-            adduser.MdiParent = this;
-            adduser.Show();
+            AddRemoveUser removeuser = new AddRemoveUser(true);
+            removeuser.MdiParent = this;
+            removeuser.WindowState = FormWindowState.Normal;
+            removeuser.Show();
 
-            adduser.FormClosed += new FormClosedEventHandler(EnableForm);
+            removeuser.FormClosed += new FormClosedEventHandler(EnableForm);
         }
     }
 }

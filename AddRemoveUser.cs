@@ -71,7 +71,9 @@ namespace Software_Development_Capstone
 
                     if (result == DialogResult.Yes)
                     {
-                        context.Users.Remove((from users in context.Users where users.UserName == textbox_Username.Text select users).First());
+                        var userName = combo_Username.SelectedItem.ToString();
+                        var removeUser = (from users in context.Users where users.UserName == userName select users).First();
+                        context.Users.Remove(removeUser);
                     }
                     else return;
                 }
