@@ -137,6 +137,12 @@
     <Compile Include="AddIncomeExpense.Designer.cs">
       <DependentUpon>AddIncomeExpense.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddRemoveUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddRemoveUser.Designer.cs">
+      <DependentUpon>AddRemoveUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChangePasswordForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddIncomeExpense.resx">
       <DependentUpon>AddIncomeExpense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddRemoveUser.resx">
+      <DependentUpon>AddRemoveUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChangePasswordForm.resx">
       <DependentUpon>ChangePasswordForm.cs</DependentUpon>

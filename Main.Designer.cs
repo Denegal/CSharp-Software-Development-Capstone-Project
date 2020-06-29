@@ -71,6 +71,7 @@
             this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
             this.logoutToolStripMenuItem.Size = new System.Drawing.Size(206, 24);
             this.logoutToolStripMenuItem.Text = "Add User";
+            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
             // changePasswordToolStripMenuItem
             // 
@@ -112,6 +113,7 @@
             this.removeUserToolStripMenuItem.Name = "removeUserToolStripMenuItem";
             this.removeUserToolStripMenuItem.Size = new System.Drawing.Size(206, 24);
             this.removeUserToolStripMenuItem.Text = "Remove User";
+            this.removeUserToolStripMenuItem.Click += new System.EventHandler(this.removeUserToolStripMenuItem_Click);
             // 
             // Main
             // 

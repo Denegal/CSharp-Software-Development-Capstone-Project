@@ -138,5 +138,29 @@ namespace Software_Development_Capstone
             loginform.WindowState = FormWindowState.Maximized;
             loginform.Show();
         }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.ActiveMdiChild.Enabled = false;
+            menu_bar.Enabled = false;
+
+            AddRemoveUser adduser = new AddRemoveUser();
+            adduser.MdiParent = this;
+            adduser.Show();
+
+            adduser.FormClosed += new FormClosedEventHandler(EnableForm);
+        }
+
+        private void removeUserToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.ActiveMdiChild.Enabled = false;
+            menu_bar.Enabled = false;
+
+            AddRemoveUser adduser = new AddRemoveUser(true);
+            adduser.MdiParent = this;
+            adduser.Show();
+
+            adduser.FormClosed += new FormClosedEventHandler(EnableForm);
+        }
     }
 }
