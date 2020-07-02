@@ -91,5 +91,20 @@ namespace Software_Development_Capstone
         {
             parent.financeToolStripMenuItem.PerformClick();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddEditClient addclientform = new AddEditClient();
+            addclientform.Show(this);
+            addclientform.FormClosed += new FormClosedEventHandler(EnableForm);
+            this.Enabled = false;
+            parent.Enabled = false;
+        }
+
+        private void EnableForm(object sender, FormClosedEventArgs e)
+        {
+            this.Enabled = true;
+            parent.Enabled = true;
+        }
     }
 }

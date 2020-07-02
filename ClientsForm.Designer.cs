@@ -54,7 +54,6 @@
             this.button_ViewClient = new System.Windows.Forms.Button();
             this.button_EditClient = new System.Windows.Forms.Button();
             this.button_RemoveClient = new System.Windows.Forms.Button();
-            this.button_SaveReport = new System.Windows.Forms.Button();
             this.Title_Logo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataView_Clients)).BeginInit();
             this.box_Search.SuspendLayout();
@@ -375,21 +374,6 @@
             this.button_RemoveClient.UseVisualStyleBackColor = true;
             this.button_RemoveClient.Click += new System.EventHandler(this.button_RemoveClient_Click);
             // 
-            // button_SaveReport
-            // 
-            this.button_SaveReport.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button_SaveReport.AutoSize = true;
-            this.button_SaveReport.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_SaveReport.BackgroundImage")));
-            this.button_SaveReport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_SaveReport.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button_SaveReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_SaveReport.ForeColor = System.Drawing.Color.White;
-            this.button_SaveReport.Location = new System.Drawing.Point(383, 816);
-            this.button_SaveReport.Name = "button_SaveReport";
-            this.button_SaveReport.Size = new System.Drawing.Size(178, 87);
-            this.button_SaveReport.TabIndex = 8;
-            this.button_SaveReport.UseVisualStyleBackColor = true;
-            // 
             // Title_Logo
             // 
             this.Title_Logo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -418,7 +402,6 @@
             this.Controls.Add(this.button_RemoveClient);
             this.Controls.Add(this.box_Search);
             this.Controls.Add(this.label_ClientList);
-            this.Controls.Add(this.button_SaveReport);
             this.Controls.Add(this.dataView_Clients);
             this.Controls.Add(this.Title_Logo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -445,7 +428,6 @@
 
         private System.Windows.Forms.PictureBox Title_Logo;
         private System.Windows.Forms.DataGridView dataView_Clients;
-        private System.Windows.Forms.Button button_SaveReport;
         private System.Windows.Forms.Label label_ClientList;
         private System.Windows.Forms.GroupBox box_Search;
         private System.Windows.Forms.Label label6;
