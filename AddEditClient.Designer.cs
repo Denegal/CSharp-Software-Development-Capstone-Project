@@ -29,20 +29,14 @@
         private void InitializeComponent()
         {
             this.label_Title = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.group_Client = new System.Windows.Forms.GroupBox();
             this.button_Remove = new System.Windows.Forms.Button();
             this.button_Add = new System.Windows.Forms.Button();
             this.combo_History = new System.Windows.Forms.ComboBox();
             this.textbox_MedicalHistory = new System.Windows.Forms.TextBox();
-            this.checkbox_History = new System.Windows.Forms.PictureBox();
             this.label_MedicalHistory = new System.Windows.Forms.Label();
             this.textbox_Injuries = new System.Windows.Forms.TextBox();
-            this.checkbox_Injury = new System.Windows.Forms.PictureBox();
             this.label_Injuries = new System.Windows.Forms.Label();
-            this.checkbox_Pregnant = new System.Windows.Forms.PictureBox();
-            this.checkbox_Medical = new System.Windows.Forms.PictureBox();
-            this.checkbox_Waiver = new System.Windows.Forms.PictureBox();
             this.label_Pregnant = new System.Windows.Forms.Label();
             this.label_MedicalCare = new System.Windows.Forms.Label();
             this.label_Waiver = new System.Windows.Forms.Label();
@@ -60,13 +54,19 @@
             this.label_Email = new System.Windows.Forms.Label();
             this.button_Save = new System.Windows.Forms.Button();
             this.button_Cancel = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.checkbox_History = new System.Windows.Forms.PictureBox();
+            this.checkbox_Injury = new System.Windows.Forms.PictureBox();
+            this.checkbox_Pregnant = new System.Windows.Forms.PictureBox();
+            this.checkbox_Medical = new System.Windows.Forms.PictureBox();
+            this.checkbox_Waiver = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.group_Client.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkbox_History)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkbox_Injury)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkbox_Pregnant)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkbox_Medical)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkbox_Waiver)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label_Title
@@ -78,16 +78,6 @@
             this.label_Title.TabIndex = 1;
             this.label_Title.Text = "New Client";
             this.label_Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(893, 22);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // group_Client
             // 
@@ -186,17 +176,6 @@
             this.textbox_MedicalHistory.Size = new System.Drawing.Size(675, 106);
             this.textbox_MedicalHistory.TabIndex = 49;
             // 
-            // checkbox_History
-            // 
-            this.checkbox_History.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.empty_checkbox;
-            this.checkbox_History.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.checkbox_History.Location = new System.Drawing.Point(236, 428);
-            this.checkbox_History.Name = "checkbox_History";
-            this.checkbox_History.Size = new System.Drawing.Size(41, 41);
-            this.checkbox_History.TabIndex = 48;
-            this.checkbox_History.TabStop = false;
-            this.checkbox_History.Click += new System.EventHandler(this.checkbox_History_Click);
-            // 
             // label_MedicalHistory
             // 
             this.label_MedicalHistory.AutoSize = true;
@@ -222,17 +201,6 @@
             this.textbox_Injuries.Size = new System.Drawing.Size(675, 83);
             this.textbox_Injuries.TabIndex = 46;
             // 
-            // checkbox_Injury
-            // 
-            this.checkbox_Injury.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.empty_checkbox;
-            this.checkbox_Injury.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.checkbox_Injury.Location = new System.Drawing.Point(221, 281);
-            this.checkbox_Injury.Name = "checkbox_Injury";
-            this.checkbox_Injury.Size = new System.Drawing.Size(41, 41);
-            this.checkbox_Injury.TabIndex = 45;
-            this.checkbox_Injury.TabStop = false;
-            this.checkbox_Injury.Click += new System.EventHandler(this.checkbox_Injury_Click);
-            // 
             // label_Injuries
             // 
             this.label_Injuries.AutoSize = true;
@@ -245,39 +213,6 @@
             this.label_Injuries.TabIndex = 44;
             this.label_Injuries.Text = "Curent Injuries:";
             this.label_Injuries.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // checkbox_Pregnant
-            // 
-            this.checkbox_Pregnant.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.empty_checkbox;
-            this.checkbox_Pregnant.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.checkbox_Pregnant.Location = new System.Drawing.Point(461, 214);
-            this.checkbox_Pregnant.Name = "checkbox_Pregnant";
-            this.checkbox_Pregnant.Size = new System.Drawing.Size(41, 41);
-            this.checkbox_Pregnant.TabIndex = 43;
-            this.checkbox_Pregnant.TabStop = false;
-            this.checkbox_Pregnant.Click += new System.EventHandler(this.checkbox_Pregnant_Click);
-            // 
-            // checkbox_Medical
-            // 
-            this.checkbox_Medical.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.empty_checkbox;
-            this.checkbox_Medical.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.checkbox_Medical.Location = new System.Drawing.Point(741, 214);
-            this.checkbox_Medical.Name = "checkbox_Medical";
-            this.checkbox_Medical.Size = new System.Drawing.Size(41, 41);
-            this.checkbox_Medical.TabIndex = 42;
-            this.checkbox_Medical.TabStop = false;
-            this.checkbox_Medical.Click += new System.EventHandler(this.checkbox_Medical_Click);
-            // 
-            // checkbox_Waiver
-            // 
-            this.checkbox_Waiver.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.empty_checkbox;
-            this.checkbox_Waiver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.checkbox_Waiver.Location = new System.Drawing.Point(221, 214);
-            this.checkbox_Waiver.Name = "checkbox_Waiver";
-            this.checkbox_Waiver.Size = new System.Drawing.Size(41, 41);
-            this.checkbox_Waiver.TabIndex = 41;
-            this.checkbox_Waiver.TabStop = false;
-            this.checkbox_Waiver.Click += new System.EventHandler(this.checkbox_Waiver_Click);
             // 
             // label_Pregnant
             // 
@@ -490,6 +425,71 @@
             this.button_Cancel.UseVisualStyleBackColor = false;
             this.button_Cancel.Click += new System.EventHandler(this.button_Cancel_Click);
             // 
+            // checkbox_History
+            // 
+            this.checkbox_History.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.empty_checkbox;
+            this.checkbox_History.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkbox_History.Location = new System.Drawing.Point(236, 428);
+            this.checkbox_History.Name = "checkbox_History";
+            this.checkbox_History.Size = new System.Drawing.Size(41, 41);
+            this.checkbox_History.TabIndex = 48;
+            this.checkbox_History.TabStop = false;
+            this.checkbox_History.Click += new System.EventHandler(this.checkbox_History_Click);
+            // 
+            // checkbox_Injury
+            // 
+            this.checkbox_Injury.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.empty_checkbox;
+            this.checkbox_Injury.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkbox_Injury.Location = new System.Drawing.Point(221, 281);
+            this.checkbox_Injury.Name = "checkbox_Injury";
+            this.checkbox_Injury.Size = new System.Drawing.Size(41, 41);
+            this.checkbox_Injury.TabIndex = 45;
+            this.checkbox_Injury.TabStop = false;
+            this.checkbox_Injury.Click += new System.EventHandler(this.checkbox_Injury_Click);
+            // 
+            // checkbox_Pregnant
+            // 
+            this.checkbox_Pregnant.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.empty_checkbox;
+            this.checkbox_Pregnant.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkbox_Pregnant.Location = new System.Drawing.Point(461, 214);
+            this.checkbox_Pregnant.Name = "checkbox_Pregnant";
+            this.checkbox_Pregnant.Size = new System.Drawing.Size(41, 41);
+            this.checkbox_Pregnant.TabIndex = 43;
+            this.checkbox_Pregnant.TabStop = false;
+            this.checkbox_Pregnant.Click += new System.EventHandler(this.checkbox_Pregnant_Click);
+            // 
+            // checkbox_Medical
+            // 
+            this.checkbox_Medical.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.empty_checkbox;
+            this.checkbox_Medical.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkbox_Medical.Location = new System.Drawing.Point(741, 214);
+            this.checkbox_Medical.Name = "checkbox_Medical";
+            this.checkbox_Medical.Size = new System.Drawing.Size(41, 41);
+            this.checkbox_Medical.TabIndex = 42;
+            this.checkbox_Medical.TabStop = false;
+            this.checkbox_Medical.Click += new System.EventHandler(this.checkbox_Medical_Click);
+            // 
+            // checkbox_Waiver
+            // 
+            this.checkbox_Waiver.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.empty_checkbox;
+            this.checkbox_Waiver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkbox_Waiver.Location = new System.Drawing.Point(221, 214);
+            this.checkbox_Waiver.Name = "checkbox_Waiver";
+            this.checkbox_Waiver.Size = new System.Drawing.Size(41, 41);
+            this.checkbox_Waiver.TabIndex = 41;
+            this.checkbox_Waiver.TabStop = false;
+            this.checkbox_Waiver.Click += new System.EventHandler(this.checkbox_Waiver_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(893, 22);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // AddEditClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -506,9 +506,9 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddEditClient";
+            this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.group_Client.ResumeLayout(false);
             this.group_Client.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkbox_History)).EndInit();
@@ -516,6 +516,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.checkbox_Pregnant)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkbox_Medical)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.checkbox_Waiver)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
