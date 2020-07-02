@@ -27,17 +27,13 @@ namespace Software_Development_Capstone
 
             dataView_Finance.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            /*
-            dataView_Finance.Columns[0].FillWeight = 80;
-            dataView_Finance.Columns[1].FillWeight = 80;
-            dataView_Finance.Columns[2].FillWeight = 80;
-            dataView_Finance.Columns[3].FillWeight = 125;
-            dataView_Finance.Columns[4].FillWeight = 50;
-            dataView_Finance.Columns[5].FillWeight = 50;
-            dataView_Finance.Columns[6].FillWeight = 75;
-            dataView_Finance.Columns[7].FillWeight = 80;
-            dataView_Finance.Columns[8].FillWeight = 75;
-            */
+            dataView_Finance.Columns[0].FillWeight = 50;  // ID
+            dataView_Finance.Columns[1].FillWeight = 60;  // Income/Expense
+            dataView_Finance.Columns[2].FillWeight = 60;  // Amount
+            dataView_Finance.Columns[3].FillWeight = 60;  // Date
+            dataView_Finance.Columns[4].FillWeight = 80; // Type
+            dataView_Finance.Columns[5].FillWeight = 130; // Desc
+            dataView_Finance.Columns[6].FillWeight = 100; // Client
 
             dataView_Finance.AutoResizeColumns();
 
@@ -57,7 +53,7 @@ namespace Software_Development_Capstone
                                select new FinanceList
                                {
                                    ID = finance.FinanceId,
-                                   IncomeExpense = finance.IncomeOrExpense,
+                                   Category = finance.IncomeOrExpense,
                                    Date = finance.FinanceDate,
                                    Amount = finance.Amount,
                                    Type = finance.Type,
