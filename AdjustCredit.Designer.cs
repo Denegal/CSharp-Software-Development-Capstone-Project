@@ -143,7 +143,6 @@
             // 
             // combo_Client
             // 
-            this.combo_Client.Enabled = false;
             this.combo_Client.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.combo_Client.FormattingEnabled = true;
             this.combo_Client.Location = new System.Drawing.Point(188, 25);
@@ -167,7 +166,6 @@
             // 
             // button_Remove
             // 
-            this.button_Remove.Enabled = false;
             this.button_Remove.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Remove.Location = new System.Drawing.Point(361, 171);
             this.button_Remove.Name = "button_Remove";
@@ -179,7 +177,6 @@
             // 
             // button_Add
             // 
-            this.button_Add.Enabled = false;
             this.button_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Add.Location = new System.Drawing.Point(277, 171);
             this.button_Add.Name = "button_Add";

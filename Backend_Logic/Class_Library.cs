@@ -16,7 +16,7 @@ namespace Backend_Logic
         public bool Injuries { get; set; }
         public bool Pregnant { get; set; }
         public bool MedicalCare { get; set; }
-        public int Credits { get; set; }
+        public int Credit { get; set; }
         
     }
 

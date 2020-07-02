@@ -23,6 +23,8 @@ namespace Software_Development_Capstone
 
             Update_datagrid();
 
+            using (var context = new Backend_DB.DBEntities()) { button_Credit.Enabled = context.Clients.Count() > 0; }
+
             dataView_Finance.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             /*
@@ -135,9 +137,13 @@ namespace Software_Development_Capstone
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button_Credit_Click(object sender, EventArgs e)
         {
-
+            AdjustCredit adjustCreditForm = new AdjustCredit();
+            adjustCreditForm.Show(this);
+            adjustCreditForm.FormClosed += new FormClosedEventHandler(EnableForm);
+            this.Enabled = false;
+            parent.Enabled = false;
         }
     }
 }

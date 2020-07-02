@@ -13,6 +13,7 @@ namespace Software_Development_Capstone
     public partial class AdjustCredit : Form
     {
         int newCredit = 0;
+        int oldCredit = 0;
 
         public AdjustCredit()
         {
@@ -22,6 +23,8 @@ namespace Software_Development_Capstone
             {
                 combo_Client.DataSource = (from clients in context.Clients select clients.FName + " " + clients.LName).ToList();
             }
+
+            combo_Client_SelectionChangeCommitted(this, new EventArgs());
         }
 
         private void button_Cancel_Click(object sender, EventArgs e)
@@ -40,6 +43,7 @@ namespace Software_Development_Capstone
                 var clientbalance = (from clients in context.Clients where clients.FName == clientFName && clients.LName == clientLName select clients.ClassCredit).First();
 
                 newCredit = clientbalance;
+                oldCredit = clientbalance;
 
                 label_CurrentBalance.Text = "Current Credit Balance: $" + newCredit.ToString();
                 label_NewBalance.Text = "New Credit Balance: $" + newCredit.ToString();
@@ -81,9 +85,22 @@ namespace Software_Development_Capstone
 
                 client.ClassCredit = newCredit;
 
+                Backend_DB.Finance newincome = new Backend_DB.Finance()
+                {
+                    IncomeOrExpense = newCredit > oldCredit ? "Income" : "Expense",
+                    Type = "Class Prepay",
+                    Amount = long.Parse((newCredit - oldCredit).ToString()),
+                    Client = (from clients in context.Clients where clients.FName == clientFName && clients.LName == clientLName select clients.ClientId).First(),
+                    FinanceDate = DateTime.Now.Date,
+                    Desc = "Client " + clientFName + " " + clientLName + " prepaid for classes.",
+                };
+
+                context.Finances.Add(newincome);
+
                 context.SaveChanges();
             }
 
+            this.Close();
         }
     }
 }

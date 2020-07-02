@@ -61,7 +61,7 @@ namespace Software_Development_Capstone
                                   Injuries = !(client.Injuries == ""),
                                   Pregnant = client.Pregnant == 1,
                                   MedicalCare = client.MedicalCare == 1,
-                                  Credits = client.ClassCredit,
+                                  Credit = client.ClassCredit,
                               };
 
                 var results = clients.ToList();

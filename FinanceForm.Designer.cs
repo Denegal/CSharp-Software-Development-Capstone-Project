@@ -44,9 +44,6 @@
             this.label_DTo = new System.Windows.Forms.Label();
             this.label_AFrom = new System.Windows.Forms.Label();
             this.textbox_Desc = new System.Windows.Forms.TextBox();
-            this.checkbox_Expense = new System.Windows.Forms.PictureBox();
-            this.checkbox_Income = new System.Windows.Forms.PictureBox();
-            this.button_Search = new System.Windows.Forms.Button();
             this.label_Type = new System.Windows.Forms.Label();
             this.label_Expense = new System.Windows.Forms.Label();
             this.label_Income = new System.Windows.Forms.Label();
@@ -55,11 +52,14 @@
             this.label_DFrom = new System.Windows.Forms.Label();
             this.label_Date = new System.Windows.Forms.Label();
             this.label_Total = new System.Windows.Forms.Label();
+            this.button_Credit = new System.Windows.Forms.Button();
             this.button_AddIncome = new System.Windows.Forms.Button();
             this.button_AddExpense = new System.Windows.Forms.Button();
             this.button_Remove = new System.Windows.Forms.Button();
+            this.checkbox_Expense = new System.Windows.Forms.PictureBox();
+            this.checkbox_Income = new System.Windows.Forms.PictureBox();
+            this.button_Search = new System.Windows.Forms.Button();
             this.Title_Logo = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataView_Finance)).BeginInit();
             this.box_Search.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkbox_Expense)).BeginInit();
@@ -248,42 +248,6 @@
             this.textbox_Desc.Size = new System.Drawing.Size(271, 31);
             this.textbox_Desc.TabIndex = 25;
             // 
-            // checkbox_Expense
-            // 
-            this.checkbox_Expense.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.empty_checkbox;
-            this.checkbox_Expense.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.checkbox_Expense.Location = new System.Drawing.Point(388, 16);
-            this.checkbox_Expense.Name = "checkbox_Expense";
-            this.checkbox_Expense.Size = new System.Drawing.Size(41, 41);
-            this.checkbox_Expense.TabIndex = 20;
-            this.checkbox_Expense.TabStop = false;
-            // 
-            // checkbox_Income
-            // 
-            this.checkbox_Income.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.empty_checkbox;
-            this.checkbox_Income.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.checkbox_Income.Location = new System.Drawing.Point(166, 16);
-            this.checkbox_Income.Name = "checkbox_Income";
-            this.checkbox_Income.Size = new System.Drawing.Size(41, 41);
-            this.checkbox_Income.TabIndex = 19;
-            this.checkbox_Income.TabStop = false;
-            // 
-            // button_Search
-            // 
-            this.button_Search.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button_Search.AutoSize = true;
-            this.button_Search.BackColor = System.Drawing.Color.Transparent;
-            this.button_Search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Search.BackgroundImage")));
-            this.button_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_Search.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Search.ForeColor = System.Drawing.Color.White;
-            this.button_Search.Location = new System.Drawing.Point(280, 365);
-            this.button_Search.Name = "button_Search";
-            this.button_Search.Size = new System.Drawing.Size(178, 87);
-            this.button_Search.TabIndex = 18;
-            this.button_Search.UseVisualStyleBackColor = false;
-            // 
             // label_Type
             // 
             this.label_Type.AutoSize = true;
@@ -390,6 +354,23 @@
             this.label_Total.Text = "Total:   $ 0";
             this.label_Total.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // button_Credit
+            // 
+            this.button_Credit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button_Credit.AutoSize = true;
+            this.button_Credit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Credit.BackgroundImage")));
+            this.button_Credit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_Credit.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_Credit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Credit.ForeColor = System.Drawing.Color.White;
+            this.button_Credit.Location = new System.Drawing.Point(1035, 816);
+            this.button_Credit.Name = "button_Credit";
+            this.button_Credit.Size = new System.Drawing.Size(178, 87);
+            this.button_Credit.TabIndex = 21;
+            this.button_Credit.Text = "Credit";
+            this.button_Credit.UseVisualStyleBackColor = true;
+            this.button_Credit.Click += new System.EventHandler(this.button_Credit_Click);
+            // 
             // button_AddIncome
             // 
             this.button_AddIncome.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -438,6 +419,42 @@
             this.button_Remove.UseVisualStyleBackColor = true;
             this.button_Remove.Click += new System.EventHandler(this.button_Remove_Click);
             // 
+            // checkbox_Expense
+            // 
+            this.checkbox_Expense.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.empty_checkbox;
+            this.checkbox_Expense.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkbox_Expense.Location = new System.Drawing.Point(388, 16);
+            this.checkbox_Expense.Name = "checkbox_Expense";
+            this.checkbox_Expense.Size = new System.Drawing.Size(41, 41);
+            this.checkbox_Expense.TabIndex = 20;
+            this.checkbox_Expense.TabStop = false;
+            // 
+            // checkbox_Income
+            // 
+            this.checkbox_Income.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.empty_checkbox;
+            this.checkbox_Income.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkbox_Income.Location = new System.Drawing.Point(166, 16);
+            this.checkbox_Income.Name = "checkbox_Income";
+            this.checkbox_Income.Size = new System.Drawing.Size(41, 41);
+            this.checkbox_Income.TabIndex = 19;
+            this.checkbox_Income.TabStop = false;
+            // 
+            // button_Search
+            // 
+            this.button_Search.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button_Search.AutoSize = true;
+            this.button_Search.BackColor = System.Drawing.Color.Transparent;
+            this.button_Search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Search.BackgroundImage")));
+            this.button_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_Search.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Search.ForeColor = System.Drawing.Color.White;
+            this.button_Search.Location = new System.Drawing.Point(280, 365);
+            this.button_Search.Name = "button_Search";
+            this.button_Search.Size = new System.Drawing.Size(178, 87);
+            this.button_Search.TabIndex = 18;
+            this.button_Search.UseVisualStyleBackColor = false;
+            // 
             // Title_Logo
             // 
             this.Title_Logo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -453,23 +470,6 @@
             this.Title_Logo.TabIndex = 2;
             this.Title_Logo.TabStop = false;
             // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button1.AutoSize = true;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1035, 816);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(178, 87);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Credit";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // FinanceForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -477,7 +477,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(116)))), ((int)(((byte)(235)))));
             this.ClientSize = new System.Drawing.Size(1455, 932);
             this.ControlBox = false;
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button_Credit);
             this.Controls.Add(this.label_Total);
             this.Controls.Add(this.button_AddIncome);
             this.Controls.Add(this.button_AddExpense);
@@ -534,6 +534,6 @@
         private System.Windows.Forms.Label label_DTo;
         private System.Windows.Forms.Label label_AFrom;
         private System.Windows.Forms.Label label_Total;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button_Credit;
     }
 }

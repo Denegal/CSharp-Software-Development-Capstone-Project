@@ -82,6 +82,11 @@ namespace Software_Development_Capstone
                 }
 
 
+                button_EditClient.Enabled = results.Count > 0;
+                button_RemoveClient.Enabled = results.Count > 0;
+                button_ViewClient.Enabled = results.Count > 0;
+
+
                 dataView_Clients.DataSource = results;
             }
 
