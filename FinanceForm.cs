@@ -16,6 +16,8 @@ namespace Software_Development_Capstone
     public partial class FinanceForm : Form
     {
         Main parent = new Main();
+        bool IncomeChecked = false;
+        bool ExpenseChecked = false;
 
         public FinanceForm(Main Parent)
         {
@@ -39,7 +41,7 @@ namespace Software_Development_Capstone
 
         }
 
-        private void Update_datagrid()
+        private void Update_datagrid(bool filter = false)
         {
             //TODO: Look at making list sortable when dataview column headers are clicked
             //      by sending header name or index to function. Possibly have to use switch
@@ -63,6 +65,25 @@ namespace Software_Development_Capstone
                                };
 
                 var results = finances.ToList();
+
+                // if filtering results, edit the list before updating the dataview
+                // use of lambda functions here greatly decreases the code size and increases readability
+                // each line can be read as 'remove all finances where the client does not contain what is being searched for'.
+                if (filter)
+                {
+                    if (!IncomeChecked) { results.RemoveAll(transaction => transaction.Category == "Income"); }
+                    if (!ExpenseChecked) { results.RemoveAll(transaction => transaction.Category == "Expense"); }
+                    if (textbox_Desc.Text != "") { results.RemoveAll(transaction => !transaction.Desc.ToLower().Contains(textbox_Desc.Text.ToLower())); }
+                    if (date_start.Checked) { results.RemoveAll(transaction => transaction.Date < date_start.Value); }
+                    if (date_end.Checked) { results.RemoveAll(transaction => transaction.Date > date_end.Value); }
+                    if (texbox_AFrom.Text != "") { results.RemoveAll(transaction => transaction.Amount < long.Parse(texbox_AFrom.Text)); }
+                    if (textbox_ATo.Text != "") { results.RemoveAll(transaction => transaction.Amount > long.Parse(textbox_ATo.Text)); }
+                    if (combobox_Type.SelectedIndex != 0) { results.RemoveAll(transaction => transaction.Type != combobox_Type.SelectedItem.ToString()) }
+
+                }
+
+
+                button_Remove.Enabled = results.Count > 0;
 
                 dataView_Finance.DataSource = results;
 
@@ -140,6 +161,37 @@ namespace Software_Development_Capstone
             adjustCreditForm.FormClosed += new FormClosedEventHandler(EnableForm);
             this.Enabled = false;
             parent.Enabled = false;
+        }
+
+        private void button_Search_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkbox_Income_Click(object sender, EventArgs e)
+        {
+            if (IncomeChecked)
+            {
+                checkbox_Income.BackgroundImage = Software_Development_Capstone.Properties.Resources.empty_checkbox;
+            }
+            else
+            {
+                checkbox_Income.BackgroundImage = Software_Development_Capstone.Properties.Resources.checked_checkbox;
+            }
+            IncomeChecked = !IncomeChecked;
+        }
+
+        private void checkbox_Expense_Click(object sender, EventArgs e)
+        {
+            if (ExpenseChecked)
+            {
+                checkbox_Expense.BackgroundImage = Software_Development_Capstone.Properties.Resources.empty_checkbox;
+            }
+            else
+            {
+                checkbox_Expense.BackgroundImage = Software_Development_Capstone.Properties.Resources.checked_checkbox;
+            }
+            ExpenseChecked = !ExpenseChecked;
         }
     }
 }
