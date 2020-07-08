@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FinanceForm));
             this.label_FinanceList = new System.Windows.Forms.Label();
             this.dataView_Finance = new System.Windows.Forms.DataGridView();
@@ -70,7 +70,9 @@
             // label_FinanceList
             // 
             this.label_FinanceList.AutoSize = true;
+            this.label_FinanceList.BackColor = System.Drawing.Color.Transparent;
             this.label_FinanceList.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_FinanceList.ForeColor = System.Drawing.SystemColors.Control;
             this.label_FinanceList.Location = new System.Drawing.Point(147, 161);
             this.label_FinanceList.Name = "label_FinanceList";
             this.label_FinanceList.Size = new System.Drawing.Size(687, 73);
@@ -84,23 +86,23 @@
             this.dataView_Finance.AllowUserToDeleteRows = false;
             this.dataView_Finance.AllowUserToResizeColumns = false;
             this.dataView_Finance.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            this.dataView_Finance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dataView_Finance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataView_Finance.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataView_Finance.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataView_Finance.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataView_Finance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataView_Finance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataView_Finance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataView_Finance.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dataView_Finance.Location = new System.Drawing.Point(47, 237);
@@ -109,8 +111,8 @@
             this.dataView_Finance.Name = "dataView_Finance";
             this.dataView_Finance.ReadOnly = true;
             this.dataView_Finance.RowHeadersVisible = false;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataView_Finance.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataView_Finance.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataView_Finance.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataView_Finance.RowTemplate.DividerHeight = 2;
             this.dataView_Finance.RowTemplate.Height = 35;
@@ -122,6 +124,7 @@
             // 
             // box_Search
             // 
+            this.box_Search.BackColor = System.Drawing.Color.Transparent;
             this.box_Search.Controls.Add(this.combobox_Type);
             this.box_Search.Controls.Add(this.textbox_ATo);
             this.box_Search.Controls.Add(this.texbox_AFrom);
@@ -207,7 +210,7 @@
             // 
             this.label_ATo.AutoSize = true;
             this.label_ATo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_ATo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_ATo.ForeColor = System.Drawing.SystemColors.Control;
             this.label_ATo.Location = new System.Drawing.Point(248, 297);
             this.label_ATo.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label_ATo.Name = "label_ATo";
@@ -220,7 +223,7 @@
             // 
             this.label_DTo.AutoSize = true;
             this.label_DTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_DTo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_DTo.ForeColor = System.Drawing.SystemColors.Control;
             this.label_DTo.Location = new System.Drawing.Point(69, 211);
             this.label_DTo.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label_DTo.Name = "label_DTo";
@@ -233,7 +236,7 @@
             // 
             this.label_AFrom.AutoSize = true;
             this.label_AFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_AFrom.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_AFrom.ForeColor = System.Drawing.SystemColors.Control;
             this.label_AFrom.Location = new System.Drawing.Point(43, 297);
             this.label_AFrom.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label_AFrom.Name = "label_AFrom";
@@ -277,9 +280,10 @@
             this.button_Search.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button_Search.AutoSize = true;
             this.button_Search.BackColor = System.Drawing.Color.Transparent;
-            this.button_Search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Search.BackgroundImage")));
+            this.button_Search.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Search;
             this.button_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_Search.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_Search.FlatAppearance.BorderSize = 0;
             this.button_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Search.ForeColor = System.Drawing.Color.White;
             this.button_Search.Location = new System.Drawing.Point(280, 365);
@@ -293,7 +297,7 @@
             // 
             this.label_Type.AutoSize = true;
             this.label_Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Type.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_Type.ForeColor = System.Drawing.SystemColors.Control;
             this.label_Type.Location = new System.Drawing.Point(6, 387);
             this.label_Type.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label_Type.Name = "label_Type";
@@ -306,7 +310,7 @@
             // 
             this.label_Expense.AutoSize = true;
             this.label_Expense.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Expense.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_Expense.ForeColor = System.Drawing.SystemColors.Control;
             this.label_Expense.Location = new System.Drawing.Point(247, 16);
             this.label_Expense.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label_Expense.Name = "label_Expense";
@@ -319,7 +323,7 @@
             // 
             this.label_Income.AutoSize = true;
             this.label_Income.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Income.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_Income.ForeColor = System.Drawing.SystemColors.Control;
             this.label_Income.Location = new System.Drawing.Point(42, 16);
             this.label_Income.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label_Income.Name = "label_Income";
@@ -332,7 +336,7 @@
             // 
             this.label_Desc.AutoSize = true;
             this.label_Desc.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Desc.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_Desc.ForeColor = System.Drawing.SystemColors.Control;
             this.label_Desc.Location = new System.Drawing.Point(6, 79);
             this.label_Desc.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label_Desc.Name = "label_Desc";
@@ -345,7 +349,7 @@
             // 
             this.label_Amount.AutoSize = true;
             this.label_Amount.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Amount.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_Amount.ForeColor = System.Drawing.SystemColors.Control;
             this.label_Amount.Location = new System.Drawing.Point(6, 256);
             this.label_Amount.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label_Amount.Name = "label_Amount";
@@ -358,7 +362,7 @@
             // 
             this.label_DFrom.AutoSize = true;
             this.label_DFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_DFrom.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_DFrom.ForeColor = System.Drawing.SystemColors.Control;
             this.label_DFrom.Location = new System.Drawing.Point(43, 176);
             this.label_DFrom.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label_DFrom.Name = "label_DFrom";
@@ -371,7 +375,7 @@
             // 
             this.label_Date.AutoSize = true;
             this.label_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Date.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_Date.ForeColor = System.Drawing.SystemColors.Control;
             this.label_Date.Location = new System.Drawing.Point(6, 135);
             this.label_Date.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label_Date.Name = "label_Date";
@@ -382,7 +386,7 @@
             // 
             // label_Total
             // 
-            this.label_Total.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label_Total.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label_Total.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Total.Location = new System.Drawing.Point(47, 717);
@@ -399,9 +403,11 @@
             // 
             this.button_Credit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button_Credit.AutoSize = true;
-            this.button_Credit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Credit.BackgroundImage")));
+            this.button_Credit.BackColor = System.Drawing.Color.Transparent;
+            this.button_Credit.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.credits;
             this.button_Credit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_Credit.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_Credit.FlatAppearance.BorderSize = 0;
             this.button_Credit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Credit.ForeColor = System.Drawing.Color.White;
             this.button_Credit.Location = new System.Drawing.Point(1035, 816);
@@ -409,55 +415,61 @@
             this.button_Credit.Size = new System.Drawing.Size(178, 87);
             this.button_Credit.TabIndex = 21;
             this.button_Credit.Text = "Credit";
-            this.button_Credit.UseVisualStyleBackColor = true;
+            this.button_Credit.UseVisualStyleBackColor = false;
             this.button_Credit.Click += new System.EventHandler(this.button_Credit_Click);
             // 
             // button_AddIncome
             // 
             this.button_AddIncome.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button_AddIncome.AutoSize = true;
-            this.button_AddIncome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_AddIncome.BackgroundImage")));
+            this.button_AddIncome.BackColor = System.Drawing.Color.Transparent;
+            this.button_AddIncome.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.ClientPayment;
             this.button_AddIncome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_AddIncome.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_AddIncome.FlatAppearance.BorderSize = 0;
             this.button_AddIncome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_AddIncome.ForeColor = System.Drawing.Color.White;
             this.button_AddIncome.Location = new System.Drawing.Point(1035, 723);
             this.button_AddIncome.Name = "button_AddIncome";
             this.button_AddIncome.Size = new System.Drawing.Size(178, 87);
             this.button_AddIncome.TabIndex = 18;
-            this.button_AddIncome.UseVisualStyleBackColor = true;
+            this.button_AddIncome.UseVisualStyleBackColor = false;
             this.button_AddIncome.Click += new System.EventHandler(this.button_AddIncome_Click);
             // 
             // button_AddExpense
             // 
             this.button_AddExpense.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button_AddExpense.AutoSize = true;
-            this.button_AddExpense.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_AddExpense.BackgroundImage")));
+            this.button_AddExpense.BackColor = System.Drawing.Color.Transparent;
+            this.button_AddExpense.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Expense;
             this.button_AddExpense.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_AddExpense.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_AddExpense.FlatAppearance.BorderSize = 0;
             this.button_AddExpense.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_AddExpense.ForeColor = System.Drawing.Color.White;
             this.button_AddExpense.Location = new System.Drawing.Point(1236, 723);
             this.button_AddExpense.Name = "button_AddExpense";
             this.button_AddExpense.Size = new System.Drawing.Size(178, 87);
             this.button_AddExpense.TabIndex = 17;
-            this.button_AddExpense.UseVisualStyleBackColor = true;
+            this.button_AddExpense.UseVisualStyleBackColor = false;
             this.button_AddExpense.Click += new System.EventHandler(this.button_AddExpense_Click);
             // 
             // button_Remove
             // 
             this.button_Remove.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button_Remove.AutoSize = true;
-            this.button_Remove.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Remove.BackgroundImage")));
+            this.button_Remove.BackColor = System.Drawing.Color.Transparent;
+            this.button_Remove.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Delete;
             this.button_Remove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_Remove.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_Remove.FlatAppearance.BorderSize = 0;
             this.button_Remove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Remove.ForeColor = System.Drawing.Color.White;
             this.button_Remove.Location = new System.Drawing.Point(1236, 816);
             this.button_Remove.Name = "button_Remove";
             this.button_Remove.Size = new System.Drawing.Size(178, 87);
             this.button_Remove.TabIndex = 16;
-            this.button_Remove.UseVisualStyleBackColor = true;
+            this.button_Remove.UseVisualStyleBackColor = false;
             this.button_Remove.Click += new System.EventHandler(this.button_Remove_Click);
             // 
             // Title_Logo
@@ -465,7 +477,7 @@
             this.Title_Logo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Title_Logo.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.Title_Logo.Image = ((System.Drawing.Image)(resources.GetObject("Title_Logo.Image")));
+            this.Title_Logo.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Header;
             this.Title_Logo.InitialImage = ((System.Drawing.Image)(resources.GetObject("Title_Logo.InitialImage")));
             this.Title_Logo.Location = new System.Drawing.Point(0, 0);
             this.Title_Logo.Margin = new System.Windows.Forms.Padding(0);
@@ -480,6 +492,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(116)))), ((int)(((byte)(235)))));
+            this.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1455, 932);
             this.ControlBox = false;
             this.Controls.Add(this.button_Credit);
@@ -491,6 +505,7 @@
             this.Controls.Add(this.label_FinanceList);
             this.Controls.Add(this.dataView_Finance);
             this.Controls.Add(this.Title_Logo);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

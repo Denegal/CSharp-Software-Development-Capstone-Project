@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CheckinForm));
             this.label_Title = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.group_Client = new System.Windows.Forms.GroupBox();
+            this.ClassCredit = new System.Windows.Forms.Label();
+            this.Label_ClientCredit = new System.Windows.Forms.Label();
             this.textbox_MedicalHistory = new System.Windows.Forms.TextBox();
             this.textbox_Injuries = new System.Windows.Forms.TextBox();
             this.label_MedicalHistory = new System.Windows.Forms.Label();
@@ -48,8 +49,6 @@
             this.textbox_Cost = new System.Windows.Forms.TextBox();
             this.checkbox_Credit = new System.Windows.Forms.PictureBox();
             this.label_PrePaid = new System.Windows.Forms.Label();
-            this.ClassCredit = new System.Windows.Forms.Label();
-            this.Label_ClientCredit = new System.Windows.Forms.Label();
             this.button_checkin = new System.Windows.Forms.Button();
             this.button_Cancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -62,7 +61,9 @@
             // 
             // label_Title
             // 
+            this.label_Title.BackColor = System.Drawing.Color.Black;
             this.label_Title.Font = new System.Drawing.Font("Tempus Sans ITC", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Title.ForeColor = System.Drawing.SystemColors.Control;
             this.label_Title.Location = new System.Drawing.Point(0, 22);
             this.label_Title.Name = "label_Title";
             this.label_Title.Size = new System.Drawing.Size(893, 71);
@@ -82,6 +83,7 @@
             // 
             // group_Client
             // 
+            this.group_Client.BackColor = System.Drawing.Color.Transparent;
             this.group_Client.Controls.Add(this.ClassCredit);
             this.group_Client.Controls.Add(this.Label_ClientCredit);
             this.group_Client.Controls.Add(this.textbox_MedicalHistory);
@@ -101,6 +103,32 @@
             this.group_Client.Size = new System.Drawing.Size(804, 493);
             this.group_Client.TabIndex = 4;
             this.group_Client.TabStop = false;
+            // 
+            // ClassCredit
+            // 
+            this.ClassCredit.AutoSize = true;
+            this.ClassCredit.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClassCredit.ForeColor = System.Drawing.SystemColors.Control;
+            this.ClassCredit.Location = new System.Drawing.Point(20, 68);
+            this.ClassCredit.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            this.ClassCredit.Name = "ClassCredit";
+            this.ClassCredit.Size = new System.Drawing.Size(184, 31);
+            this.ClassCredit.TabIndex = 54;
+            this.ClassCredit.Text = "Class Credit:";
+            this.ClassCredit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // Label_ClientCredit
+            // 
+            this.Label_ClientCredit.AutoSize = true;
+            this.Label_ClientCredit.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label_ClientCredit.ForeColor = System.Drawing.SystemColors.Control;
+            this.Label_ClientCredit.Location = new System.Drawing.Point(213, 68);
+            this.Label_ClientCredit.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            this.Label_ClientCredit.Name = "Label_ClientCredit";
+            this.Label_ClientCredit.Size = new System.Drawing.Size(44, 31);
+            this.Label_ClientCredit.TabIndex = 55;
+            this.Label_ClientCredit.Text = "$0";
+            this.Label_ClientCredit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // textbox_MedicalHistory
             // 
@@ -130,7 +158,7 @@
             // 
             this.label_MedicalHistory.AutoSize = true;
             this.label_MedicalHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_MedicalHistory.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_MedicalHistory.ForeColor = System.Drawing.SystemColors.Control;
             this.label_MedicalHistory.Location = new System.Drawing.Point(408, 181);
             this.label_MedicalHistory.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label_MedicalHistory.Name = "label_MedicalHistory";
@@ -143,7 +171,7 @@
             // 
             this.label_Injuries.AutoSize = true;
             this.label_Injuries.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Injuries.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_Injuries.ForeColor = System.Drawing.SystemColors.Control;
             this.label_Injuries.Location = new System.Drawing.Point(26, 184);
             this.label_Injuries.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label_Injuries.Name = "label_Injuries";
@@ -186,7 +214,7 @@
             // 
             this.label_Pregnant.AutoSize = true;
             this.label_Pregnant.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Pregnant.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_Pregnant.ForeColor = System.Drawing.SystemColors.Control;
             this.label_Pregnant.Location = new System.Drawing.Point(317, 123);
             this.label_Pregnant.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label_Pregnant.Name = "label_Pregnant";
@@ -199,7 +227,7 @@
             // 
             this.label_MedicalCare.AutoSize = true;
             this.label_MedicalCare.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_MedicalCare.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_MedicalCare.ForeColor = System.Drawing.SystemColors.Control;
             this.label_MedicalCare.Location = new System.Drawing.Point(544, 123);
             this.label_MedicalCare.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label_MedicalCare.Name = "label_MedicalCare";
@@ -212,7 +240,7 @@
             // 
             this.label_Waiver.AutoSize = true;
             this.label_Waiver.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Waiver.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_Waiver.ForeColor = System.Drawing.SystemColors.Control;
             this.label_Waiver.Location = new System.Drawing.Point(23, 123);
             this.label_Waiver.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label_Waiver.Name = "label_Waiver";
@@ -225,7 +253,7 @@
             // 
             this.ClientName.AutoSize = true;
             this.ClientName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClientName.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ClientName.ForeColor = System.Drawing.SystemColors.Control;
             this.ClientName.Location = new System.Drawing.Point(20, 16);
             this.ClientName.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.ClientName.Name = "ClientName";
@@ -238,7 +266,7 @@
             // 
             this.label_Name.AutoSize = true;
             this.label_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Name.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_Name.ForeColor = System.Drawing.SystemColors.Control;
             this.label_Name.Location = new System.Drawing.Point(210, 16);
             this.label_Name.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label_Name.Name = "label_Name";
@@ -250,8 +278,9 @@
             // label_Cost
             // 
             this.label_Cost.AutoSize = true;
+            this.label_Cost.BackColor = System.Drawing.Color.Transparent;
             this.label_Cost.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Cost.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_Cost.ForeColor = System.Drawing.SystemColors.Control;
             this.label_Cost.Location = new System.Drawing.Point(72, 617);
             this.label_Cost.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label_Cost.Name = "label_Cost";
@@ -284,8 +313,9 @@
             // label_PrePaid
             // 
             this.label_PrePaid.AutoSize = true;
+            this.label_PrePaid.BackColor = System.Drawing.Color.Transparent;
             this.label_PrePaid.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_PrePaid.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_PrePaid.ForeColor = System.Drawing.SystemColors.Control;
             this.label_PrePaid.Location = new System.Drawing.Point(76, 676);
             this.label_PrePaid.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label_PrePaid.Name = "label_PrePaid";
@@ -294,56 +324,34 @@
             this.label_PrePaid.Text = "Use Credit:";
             this.label_PrePaid.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // ClassCredit
-            // 
-            this.ClassCredit.AutoSize = true;
-            this.ClassCredit.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClassCredit.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ClassCredit.Location = new System.Drawing.Point(20, 68);
-            this.ClassCredit.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
-            this.ClassCredit.Name = "ClassCredit";
-            this.ClassCredit.Size = new System.Drawing.Size(184, 31);
-            this.ClassCredit.TabIndex = 54;
-            this.ClassCredit.Text = "Class Credit:";
-            this.ClassCredit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // Label_ClientCredit
-            // 
-            this.Label_ClientCredit.AutoSize = true;
-            this.Label_ClientCredit.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_ClientCredit.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Label_ClientCredit.Location = new System.Drawing.Point(213, 68);
-            this.Label_ClientCredit.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
-            this.Label_ClientCredit.Name = "Label_ClientCredit";
-            this.Label_ClientCredit.Size = new System.Drawing.Size(44, 31);
-            this.Label_ClientCredit.TabIndex = 55;
-            this.Label_ClientCredit.Text = "$0";
-            this.Label_ClientCredit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // button_checkin
             // 
             this.button_checkin.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button_checkin.AutoSize = true;
-            this.button_checkin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_checkin.BackgroundImage")));
+            this.button_checkin.BackColor = System.Drawing.Color.Transparent;
+            this.button_checkin.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Checkin;
             this.button_checkin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_checkin.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_checkin.FlatAppearance.BorderSize = 0;
             this.button_checkin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_checkin.ForeColor = System.Drawing.Color.White;
             this.button_checkin.Location = new System.Drawing.Point(426, 620);
             this.button_checkin.Name = "button_checkin";
             this.button_checkin.Size = new System.Drawing.Size(178, 87);
             this.button_checkin.TabIndex = 56;
-            this.button_checkin.UseVisualStyleBackColor = true;
+            this.button_checkin.UseVisualStyleBackColor = false;
             this.button_checkin.Click += new System.EventHandler(this.button_checkin_Click);
             // 
             // button_Cancel
             // 
             this.button_Cancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button_Cancel.AutoSize = true;
-            this.button_Cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button_Cancel.BackColor = System.Drawing.Color.Transparent;
+            this.button_Cancel.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Cancel;
             this.button_Cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button_Cancel.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_Cancel.FlatAppearance.BorderSize = 0;
             this.button_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Cancel.ForeColor = System.Drawing.Color.Black;
@@ -351,7 +359,6 @@
             this.button_Cancel.Name = "button_Cancel";
             this.button_Cancel.Size = new System.Drawing.Size(193, 87);
             this.button_Cancel.TabIndex = 57;
-            this.button_Cancel.Text = "Cancel Button\r\nPlaceholder";
             this.button_Cancel.UseVisualStyleBackColor = false;
             this.button_Cancel.Click += new System.EventHandler(this.button_Cancel_Click);
             // 
@@ -360,6 +367,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(116)))), ((int)(((byte)(235)))));
+            this.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Background;
             this.CancelButton = this.button_Cancel;
             this.ClientSize = new System.Drawing.Size(894, 746);
             this.Controls.Add(this.button_Cancel);

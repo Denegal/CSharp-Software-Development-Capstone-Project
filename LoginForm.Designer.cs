@@ -64,7 +64,9 @@
             // label_username
             // 
             this.label_username.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_username.BackColor = System.Drawing.Color.Transparent;
             this.label_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_username.ForeColor = System.Drawing.SystemColors.Control;
             this.label_username.Location = new System.Drawing.Point(215, 182);
             this.label_username.Name = "label_username";
             this.label_username.Size = new System.Drawing.Size(188, 24);
@@ -75,7 +77,9 @@
             // label_password
             // 
             this.label_password.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_password.BackColor = System.Drawing.Color.Transparent;
             this.label_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_password.ForeColor = System.Drawing.SystemColors.Control;
             this.label_password.Location = new System.Drawing.Point(219, 227);
             this.label_password.Name = "label_password";
             this.label_password.Size = new System.Drawing.Size(184, 24);
@@ -97,6 +101,7 @@
             // 
             // label_message
             // 
+            this.label_message.BackColor = System.Drawing.Color.Transparent;
             this.label_message.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label_message.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_message.ForeColor = System.Drawing.Color.Red;
@@ -110,7 +115,9 @@
             // 
             this.label_welcome.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label_welcome.AutoSize = true;
+            this.label_welcome.BackColor = System.Drawing.Color.Transparent;
             this.label_welcome.Font = new System.Drawing.Font("Verdana", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_welcome.ForeColor = System.Drawing.SystemColors.Control;
             this.label_welcome.Location = new System.Drawing.Point(390, 9);
             this.label_welcome.Name = "label_welcome";
             this.label_welcome.Size = new System.Drawing.Size(253, 32);
@@ -122,6 +129,8 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoSize = true;
+            this.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(960, 459);
             this.ControlBox = false;
             this.Controls.Add(this.label_welcome);
@@ -131,6 +140,7 @@
             this.Controls.Add(this.label_username);
             this.Controls.Add(this.textbox_username);
             this.Controls.Add(this.button_login);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

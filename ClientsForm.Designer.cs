@@ -106,7 +106,9 @@
             // label_ClientList
             // 
             this.label_ClientList.AutoSize = true;
+            this.label_ClientList.BackColor = System.Drawing.Color.Transparent;
             this.label_ClientList.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_ClientList.ForeColor = System.Drawing.SystemColors.Control;
             this.label_ClientList.Location = new System.Drawing.Point(319, 161);
             this.label_ClientList.Name = "label_ClientList";
             this.label_ClientList.Size = new System.Drawing.Size(324, 73);
@@ -115,6 +117,7 @@
             // 
             // box_Search
             // 
+            this.box_Search.BackColor = System.Drawing.Color.Transparent;
             this.box_Search.Controls.Add(this.textbox_Email);
             this.box_Search.Controls.Add(this.textbox_Phone);
             this.box_Search.Controls.Add(this.textbox_LName);
@@ -207,9 +210,10 @@
             this.button_Search.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button_Search.AutoSize = true;
             this.button_Search.BackColor = System.Drawing.Color.Transparent;
-            this.button_Search.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Search.BackgroundImage")));
+            this.button_Search.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Search;
             this.button_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_Search.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_Search.FlatAppearance.BorderSize = 0;
             this.button_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Search.ForeColor = System.Drawing.Color.White;
             this.button_Search.Location = new System.Drawing.Point(195, 354);
@@ -223,7 +227,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label6.ForeColor = System.Drawing.SystemColors.Control;
             this.label6.Location = new System.Drawing.Point(73, 300);
             this.label6.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label6.Name = "label6";
@@ -236,7 +240,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
             this.label5.Location = new System.Drawing.Point(6, 246);
             this.label5.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label5.Name = "label5";
@@ -249,7 +253,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
             this.label4.Location = new System.Drawing.Point(6, 195);
             this.label4.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label4.Name = "label4";
@@ -262,7 +266,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Location = new System.Drawing.Point(77, 139);
             this.label3.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label3.Name = "label3";
@@ -275,7 +279,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(66, 98);
             this.label2.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label2.Name = "label2";
@@ -288,7 +292,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
             this.label1.Location = new System.Drawing.Point(9, 57);
             this.label1.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label1.Name = "label1";
@@ -301,7 +305,7 @@
             // 
             this.label_FName.AutoSize = true;
             this.label_FName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_FName.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_FName.ForeColor = System.Drawing.SystemColors.Control;
             this.label_FName.Location = new System.Drawing.Point(6, 16);
             this.label_FName.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label_FName.Name = "label_FName";
@@ -314,72 +318,80 @@
             // 
             this.button_AddClient.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button_AddClient.AutoSize = true;
-            this.button_AddClient.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_AddClient.BackgroundImage")));
+            this.button_AddClient.BackColor = System.Drawing.Color.Transparent;
+            this.button_AddClient.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.NewClient;
             this.button_AddClient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_AddClient.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_AddClient.FlatAppearance.BorderSize = 0;
             this.button_AddClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_AddClient.ForeColor = System.Drawing.Color.White;
             this.button_AddClient.Location = new System.Drawing.Point(1043, 816);
             this.button_AddClient.Name = "button_AddClient";
             this.button_AddClient.Size = new System.Drawing.Size(178, 87);
             this.button_AddClient.TabIndex = 14;
-            this.button_AddClient.UseVisualStyleBackColor = true;
+            this.button_AddClient.UseVisualStyleBackColor = false;
             this.button_AddClient.Click += new System.EventHandler(this.button_AddClient_Click);
             // 
             // button_ViewClient
             // 
             this.button_ViewClient.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button_ViewClient.AutoSize = true;
-            this.button_ViewClient.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_ViewClient.BackgroundImage")));
+            this.button_ViewClient.BackColor = System.Drawing.Color.Transparent;
+            this.button_ViewClient.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.ClientInfo;
             this.button_ViewClient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_ViewClient.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_ViewClient.FlatAppearance.BorderSize = 0;
             this.button_ViewClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_ViewClient.ForeColor = System.Drawing.Color.White;
             this.button_ViewClient.Location = new System.Drawing.Point(1043, 723);
             this.button_ViewClient.Name = "button_ViewClient";
             this.button_ViewClient.Size = new System.Drawing.Size(178, 87);
             this.button_ViewClient.TabIndex = 13;
-            this.button_ViewClient.UseVisualStyleBackColor = true;
+            this.button_ViewClient.UseVisualStyleBackColor = false;
             this.button_ViewClient.Click += new System.EventHandler(this.button_ViewClient_Click);
             // 
             // button_EditClient
             // 
             this.button_EditClient.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button_EditClient.AutoSize = true;
-            this.button_EditClient.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_EditClient.BackgroundImage")));
+            this.button_EditClient.BackColor = System.Drawing.Color.Transparent;
+            this.button_EditClient.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.EditClient;
             this.button_EditClient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_EditClient.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_EditClient.FlatAppearance.BorderSize = 0;
             this.button_EditClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_EditClient.ForeColor = System.Drawing.Color.White;
             this.button_EditClient.Location = new System.Drawing.Point(1244, 723);
             this.button_EditClient.Name = "button_EditClient";
             this.button_EditClient.Size = new System.Drawing.Size(178, 87);
             this.button_EditClient.TabIndex = 12;
-            this.button_EditClient.UseVisualStyleBackColor = true;
+            this.button_EditClient.UseVisualStyleBackColor = false;
             this.button_EditClient.Click += new System.EventHandler(this.button_EditClient_Click);
             // 
             // button_RemoveClient
             // 
             this.button_RemoveClient.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button_RemoveClient.AutoSize = true;
-            this.button_RemoveClient.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_RemoveClient.BackgroundImage")));
+            this.button_RemoveClient.BackColor = System.Drawing.Color.Transparent;
+            this.button_RemoveClient.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Remove;
             this.button_RemoveClient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_RemoveClient.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_RemoveClient.FlatAppearance.BorderSize = 0;
             this.button_RemoveClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_RemoveClient.ForeColor = System.Drawing.Color.White;
             this.button_RemoveClient.Location = new System.Drawing.Point(1244, 816);
             this.button_RemoveClient.Name = "button_RemoveClient";
             this.button_RemoveClient.Size = new System.Drawing.Size(178, 87);
             this.button_RemoveClient.TabIndex = 11;
-            this.button_RemoveClient.UseVisualStyleBackColor = true;
+            this.button_RemoveClient.UseVisualStyleBackColor = false;
             this.button_RemoveClient.Click += new System.EventHandler(this.button_RemoveClient_Click);
             // 
             // Title_Logo
             // 
             this.Title_Logo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Title_Logo.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.Title_Logo.Image = ((System.Drawing.Image)(resources.GetObject("Title_Logo.Image")));
+            this.Title_Logo.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.Title_Logo.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Header;
             this.Title_Logo.InitialImage = ((System.Drawing.Image)(resources.GetObject("Title_Logo.InitialImage")));
             this.Title_Logo.Location = new System.Drawing.Point(0, 0);
             this.Title_Logo.Margin = new System.Windows.Forms.Padding(0);
@@ -394,6 +406,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(116)))), ((int)(((byte)(235)))));
+            this.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Background;
             this.ClientSize = new System.Drawing.Size(1455, 932);
             this.ControlBox = false;
             this.Controls.Add(this.button_AddClient);

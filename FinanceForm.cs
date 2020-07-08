@@ -78,7 +78,7 @@ namespace Software_Development_Capstone
                     if (date_end.Checked) { results.RemoveAll(transaction => transaction.Date > date_end.Value); }
                     if (texbox_AFrom.Text != "") { results.RemoveAll(transaction => transaction.Amount < long.Parse(texbox_AFrom.Text)); }
                     if (textbox_ATo.Text != "") { results.RemoveAll(transaction => transaction.Amount > long.Parse(textbox_ATo.Text)); }
-                    if (combobox_Type.SelectedIndex != 0) { results.RemoveAll(transaction => transaction.Type != combobox_Type.SelectedItem.ToString()) }
+                    if (combobox_Type.SelectedIndex != 0) { results.RemoveAll(transaction => transaction.Type != combobox_Type.SelectedItem.ToString()); }
 
                 }
 

@@ -29,7 +29,7 @@ namespace Software_Development_Capstone
 
                 label_Name.Text = checkin_client.FName + " " + checkin_client.LName;
 
-                Label_ClientCredit.Text = "$" + checkin_client.ClassCredit.ToString();
+                Label_ClientCredit.Text = checkin_client.ClassCredit.ToString();
 
                 if (checkin_client.Waiver == 1) { checkbox_Waiver.BackgroundImage = Software_Development_Capstone.Properties.Resources.checked_checkbox; }
                 if (checkin_client.Pregnant == 1) { checkbox_Pregnant.BackgroundImage = Software_Development_Capstone.Properties.Resources.checked_checkbox; }
@@ -84,15 +84,15 @@ namespace Software_Development_Capstone
                 {
                     var checkin_client = (from clients in context.Clients where clients.ClientId == checkinID select clients).First();
 
-                    if (int.Parse(textbox_Cost.Text) > checkin_client.ClassCredit)
+                    if (checkin_client.ClassCredit == 0)
                     {
                         MessageBox.Show("Unable to check-in client. Client does not have enough class credit.");
                         return;
                     }
 
-                    checkin_client.ClassCredit -= int.Parse(textbox_Cost.Text);
+                    checkin_client.ClassCredit -= 1;
                     context.SaveChanges();
-                    MessageBox.Show("Client Successfully checked-in. $" + int.Parse(textbox_Cost.Text) + " deducted from clients credit.");
+                    MessageBox.Show("Client Successfully checked-in. Class deducted from clients credit.");
                 }
                 else
                 {

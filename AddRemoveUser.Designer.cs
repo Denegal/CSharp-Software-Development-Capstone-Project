@@ -28,24 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddRemoveUser));
             this.label_Title = new System.Windows.Forms.Label();
             this.group_User = new System.Windows.Forms.GroupBox();
+            this.textbox_Password2 = new System.Windows.Forms.TextBox();
+            this.label_Password2 = new System.Windows.Forms.Label();
+            this.combo_Username = new System.Windows.Forms.ComboBox();
             this.label_Username = new System.Windows.Forms.Label();
             this.textbox_Password = new System.Windows.Forms.TextBox();
             this.label_Password = new System.Windows.Forms.Label();
             this.textbox_Username = new System.Windows.Forms.TextBox();
             this.button_Save = new System.Windows.Forms.Button();
             this.button_Cancel = new System.Windows.Forms.Button();
-            this.combo_Username = new System.Windows.Forms.ComboBox();
-            this.textbox_Password2 = new System.Windows.Forms.TextBox();
-            this.label_Password2 = new System.Windows.Forms.Label();
             this.group_User.SuspendLayout();
             this.SuspendLayout();
             // 
             // label_Title
             // 
-            this.label_Title.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label_Title.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label_Title.Font = new System.Drawing.Font("Tempus Sans ITC", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Title.Location = new System.Drawing.Point(0, 0);
             this.label_Title.Name = "label_Title";
@@ -56,6 +55,7 @@
             // 
             // group_User
             // 
+            this.group_User.BackColor = System.Drawing.Color.Transparent;
             this.group_User.Controls.Add(this.textbox_Password2);
             this.group_User.Controls.Add(this.label_Password2);
             this.group_User.Controls.Add(this.combo_Username);
@@ -69,84 +69,30 @@
             this.group_User.TabIndex = 10;
             this.group_User.TabStop = false;
             // 
-            // label_Username
+            // textbox_Password2
             // 
-            this.label_Username.AutoSize = true;
-            this.label_Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Username.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label_Username.Location = new System.Drawing.Point(39, 43);
-            this.label_Username.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
-            this.label_Username.Name = "label_Username";
-            this.label_Username.Size = new System.Drawing.Size(125, 25);
-            this.label_Username.TabIndex = 26;
-            this.label_Username.Text = "Username:";
-            this.label_Username.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.textbox_Password2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textbox_Password2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textbox_Password2.Location = new System.Drawing.Point(170, 126);
+            this.textbox_Password2.MaxLength = 50;
+            this.textbox_Password2.Name = "textbox_Password2";
+            this.textbox_Password2.PasswordChar = '*';
+            this.textbox_Password2.Size = new System.Drawing.Size(295, 31);
+            this.textbox_Password2.TabIndex = 53;
+            this.textbox_Password2.UseSystemPasswordChar = true;
             // 
-            // textbox_Password
+            // label_Password2
             // 
-            this.textbox_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textbox_Password.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textbox_Password.Location = new System.Drawing.Point(170, 91);
-            this.textbox_Password.MaxLength = 50;
-            this.textbox_Password.Name = "textbox_Password";
-            this.textbox_Password.PasswordChar = '*';
-            this.textbox_Password.Size = new System.Drawing.Size(295, 31);
-            this.textbox_Password.TabIndex = 32;
-            this.textbox_Password.UseSystemPasswordChar = true;
-            // 
-            // label_Password
-            // 
-            this.label_Password.AutoSize = true;
-            this.label_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Password.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label_Password.Location = new System.Drawing.Point(43, 94);
-            this.label_Password.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
-            this.label_Password.Name = "label_Password";
-            this.label_Password.Size = new System.Drawing.Size(121, 25);
-            this.label_Password.TabIndex = 28;
-            this.label_Password.Text = "Password:";
-            this.label_Password.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // textbox_Username
-            // 
-            this.textbox_Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textbox_Username.Location = new System.Drawing.Point(170, 40);
-            this.textbox_Username.MaxLength = 50;
-            this.textbox_Username.Name = "textbox_Username";
-            this.textbox_Username.Size = new System.Drawing.Size(295, 31);
-            this.textbox_Username.TabIndex = 30;
-            // 
-            // button_Save
-            // 
-            this.button_Save.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button_Save.AutoSize = true;
-            this.button_Save.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Save.BackgroundImage")));
-            this.button_Save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_Save.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Save.ForeColor = System.Drawing.Color.White;
-            this.button_Save.Location = new System.Drawing.Point(46, 258);
-            this.button_Save.Name = "button_Save";
-            this.button_Save.Size = new System.Drawing.Size(178, 87);
-            this.button_Save.TabIndex = 12;
-            this.button_Save.UseVisualStyleBackColor = true;
-            this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
-            // 
-            // button_Cancel
-            // 
-            this.button_Cancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button_Cancel.AutoSize = true;
-            this.button_Cancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Cancel.BackgroundImage")));
-            this.button_Cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_Cancel.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Cancel.ForeColor = System.Drawing.Color.White;
-            this.button_Cancel.Location = new System.Drawing.Point(267, 258);
-            this.button_Cancel.Name = "button_Cancel";
-            this.button_Cancel.Size = new System.Drawing.Size(178, 87);
-            this.button_Cancel.TabIndex = 11;
-            this.button_Cancel.UseVisualStyleBackColor = true;
-            this.button_Cancel.Click += new System.EventHandler(this.button_Cancel_Click);
+            this.label_Password2.AutoSize = true;
+            this.label_Password2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Password2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label_Password2.Location = new System.Drawing.Point(71, 129);
+            this.label_Password2.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            this.label_Password2.Name = "label_Password2";
+            this.label_Password2.Size = new System.Drawing.Size(93, 25);
+            this.label_Password2.TabIndex = 52;
+            this.label_Password2.Text = "Retype:";
+            this.label_Password2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // combo_Username
             // 
@@ -174,41 +120,102 @@
             this.combo_Username.TabIndex = 51;
             this.combo_Username.Visible = false;
             // 
-            // textbox_Password2
+            // label_Username
             // 
-            this.textbox_Password2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textbox_Password2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textbox_Password2.Location = new System.Drawing.Point(170, 126);
-            this.textbox_Password2.MaxLength = 50;
-            this.textbox_Password2.Name = "textbox_Password2";
-            this.textbox_Password2.PasswordChar = '*';
-            this.textbox_Password2.Size = new System.Drawing.Size(295, 31);
-            this.textbox_Password2.TabIndex = 53;
-            this.textbox_Password2.UseSystemPasswordChar = true;
+            this.label_Username.AutoSize = true;
+            this.label_Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Username.ForeColor = System.Drawing.SystemColors.Control;
+            this.label_Username.Location = new System.Drawing.Point(39, 43);
+            this.label_Username.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            this.label_Username.Name = "label_Username";
+            this.label_Username.Size = new System.Drawing.Size(125, 25);
+            this.label_Username.TabIndex = 26;
+            this.label_Username.Text = "Username:";
+            this.label_Username.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label_Password2
+            // textbox_Password
             // 
-            this.label_Password2.AutoSize = true;
-            this.label_Password2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Password2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label_Password2.Location = new System.Drawing.Point(71, 129);
-            this.label_Password2.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
-            this.label_Password2.Name = "label_Password2";
-            this.label_Password2.Size = new System.Drawing.Size(93, 25);
-            this.label_Password2.TabIndex = 52;
-            this.label_Password2.Text = "Retype:";
-            this.label_Password2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.textbox_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textbox_Password.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textbox_Password.Location = new System.Drawing.Point(170, 91);
+            this.textbox_Password.MaxLength = 50;
+            this.textbox_Password.Name = "textbox_Password";
+            this.textbox_Password.PasswordChar = '*';
+            this.textbox_Password.Size = new System.Drawing.Size(295, 31);
+            this.textbox_Password.TabIndex = 32;
+            this.textbox_Password.UseSystemPasswordChar = true;
+            // 
+            // label_Password
+            // 
+            this.label_Password.AutoSize = true;
+            this.label_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Password.ForeColor = System.Drawing.SystemColors.Control;
+            this.label_Password.Location = new System.Drawing.Point(43, 94);
+            this.label_Password.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            this.label_Password.Name = "label_Password";
+            this.label_Password.Size = new System.Drawing.Size(121, 25);
+            this.label_Password.TabIndex = 28;
+            this.label_Password.Text = "Password:";
+            this.label_Password.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // textbox_Username
+            // 
+            this.textbox_Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textbox_Username.Location = new System.Drawing.Point(170, 40);
+            this.textbox_Username.MaxLength = 50;
+            this.textbox_Username.Name = "textbox_Username";
+            this.textbox_Username.Size = new System.Drawing.Size(295, 31);
+            this.textbox_Username.TabIndex = 30;
+            // 
+            // button_Save
+            // 
+            this.button_Save.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button_Save.AutoSize = true;
+            this.button_Save.BackColor = System.Drawing.Color.Transparent;
+            this.button_Save.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.MainSave;
+            this.button_Save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_Save.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_Save.FlatAppearance.BorderSize = 0;
+            this.button_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Save.ForeColor = System.Drawing.Color.White;
+            this.button_Save.Location = new System.Drawing.Point(46, 258);
+            this.button_Save.Name = "button_Save";
+            this.button_Save.Size = new System.Drawing.Size(178, 87);
+            this.button_Save.TabIndex = 12;
+            this.button_Save.UseVisualStyleBackColor = false;
+            this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
+            // 
+            // button_Cancel
+            // 
+            this.button_Cancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button_Cancel.AutoSize = true;
+            this.button_Cancel.BackColor = System.Drawing.Color.Transparent;
+            this.button_Cancel.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Cancel;
+            this.button_Cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_Cancel.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_Cancel.FlatAppearance.BorderSize = 0;
+            this.button_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Cancel.ForeColor = System.Drawing.Color.White;
+            this.button_Cancel.Location = new System.Drawing.Point(267, 258);
+            this.button_Cancel.Name = "button_Cancel";
+            this.button_Cancel.Size = new System.Drawing.Size(178, 87);
+            this.button_Cancel.TabIndex = 11;
+            this.button_Cancel.UseVisualStyleBackColor = false;
+            this.button_Cancel.Click += new System.EventHandler(this.button_Cancel_Click);
             // 
             // AddRemoveUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(502, 351);
             this.ControlBox = false;
             this.Controls.Add(this.button_Save);
             this.Controls.Add(this.button_Cancel);
             this.Controls.Add(this.group_User);
             this.Controls.Add(this.label_Title);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Location = new System.Drawing.Point(50, 100);
             this.MaximumSize = new System.Drawing.Size(508, 357);

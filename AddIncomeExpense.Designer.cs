@@ -47,6 +47,7 @@
             // 
             // group_Client
             // 
+            this.group_Client.BackColor = System.Drawing.Color.Transparent;
             this.group_Client.Controls.Add(this.label_Other);
             this.group_Client.Controls.Add(this.textbox_Other);
             this.group_Client.Controls.Add(this.combo_ClientType);
@@ -55,6 +56,7 @@
             this.group_Client.Controls.Add(this.label_ClientType);
             this.group_Client.Controls.Add(this.label_Amount);
             this.group_Client.Controls.Add(this.textbox_Amount);
+            this.group_Client.ForeColor = System.Drawing.SystemColors.Control;
             this.group_Client.Location = new System.Drawing.Point(45, 100);
             this.group_Client.Name = "group_Client";
             this.group_Client.Size = new System.Drawing.Size(804, 340);
@@ -65,7 +67,7 @@
             // 
             this.label_Other.AutoSize = true;
             this.label_Other.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Other.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_Other.ForeColor = System.Drawing.SystemColors.Control;
             this.label_Other.Location = new System.Drawing.Point(437, 57);
             this.label_Other.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label_Other.Name = "label_Other";
@@ -116,7 +118,7 @@
             // 
             this.label_Desc.AutoSize = true;
             this.label_Desc.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Desc.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_Desc.ForeColor = System.Drawing.SystemColors.Control;
             this.label_Desc.Location = new System.Drawing.Point(6, 113);
             this.label_Desc.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label_Desc.Name = "label_Desc";
@@ -129,7 +131,7 @@
             // 
             this.label_ClientType.AutoSize = true;
             this.label_ClientType.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_ClientType.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_ClientType.ForeColor = System.Drawing.SystemColors.Control;
             this.label_ClientType.Location = new System.Drawing.Point(6, 57);
             this.label_ClientType.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label_ClientType.Name = "label_ClientType";
@@ -142,7 +144,7 @@
             // 
             this.label_Amount.AutoSize = true;
             this.label_Amount.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Amount.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_Amount.ForeColor = System.Drawing.SystemColors.Control;
             this.label_Amount.Location = new System.Drawing.Point(6, 16);
             this.label_Amount.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label_Amount.Name = "label_Amount";
@@ -173,8 +175,10 @@
             // 
             // label_Title
             // 
+            this.label_Title.BackColor = System.Drawing.Color.Black;
             this.label_Title.Font = new System.Drawing.Font("Tempus Sans ITC", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Title.Location = new System.Drawing.Point(0, 26);
+            this.label_Title.ForeColor = System.Drawing.SystemColors.Control;
+            this.label_Title.Location = new System.Drawing.Point(0, 22);
             this.label_Title.Name = "label_Title";
             this.label_Title.Size = new System.Drawing.Size(893, 71);
             this.label_Title.TabIndex = 54;
@@ -185,10 +189,12 @@
             // 
             this.button_Cancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button_Cancel.AutoSize = true;
-            this.button_Cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button_Cancel.BackColor = System.Drawing.Color.Transparent;
+            this.button_Cancel.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Cancel;
             this.button_Cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button_Cancel.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_Cancel.FlatAppearance.BorderSize = 0;
             this.button_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Cancel.ForeColor = System.Drawing.Color.Black;
@@ -196,7 +202,6 @@
             this.button_Cancel.Name = "button_Cancel";
             this.button_Cancel.Size = new System.Drawing.Size(193, 87);
             this.button_Cancel.TabIndex = 56;
-            this.button_Cancel.Text = "Cancel Button\r\nPlaceholder";
             this.button_Cancel.UseVisualStyleBackColor = false;
             this.button_Cancel.Click += new System.EventHandler(this.button_Cancel_Click);
             // 
@@ -204,9 +209,11 @@
             // 
             this.button_Save.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button_Save.AutoSize = true;
-            this.button_Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button_Save.BackColor = System.Drawing.Color.Transparent;
+            this.button_Save.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.MainSave;
             this.button_Save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_Save.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_Save.FlatAppearance.BorderSize = 0;
             this.button_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Save.ForeColor = System.Drawing.Color.Black;
@@ -214,7 +221,6 @@
             this.button_Save.Name = "button_Save";
             this.button_Save.Size = new System.Drawing.Size(193, 87);
             this.button_Save.TabIndex = 55;
-            this.button_Save.Text = "Save Button\r\nPlaceholder";
             this.button_Save.UseVisualStyleBackColor = false;
             this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
             // 
@@ -222,7 +228,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(116)))), ((int)(((byte)(235)))));
+            this.BackColor = System.Drawing.Color.DimGray;
+            this.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton = this.button_Cancel;
             this.ClientSize = new System.Drawing.Size(894, 553);
             this.Controls.Add(this.button_Cancel);
@@ -230,6 +238,7 @@
             this.Controls.Add(this.label_Title);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.group_Client);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

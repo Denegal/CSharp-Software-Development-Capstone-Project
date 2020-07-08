@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChangePasswordForm));
             this.label_Title = new System.Windows.Forms.Label();
             this.group_Client = new System.Windows.Forms.GroupBox();
             this.textbox_NewPass2 = new System.Windows.Forms.TextBox();
@@ -45,7 +44,7 @@
             // 
             // label_Title
             // 
-            this.label_Title.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label_Title.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.label_Title.Font = new System.Drawing.Font("Tempus Sans ITC", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Title.Location = new System.Drawing.Point(0, 0);
             this.label_Title.Name = "label_Title";
@@ -56,6 +55,7 @@
             // 
             // group_Client
             // 
+            this.group_Client.BackColor = System.Drawing.Color.Transparent;
             this.group_Client.Controls.Add(this.textbox_NewPass2);
             this.group_Client.Controls.Add(this.label_NewPass2);
             this.group_Client.Controls.Add(this.label_OldPaass);
@@ -85,7 +85,7 @@
             // 
             this.label_NewPass2.AutoSize = true;
             this.label_NewPass2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_NewPass2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_NewPass2.ForeColor = System.Drawing.SystemColors.Control;
             this.label_NewPass2.Location = new System.Drawing.Point(10, 116);
             this.label_NewPass2.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label_NewPass2.Name = "label_NewPass2";
@@ -98,7 +98,7 @@
             // 
             this.label_OldPaass.AutoSize = true;
             this.label_OldPaass.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_OldPaass.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_OldPaass.ForeColor = System.Drawing.SystemColors.Control;
             this.label_OldPaass.Location = new System.Drawing.Point(6, 22);
             this.label_OldPaass.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label_OldPaass.Name = "label_OldPaass";
@@ -132,7 +132,7 @@
             // 
             this.label_NewPass1.AutoSize = true;
             this.label_NewPass1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_NewPass1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_NewPass1.ForeColor = System.Drawing.SystemColors.Control;
             this.label_NewPass1.Location = new System.Drawing.Point(39, 82);
             this.label_NewPass1.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label_NewPass1.Name = "label_NewPass1";
@@ -156,32 +156,36 @@
             // 
             this.button_Save.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button_Save.AutoSize = true;
-            this.button_Save.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Save.BackgroundImage")));
+            this.button_Save.BackColor = System.Drawing.Color.Transparent;
+            this.button_Save.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.MainSave;
             this.button_Save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_Save.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_Save.FlatAppearance.BorderSize = 0;
             this.button_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Save.ForeColor = System.Drawing.Color.White;
             this.button_Save.Location = new System.Drawing.Point(46, 258);
             this.button_Save.Name = "button_Save";
             this.button_Save.Size = new System.Drawing.Size(178, 87);
             this.button_Save.TabIndex = 9;
-            this.button_Save.UseVisualStyleBackColor = true;
+            this.button_Save.UseVisualStyleBackColor = false;
             this.button_Save.Click += new System.EventHandler(this.button1_Click);
             // 
             // button_Cancel
             // 
             this.button_Cancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button_Cancel.AutoSize = true;
-            this.button_Cancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Cancel.BackgroundImage")));
+            this.button_Cancel.BackColor = System.Drawing.Color.Transparent;
+            this.button_Cancel.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Cancel;
             this.button_Cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_Cancel.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_Cancel.FlatAppearance.BorderSize = 0;
             this.button_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Cancel.ForeColor = System.Drawing.Color.White;
             this.button_Cancel.Location = new System.Drawing.Point(267, 258);
             this.button_Cancel.Name = "button_Cancel";
             this.button_Cancel.Size = new System.Drawing.Size(178, 87);
             this.button_Cancel.TabIndex = 8;
-            this.button_Cancel.UseVisualStyleBackColor = true;
+            this.button_Cancel.UseVisualStyleBackColor = false;
             this.button_Cancel.Click += new System.EventHandler(this.button_checkin_Click);
             // 
             // ChangePasswordForm
@@ -189,6 +193,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Background;
             this.ClientSize = new System.Drawing.Size(502, 351);
             this.ControlBox = false;
             this.Controls.Add(this.button_Save);

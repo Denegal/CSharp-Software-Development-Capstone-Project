@@ -287,6 +287,54 @@
   <ItemGroup>
     <None Include="Resources\checked-checkbox.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Header.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Checkin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClientInfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClientPayment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clients.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\credits.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EditClient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Expense.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Finance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MainSave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewClient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -34,9 +34,14 @@
             this.button_Add = new System.Windows.Forms.Button();
             this.combo_History = new System.Windows.Forms.ComboBox();
             this.textbox_MedicalHistory = new System.Windows.Forms.TextBox();
+            this.checkbox_History = new System.Windows.Forms.PictureBox();
             this.label_MedicalHistory = new System.Windows.Forms.Label();
             this.textbox_Injuries = new System.Windows.Forms.TextBox();
+            this.checkbox_Injury = new System.Windows.Forms.PictureBox();
             this.label_Injuries = new System.Windows.Forms.Label();
+            this.checkbox_Pregnant = new System.Windows.Forms.PictureBox();
+            this.checkbox_Medical = new System.Windows.Forms.PictureBox();
+            this.checkbox_Waiver = new System.Windows.Forms.PictureBox();
             this.label_Pregnant = new System.Windows.Forms.Label();
             this.label_MedicalCare = new System.Windows.Forms.Label();
             this.label_Waiver = new System.Windows.Forms.Label();
@@ -54,11 +59,6 @@
             this.label_Email = new System.Windows.Forms.Label();
             this.button_Save = new System.Windows.Forms.Button();
             this.button_Cancel = new System.Windows.Forms.Button();
-            this.checkbox_History = new System.Windows.Forms.PictureBox();
-            this.checkbox_Injury = new System.Windows.Forms.PictureBox();
-            this.checkbox_Pregnant = new System.Windows.Forms.PictureBox();
-            this.checkbox_Medical = new System.Windows.Forms.PictureBox();
-            this.checkbox_Waiver = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.group_Client.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.checkbox_History)).BeginInit();
@@ -71,7 +71,9 @@
             // 
             // label_Title
             // 
+            this.label_Title.BackColor = System.Drawing.Color.Black;
             this.label_Title.Font = new System.Drawing.Font("Tempus Sans ITC", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Title.ForeColor = System.Drawing.SystemColors.Control;
             this.label_Title.Location = new System.Drawing.Point(0, 22);
             this.label_Title.Name = "label_Title";
             this.label_Title.Size = new System.Drawing.Size(893, 71);
@@ -81,6 +83,7 @@
             // 
             // group_Client
             // 
+            this.group_Client.BackColor = System.Drawing.Color.Transparent;
             this.group_Client.Controls.Add(this.button_Remove);
             this.group_Client.Controls.Add(this.button_Add);
             this.group_Client.Controls.Add(this.combo_History);
@@ -176,11 +179,22 @@
             this.textbox_MedicalHistory.Size = new System.Drawing.Size(675, 106);
             this.textbox_MedicalHistory.TabIndex = 49;
             // 
+            // checkbox_History
+            // 
+            this.checkbox_History.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.empty_checkbox;
+            this.checkbox_History.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.checkbox_History.Location = new System.Drawing.Point(236, 428);
+            this.checkbox_History.Name = "checkbox_History";
+            this.checkbox_History.Size = new System.Drawing.Size(41, 41);
+            this.checkbox_History.TabIndex = 48;
+            this.checkbox_History.TabStop = false;
+            this.checkbox_History.Click += new System.EventHandler(this.checkbox_History_Click);
+            // 
             // label_MedicalHistory
             // 
             this.label_MedicalHistory.AutoSize = true;
             this.label_MedicalHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_MedicalHistory.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label_MedicalHistory.ForeColor = System.Drawing.SystemColors.Control;
             this.label_MedicalHistory.Location = new System.Drawing.Point(6, 428);
             this.label_MedicalHistory.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label_MedicalHistory.Name = "label_MedicalHistory";
@@ -201,241 +215,6 @@
             this.textbox_Injuries.Size = new System.Drawing.Size(675, 83);
             this.textbox_Injuries.TabIndex = 46;
             // 
-            // label_Injuries
-            // 
-            this.label_Injuries.AutoSize = true;
-            this.label_Injuries.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Injuries.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label_Injuries.Location = new System.Drawing.Point(6, 281);
-            this.label_Injuries.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
-            this.label_Injuries.Name = "label_Injuries";
-            this.label_Injuries.Size = new System.Drawing.Size(215, 31);
-            this.label_Injuries.TabIndex = 44;
-            this.label_Injuries.Text = "Curent Injuries:";
-            this.label_Injuries.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label_Pregnant
-            // 
-            this.label_Pregnant.AutoSize = true;
-            this.label_Pregnant.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Pregnant.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label_Pregnant.Location = new System.Drawing.Point(314, 214);
-            this.label_Pregnant.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
-            this.label_Pregnant.Name = "label_Pregnant";
-            this.label_Pregnant.Size = new System.Drawing.Size(141, 31);
-            this.label_Pregnant.TabIndex = 40;
-            this.label_Pregnant.Text = "Pregnant:";
-            this.label_Pregnant.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label_MedicalCare
-            // 
-            this.label_MedicalCare.AutoSize = true;
-            this.label_MedicalCare.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_MedicalCare.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label_MedicalCare.Location = new System.Drawing.Point(541, 214);
-            this.label_MedicalCare.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
-            this.label_MedicalCare.Name = "label_MedicalCare";
-            this.label_MedicalCare.Size = new System.Drawing.Size(194, 31);
-            this.label_MedicalCare.TabIndex = 39;
-            this.label_MedicalCare.Text = "Medical Care:";
-            this.label_MedicalCare.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label_Waiver
-            // 
-            this.label_Waiver.AutoSize = true;
-            this.label_Waiver.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Waiver.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label_Waiver.Location = new System.Drawing.Point(6, 214);
-            this.label_Waiver.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
-            this.label_Waiver.Name = "label_Waiver";
-            this.label_Waiver.Size = new System.Drawing.Size(209, 31);
-            this.label_Waiver.TabIndex = 38;
-            this.label_Waiver.Text = "Waiver on File:";
-            this.label_Waiver.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // textbox_EContactPhone
-            // 
-            this.textbox_EContactPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textbox_EContactPhone.Location = new System.Drawing.Point(382, 167);
-            this.textbox_EContactPhone.MaxLength = 10;
-            this.textbox_EContactPhone.Name = "textbox_EContactPhone";
-            this.textbox_EContactPhone.Size = new System.Drawing.Size(199, 31);
-            this.textbox_EContactPhone.TabIndex = 37;
-            this.textbox_EContactPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox_EContactPhone_KeyPress);
-            // 
-            // label_EContactPhone
-            // 
-            this.label_EContactPhone.AutoSize = true;
-            this.label_EContactPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_EContactPhone.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label_EContactPhone.Location = new System.Drawing.Point(6, 164);
-            this.label_EContactPhone.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
-            this.label_EContactPhone.Name = "label_EContactPhone";
-            this.label_EContactPhone.Size = new System.Drawing.Size(370, 31);
-            this.label_EContactPhone.TabIndex = 36;
-            this.label_EContactPhone.Text = "Emergency Contact Phone:";
-            this.label_EContactPhone.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label_EContact
-            // 
-            this.label_EContact.AutoSize = true;
-            this.label_EContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_EContact.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label_EContact.Location = new System.Drawing.Point(6, 116);
-            this.label_EContact.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
-            this.label_EContact.Name = "label_EContact";
-            this.label_EContact.Size = new System.Drawing.Size(279, 31);
-            this.label_EContact.TabIndex = 34;
-            this.label_EContact.Text = "Emergency Contact:";
-            this.label_EContact.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // textbox_EContact
-            // 
-            this.textbox_EContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textbox_EContact.Location = new System.Drawing.Point(291, 119);
-            this.textbox_EContact.MaxLength = 50;
-            this.textbox_EContact.Name = "textbox_EContact";
-            this.textbox_EContact.Size = new System.Drawing.Size(290, 31);
-            this.textbox_EContact.TabIndex = 35;
-            // 
-            // textbox_Email
-            // 
-            this.textbox_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textbox_Email.Location = new System.Drawing.Point(519, 56);
-            this.textbox_Email.MaxLength = 30;
-            this.textbox_Email.Name = "textbox_Email";
-            this.textbox_Email.Size = new System.Drawing.Size(263, 31);
-            this.textbox_Email.TabIndex = 33;
-            // 
-            // label_FName
-            // 
-            this.label_FName.AutoSize = true;
-            this.label_FName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_FName.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label_FName.Location = new System.Drawing.Point(6, 16);
-            this.label_FName.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
-            this.label_FName.Name = "label_FName";
-            this.label_FName.Size = new System.Drawing.Size(166, 31);
-            this.label_FName.TabIndex = 26;
-            this.label_FName.Text = "First Name:";
-            this.label_FName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // textbox_Phone
-            // 
-            this.textbox_Phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textbox_Phone.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textbox_Phone.Location = new System.Drawing.Point(178, 53);
-            this.textbox_Phone.MaxLength = 10;
-            this.textbox_Phone.Name = "textbox_Phone";
-            this.textbox_Phone.Size = new System.Drawing.Size(195, 31);
-            this.textbox_Phone.TabIndex = 32;
-            this.textbox_Phone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox_Phone_KeyPress);
-            // 
-            // label_LName
-            // 
-            this.label_LName.AutoSize = true;
-            this.label_LName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_LName.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label_LName.Location = new System.Drawing.Point(418, 16);
-            this.label_LName.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
-            this.label_LName.Name = "label_LName";
-            this.label_LName.Size = new System.Drawing.Size(163, 31);
-            this.label_LName.TabIndex = 27;
-            this.label_LName.Text = "Last Name:";
-            this.label_LName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // textbox_LName
-            // 
-            this.textbox_LName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textbox_LName.Location = new System.Drawing.Point(587, 16);
-            this.textbox_LName.MaxLength = 20;
-            this.textbox_LName.Name = "textbox_LName";
-            this.textbox_LName.Size = new System.Drawing.Size(195, 31);
-            this.textbox_LName.TabIndex = 31;
-            // 
-            // label_Phone
-            // 
-            this.label_Phone.AutoSize = true;
-            this.label_Phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Phone.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label_Phone.Location = new System.Drawing.Point(66, 53);
-            this.label_Phone.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
-            this.label_Phone.Name = "label_Phone";
-            this.label_Phone.Size = new System.Drawing.Size(106, 31);
-            this.label_Phone.TabIndex = 28;
-            this.label_Phone.Text = "Phone:";
-            this.label_Phone.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // textbox_FName
-            // 
-            this.textbox_FName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textbox_FName.Location = new System.Drawing.Point(178, 16);
-            this.textbox_FName.MaxLength = 15;
-            this.textbox_FName.Name = "textbox_FName";
-            this.textbox_FName.Size = new System.Drawing.Size(195, 31);
-            this.textbox_FName.TabIndex = 30;
-            // 
-            // label_Email
-            // 
-            this.label_Email.AutoSize = true;
-            this.label_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Email.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label_Email.Location = new System.Drawing.Point(418, 56);
-            this.label_Email.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
-            this.label_Email.Name = "label_Email";
-            this.label_Email.Size = new System.Drawing.Size(95, 31);
-            this.label_Email.TabIndex = 29;
-            this.label_Email.Text = "Email:";
-            this.label_Email.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // button_Save
-            // 
-            this.button_Save.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button_Save.AutoSize = true;
-            this.button_Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button_Save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_Save.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Save.ForeColor = System.Drawing.Color.Black;
-            this.button_Save.Location = new System.Drawing.Point(231, 705);
-            this.button_Save.Name = "button_Save";
-            this.button_Save.Size = new System.Drawing.Size(193, 87);
-            this.button_Save.TabIndex = 15;
-            this.button_Save.Text = "Save Button\r\nPlaceholder";
-            this.button_Save.UseVisualStyleBackColor = false;
-            this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
-            // 
-            // button_Cancel
-            // 
-            this.button_Cancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button_Cancel.AutoSize = true;
-            this.button_Cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.button_Cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button_Cancel.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_Cancel.ForeColor = System.Drawing.Color.Black;
-            this.button_Cancel.Location = new System.Drawing.Point(475, 705);
-            this.button_Cancel.Name = "button_Cancel";
-            this.button_Cancel.Size = new System.Drawing.Size(193, 87);
-            this.button_Cancel.TabIndex = 16;
-            this.button_Cancel.Text = "Cancel Button\r\nPlaceholder";
-            this.button_Cancel.UseVisualStyleBackColor = false;
-            this.button_Cancel.Click += new System.EventHandler(this.button_Cancel_Click);
-            // 
-            // checkbox_History
-            // 
-            this.checkbox_History.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.empty_checkbox;
-            this.checkbox_History.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.checkbox_History.Location = new System.Drawing.Point(236, 428);
-            this.checkbox_History.Name = "checkbox_History";
-            this.checkbox_History.Size = new System.Drawing.Size(41, 41);
-            this.checkbox_History.TabIndex = 48;
-            this.checkbox_History.TabStop = false;
-            this.checkbox_History.Click += new System.EventHandler(this.checkbox_History_Click);
-            // 
             // checkbox_Injury
             // 
             this.checkbox_Injury.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.empty_checkbox;
@@ -446,6 +225,19 @@
             this.checkbox_Injury.TabIndex = 45;
             this.checkbox_Injury.TabStop = false;
             this.checkbox_Injury.Click += new System.EventHandler(this.checkbox_Injury_Click);
+            // 
+            // label_Injuries
+            // 
+            this.label_Injuries.AutoSize = true;
+            this.label_Injuries.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Injuries.ForeColor = System.Drawing.SystemColors.Control;
+            this.label_Injuries.Location = new System.Drawing.Point(6, 281);
+            this.label_Injuries.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            this.label_Injuries.Name = "label_Injuries";
+            this.label_Injuries.Size = new System.Drawing.Size(215, 31);
+            this.label_Injuries.TabIndex = 44;
+            this.label_Injuries.Text = "Curent Injuries:";
+            this.label_Injuries.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // checkbox_Pregnant
             // 
@@ -480,6 +272,219 @@
             this.checkbox_Waiver.TabStop = false;
             this.checkbox_Waiver.Click += new System.EventHandler(this.checkbox_Waiver_Click);
             // 
+            // label_Pregnant
+            // 
+            this.label_Pregnant.AutoSize = true;
+            this.label_Pregnant.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Pregnant.ForeColor = System.Drawing.SystemColors.Control;
+            this.label_Pregnant.Location = new System.Drawing.Point(314, 214);
+            this.label_Pregnant.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            this.label_Pregnant.Name = "label_Pregnant";
+            this.label_Pregnant.Size = new System.Drawing.Size(141, 31);
+            this.label_Pregnant.TabIndex = 40;
+            this.label_Pregnant.Text = "Pregnant:";
+            this.label_Pregnant.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label_MedicalCare
+            // 
+            this.label_MedicalCare.AutoSize = true;
+            this.label_MedicalCare.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_MedicalCare.ForeColor = System.Drawing.SystemColors.Control;
+            this.label_MedicalCare.Location = new System.Drawing.Point(541, 214);
+            this.label_MedicalCare.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            this.label_MedicalCare.Name = "label_MedicalCare";
+            this.label_MedicalCare.Size = new System.Drawing.Size(194, 31);
+            this.label_MedicalCare.TabIndex = 39;
+            this.label_MedicalCare.Text = "Medical Care:";
+            this.label_MedicalCare.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label_Waiver
+            // 
+            this.label_Waiver.AutoSize = true;
+            this.label_Waiver.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Waiver.ForeColor = System.Drawing.SystemColors.Control;
+            this.label_Waiver.Location = new System.Drawing.Point(6, 214);
+            this.label_Waiver.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            this.label_Waiver.Name = "label_Waiver";
+            this.label_Waiver.Size = new System.Drawing.Size(209, 31);
+            this.label_Waiver.TabIndex = 38;
+            this.label_Waiver.Text = "Waiver on File:";
+            this.label_Waiver.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // textbox_EContactPhone
+            // 
+            this.textbox_EContactPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textbox_EContactPhone.Location = new System.Drawing.Point(382, 167);
+            this.textbox_EContactPhone.MaxLength = 10;
+            this.textbox_EContactPhone.Name = "textbox_EContactPhone";
+            this.textbox_EContactPhone.Size = new System.Drawing.Size(199, 31);
+            this.textbox_EContactPhone.TabIndex = 37;
+            this.textbox_EContactPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox_EContactPhone_KeyPress);
+            // 
+            // label_EContactPhone
+            // 
+            this.label_EContactPhone.AutoSize = true;
+            this.label_EContactPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_EContactPhone.ForeColor = System.Drawing.SystemColors.Control;
+            this.label_EContactPhone.Location = new System.Drawing.Point(6, 164);
+            this.label_EContactPhone.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            this.label_EContactPhone.Name = "label_EContactPhone";
+            this.label_EContactPhone.Size = new System.Drawing.Size(370, 31);
+            this.label_EContactPhone.TabIndex = 36;
+            this.label_EContactPhone.Text = "Emergency Contact Phone:";
+            this.label_EContactPhone.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label_EContact
+            // 
+            this.label_EContact.AutoSize = true;
+            this.label_EContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_EContact.ForeColor = System.Drawing.SystemColors.Control;
+            this.label_EContact.Location = new System.Drawing.Point(6, 116);
+            this.label_EContact.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            this.label_EContact.Name = "label_EContact";
+            this.label_EContact.Size = new System.Drawing.Size(279, 31);
+            this.label_EContact.TabIndex = 34;
+            this.label_EContact.Text = "Emergency Contact:";
+            this.label_EContact.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // textbox_EContact
+            // 
+            this.textbox_EContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textbox_EContact.Location = new System.Drawing.Point(291, 119);
+            this.textbox_EContact.MaxLength = 50;
+            this.textbox_EContact.Name = "textbox_EContact";
+            this.textbox_EContact.Size = new System.Drawing.Size(290, 31);
+            this.textbox_EContact.TabIndex = 35;
+            // 
+            // textbox_Email
+            // 
+            this.textbox_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textbox_Email.Location = new System.Drawing.Point(519, 56);
+            this.textbox_Email.MaxLength = 30;
+            this.textbox_Email.Name = "textbox_Email";
+            this.textbox_Email.Size = new System.Drawing.Size(263, 31);
+            this.textbox_Email.TabIndex = 33;
+            // 
+            // label_FName
+            // 
+            this.label_FName.AutoSize = true;
+            this.label_FName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_FName.ForeColor = System.Drawing.SystemColors.Control;
+            this.label_FName.Location = new System.Drawing.Point(6, 16);
+            this.label_FName.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            this.label_FName.Name = "label_FName";
+            this.label_FName.Size = new System.Drawing.Size(166, 31);
+            this.label_FName.TabIndex = 26;
+            this.label_FName.Text = "First Name:";
+            this.label_FName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // textbox_Phone
+            // 
+            this.textbox_Phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textbox_Phone.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.textbox_Phone.Location = new System.Drawing.Point(178, 53);
+            this.textbox_Phone.MaxLength = 10;
+            this.textbox_Phone.Name = "textbox_Phone";
+            this.textbox_Phone.Size = new System.Drawing.Size(195, 31);
+            this.textbox_Phone.TabIndex = 32;
+            this.textbox_Phone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox_Phone_KeyPress);
+            // 
+            // label_LName
+            // 
+            this.label_LName.AutoSize = true;
+            this.label_LName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_LName.ForeColor = System.Drawing.SystemColors.Control;
+            this.label_LName.Location = new System.Drawing.Point(418, 16);
+            this.label_LName.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            this.label_LName.Name = "label_LName";
+            this.label_LName.Size = new System.Drawing.Size(163, 31);
+            this.label_LName.TabIndex = 27;
+            this.label_LName.Text = "Last Name:";
+            this.label_LName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // textbox_LName
+            // 
+            this.textbox_LName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textbox_LName.Location = new System.Drawing.Point(587, 16);
+            this.textbox_LName.MaxLength = 20;
+            this.textbox_LName.Name = "textbox_LName";
+            this.textbox_LName.Size = new System.Drawing.Size(195, 31);
+            this.textbox_LName.TabIndex = 31;
+            // 
+            // label_Phone
+            // 
+            this.label_Phone.AutoSize = true;
+            this.label_Phone.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Phone.ForeColor = System.Drawing.SystemColors.Control;
+            this.label_Phone.Location = new System.Drawing.Point(66, 53);
+            this.label_Phone.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            this.label_Phone.Name = "label_Phone";
+            this.label_Phone.Size = new System.Drawing.Size(106, 31);
+            this.label_Phone.TabIndex = 28;
+            this.label_Phone.Text = "Phone:";
+            this.label_Phone.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // textbox_FName
+            // 
+            this.textbox_FName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textbox_FName.Location = new System.Drawing.Point(178, 16);
+            this.textbox_FName.MaxLength = 15;
+            this.textbox_FName.Name = "textbox_FName";
+            this.textbox_FName.Size = new System.Drawing.Size(195, 31);
+            this.textbox_FName.TabIndex = 30;
+            // 
+            // label_Email
+            // 
+            this.label_Email.AutoSize = true;
+            this.label_Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Email.ForeColor = System.Drawing.SystemColors.Control;
+            this.label_Email.Location = new System.Drawing.Point(418, 56);
+            this.label_Email.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            this.label_Email.Name = "label_Email";
+            this.label_Email.Size = new System.Drawing.Size(95, 31);
+            this.label_Email.TabIndex = 29;
+            this.label_Email.Text = "Email:";
+            this.label_Email.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // button_Save
+            // 
+            this.button_Save.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button_Save.AutoSize = true;
+            this.button_Save.BackColor = System.Drawing.Color.Transparent;
+            this.button_Save.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.MainSave;
+            this.button_Save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_Save.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_Save.FlatAppearance.BorderSize = 0;
+            this.button_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Save.ForeColor = System.Drawing.Color.Black;
+            this.button_Save.Location = new System.Drawing.Point(231, 705);
+            this.button_Save.Name = "button_Save";
+            this.button_Save.Size = new System.Drawing.Size(193, 87);
+            this.button_Save.TabIndex = 15;
+            this.button_Save.UseVisualStyleBackColor = false;
+            this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
+            // 
+            // button_Cancel
+            // 
+            this.button_Cancel.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button_Cancel.AutoSize = true;
+            this.button_Cancel.BackColor = System.Drawing.Color.Transparent;
+            this.button_Cancel.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Cancel;
+            this.button_Cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.button_Cancel.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button_Cancel.FlatAppearance.BorderSize = 0;
+            this.button_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Cancel.ForeColor = System.Drawing.Color.Black;
+            this.button_Cancel.Location = new System.Drawing.Point(475, 705);
+            this.button_Cancel.Name = "button_Cancel";
+            this.button_Cancel.Size = new System.Drawing.Size(193, 87);
+            this.button_Cancel.TabIndex = 16;
+            this.button_Cancel.UseVisualStyleBackColor = false;
+            this.button_Cancel.Click += new System.EventHandler(this.button_Cancel_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -495,6 +500,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(116)))), ((int)(((byte)(235)))));
+            this.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Background;
             this.CancelButton = this.button_Cancel;
             this.ClientSize = new System.Drawing.Size(894, 794);
             this.Controls.Add(this.button_Cancel);

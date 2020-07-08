@@ -45,8 +45,8 @@ namespace Software_Development_Capstone
                 newCredit = clientbalance;
                 oldCredit = clientbalance;
 
-                label_CurrentBalance.Text = "Current Credit Balance: $" + newCredit.ToString();
-                label_NewBalance.Text = "New Credit Balance: $" + newCredit.ToString();
+                label_CurrentBalance.Text = "Current Credit Balance: " + newCredit.ToString();
+                label_NewBalance.Text = "New Credit Balance: " + newCredit.ToString();
             }
 
         }
