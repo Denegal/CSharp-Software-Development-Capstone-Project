@@ -91,6 +91,8 @@
             this.button_AddClient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_AddClient.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.button_AddClient.FlatAppearance.BorderSize = 0;
+            this.button_AddClient.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button_AddClient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button_AddClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_AddClient.ForeColor = System.Drawing.Color.White;
             this.button_AddClient.Location = new System.Drawing.Point(322, 743);
@@ -109,6 +111,8 @@
             this.button_checkin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_checkin.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.button_checkin.FlatAppearance.BorderSize = 0;
+            this.button_checkin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button_checkin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button_checkin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_checkin.ForeColor = System.Drawing.Color.White;
             this.button_checkin.Location = new System.Drawing.Point(543, 743);
@@ -127,6 +131,8 @@
             this.button_Finance.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_Finance.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.button_Finance.FlatAppearance.BorderSize = 0;
+            this.button_Finance.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button_Finance.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button_Finance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Finance.ForeColor = System.Drawing.Color.White;
             this.button_Finance.Location = new System.Drawing.Point(1094, 323);
@@ -145,6 +151,8 @@
             this.button_Clients.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_Clients.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.button_Clients.FlatAppearance.BorderSize = 0;
+            this.button_Clients.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button_Clients.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button_Clients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Clients.ForeColor = System.Drawing.Color.Transparent;
             this.button_Clients.Location = new System.Drawing.Point(1094, 182);

@@ -364,10 +364,13 @@
             this.button_Return.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button_Return.AutoSize = true;
             this.button_Return.BackColor = System.Drawing.Color.Transparent;
+            this.button_Return.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Cancel;
             this.button_Return.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_Return.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button_Return.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.button_Return.FlatAppearance.BorderSize = 0;
+            this.button_Return.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button_Return.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button_Return.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Return.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Return.ForeColor = System.Drawing.Color.Black;

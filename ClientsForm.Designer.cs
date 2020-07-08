@@ -214,6 +214,8 @@
             this.button_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_Search.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.button_Search.FlatAppearance.BorderSize = 0;
+            this.button_Search.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button_Search.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Search.ForeColor = System.Drawing.Color.White;
             this.button_Search.Location = new System.Drawing.Point(195, 354);
@@ -323,6 +325,8 @@
             this.button_AddClient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_AddClient.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.button_AddClient.FlatAppearance.BorderSize = 0;
+            this.button_AddClient.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button_AddClient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button_AddClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_AddClient.ForeColor = System.Drawing.Color.White;
             this.button_AddClient.Location = new System.Drawing.Point(1043, 816);
@@ -341,6 +345,8 @@
             this.button_ViewClient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_ViewClient.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.button_ViewClient.FlatAppearance.BorderSize = 0;
+            this.button_ViewClient.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button_ViewClient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button_ViewClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_ViewClient.ForeColor = System.Drawing.Color.White;
             this.button_ViewClient.Location = new System.Drawing.Point(1043, 723);
@@ -359,6 +365,8 @@
             this.button_EditClient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_EditClient.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.button_EditClient.FlatAppearance.BorderSize = 0;
+            this.button_EditClient.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button_EditClient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button_EditClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_EditClient.ForeColor = System.Drawing.Color.White;
             this.button_EditClient.Location = new System.Drawing.Point(1244, 723);
@@ -377,6 +385,8 @@
             this.button_RemoveClient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_RemoveClient.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.button_RemoveClient.FlatAppearance.BorderSize = 0;
+            this.button_RemoveClient.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button_RemoveClient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button_RemoveClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_RemoveClient.ForeColor = System.Drawing.Color.White;
             this.button_RemoveClient.Location = new System.Drawing.Point(1244, 816);

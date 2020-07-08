@@ -455,6 +455,8 @@
             this.button_Save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_Save.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.button_Save.FlatAppearance.BorderSize = 0;
+            this.button_Save.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button_Save.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Save.ForeColor = System.Drawing.Color.Black;
@@ -475,6 +477,8 @@
             this.button_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button_Cancel.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.button_Cancel.FlatAppearance.BorderSize = 0;
+            this.button_Cancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button_Cancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Cancel.ForeColor = System.Drawing.Color.Black;

@@ -284,6 +284,8 @@
             this.button_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_Search.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.button_Search.FlatAppearance.BorderSize = 0;
+            this.button_Search.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button_Search.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Search.ForeColor = System.Drawing.Color.White;
             this.button_Search.Location = new System.Drawing.Point(280, 365);
@@ -408,6 +410,8 @@
             this.button_Credit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_Credit.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.button_Credit.FlatAppearance.BorderSize = 0;
+            this.button_Credit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button_Credit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button_Credit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Credit.ForeColor = System.Drawing.Color.White;
             this.button_Credit.Location = new System.Drawing.Point(1035, 816);
@@ -427,6 +431,8 @@
             this.button_AddIncome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_AddIncome.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.button_AddIncome.FlatAppearance.BorderSize = 0;
+            this.button_AddIncome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button_AddIncome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button_AddIncome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_AddIncome.ForeColor = System.Drawing.Color.White;
             this.button_AddIncome.Location = new System.Drawing.Point(1035, 723);
@@ -445,6 +451,8 @@
             this.button_AddExpense.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_AddExpense.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.button_AddExpense.FlatAppearance.BorderSize = 0;
+            this.button_AddExpense.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button_AddExpense.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button_AddExpense.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_AddExpense.ForeColor = System.Drawing.Color.White;
             this.button_AddExpense.Location = new System.Drawing.Point(1236, 723);
@@ -463,6 +471,8 @@
             this.button_Remove.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_Remove.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.button_Remove.FlatAppearance.BorderSize = 0;
+            this.button_Remove.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button_Remove.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button_Remove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Remove.ForeColor = System.Drawing.Color.White;
             this.button_Remove.Location = new System.Drawing.Point(1236, 816);

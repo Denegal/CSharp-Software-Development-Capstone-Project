@@ -333,6 +333,8 @@
             this.button_checkin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_checkin.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.button_checkin.FlatAppearance.BorderSize = 0;
+            this.button_checkin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button_checkin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button_checkin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_checkin.ForeColor = System.Drawing.Color.White;
             this.button_checkin.Location = new System.Drawing.Point(426, 620);
@@ -352,6 +354,8 @@
             this.button_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button_Cancel.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.button_Cancel.FlatAppearance.BorderSize = 0;
+            this.button_Cancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button_Cancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Cancel.ForeColor = System.Drawing.Color.Black;

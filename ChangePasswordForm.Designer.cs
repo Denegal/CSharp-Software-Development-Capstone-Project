@@ -161,6 +161,8 @@
             this.button_Save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_Save.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.button_Save.FlatAppearance.BorderSize = 0;
+            this.button_Save.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button_Save.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Save.ForeColor = System.Drawing.Color.White;
             this.button_Save.Location = new System.Drawing.Point(46, 258);
@@ -179,6 +181,8 @@
             this.button_Cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button_Cancel.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.button_Cancel.FlatAppearance.BorderSize = 0;
+            this.button_Cancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button_Cancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Cancel.ForeColor = System.Drawing.Color.White;
             this.button_Cancel.Location = new System.Drawing.Point(267, 258);
