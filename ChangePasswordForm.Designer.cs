@@ -194,12 +194,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(502, 351);
             this.ControlBox = false;
             this.Controls.Add(this.button_Save);
             this.Controls.Add(this.button_Cancel);
             this.Controls.Add(this.group_Client);
             this.Controls.Add(this.label_Title);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Location = new System.Drawing.Point(500, 500);
             this.MaximumSize = new System.Drawing.Size(508, 357);

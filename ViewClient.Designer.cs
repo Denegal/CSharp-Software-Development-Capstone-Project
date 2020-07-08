@@ -204,6 +204,7 @@
             // 
             // checkbox_Pregnant
             // 
+            this.checkbox_Pregnant.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.empty_checkbox;
             this.checkbox_Pregnant.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.checkbox_Pregnant.Location = new System.Drawing.Point(467, 237);
             this.checkbox_Pregnant.Name = "checkbox_Pregnant";
@@ -213,6 +214,7 @@
             // 
             // checkbox_Medical
             // 
+            this.checkbox_Medical.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.empty_checkbox;
             this.checkbox_Medical.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.checkbox_Medical.Location = new System.Drawing.Point(747, 237);
             this.checkbox_Medical.Name = "checkbox_Medical";
@@ -222,6 +224,7 @@
             // 
             // checkbox_Waiver
             // 
+            this.checkbox_Waiver.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.empty_checkbox;
             this.checkbox_Waiver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.checkbox_Waiver.Location = new System.Drawing.Point(227, 237);
             this.checkbox_Waiver.Name = "checkbox_Waiver";
@@ -380,6 +383,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(116)))), ((int)(((byte)(235)))));
+            this.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton = this.button_Return;
             this.ClientSize = new System.Drawing.Size(894, 794);

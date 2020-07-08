@@ -407,6 +407,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(116)))), ((int)(((byte)(235)))));
             this.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1455, 932);
             this.ControlBox = false;
             this.Controls.Add(this.button_AddClient);
@@ -417,6 +418,7 @@
             this.Controls.Add(this.label_ClientList);
             this.Controls.Add(this.dataView_Clients);
             this.Controls.Add(this.Title_Logo);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

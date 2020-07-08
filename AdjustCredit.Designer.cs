@@ -242,12 +242,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(495, 488);
             this.ControlBox = false;
             this.Controls.Add(this.button_Save);
             this.Controls.Add(this.button_Cancel);
             this.Controls.Add(this.group_Client);
             this.Controls.Add(this.label_Title);
+            this.DoubleBuffered = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AdjustCredit";
