@@ -71,7 +71,7 @@ namespace Software_Development_Capstone
 
         private void button_checkin_Click(object sender, EventArgs e)
         {
-            if (textbox_Cost.Text == "")
+            if (textbox_Cost.Text == "" && !CreditChecked)
             {
                 MessageBox.Show("Unable to check-in client. Class cost not entered.");
                 return;
