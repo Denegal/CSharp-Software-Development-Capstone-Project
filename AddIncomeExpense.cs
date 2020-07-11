@@ -66,7 +66,10 @@ namespace Software_Development_Capstone
             // only allow two numbrs after decimal point
             if (textbox_Amount.Text.IndexOf('.') == (textbox_Amount.Text.Length - 3) && textbox_Amount.Text.IndexOf('.') != -1)
             {
-                e.Handled = true;
+                if (!char.IsControl(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
             }
         }
 

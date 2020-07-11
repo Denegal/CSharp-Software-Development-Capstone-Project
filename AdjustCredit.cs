@@ -51,27 +51,49 @@ namespace Software_Development_Capstone
 
         }
 
-        private void textbox_Adjustment_KeyPress(object sender, KeyPressEventArgs e)
+        private void textbox_Amount_KeyPress(object sender, KeyPressEventArgs e)
         {
             // only allow numbers and decimal point
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
             }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && textbox_Amount.Text.Contains('.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow two numbrs after decimal point
+            if (textbox_Amount.Text.IndexOf('.') == (textbox_Amount.Text.Length - 3) && textbox_Amount.Text.IndexOf('.') != -1)
+            {
+                if (!char.IsControl(e.KeyChar)) {
+                    e.Handled = true;
+                }
+            }
         }
+        private void textbox_Credits_KeyPress(object sender, KeyPressEventArgs e)
+            {
+                // only allow numbers
+                if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
+            }
 
         private void button_Add_Click(object sender, EventArgs e)
         {
-            newCredit += int.Parse(textbox_Adjustment.Text);
-            label_NewBalance.Text = "New Credit Balance: $" + newCredit.ToString();
-            textbox_Adjustment.Text = "";
+            newCredit += int.Parse(textbox_Credits.Text);
+            label_NewBalance.Text = "New Credit Balance: " + newCredit.ToString();
+            textbox_Amount.Text = "";
         }
 
         private void button_Remove_Click(object sender, EventArgs e)
         {
-            newCredit = newCredit > int.Parse(textbox_Adjustment.Text) ? newCredit - int.Parse(textbox_Adjustment.Text) : 0;
+            newCredit = newCredit > int.Parse(textbox_Credits.Text) ? newCredit - int.Parse(textbox_Credits.Text) : 0;
             label_NewBalance.Text = "New Credit Balance: $" + newCredit.ToString();
-            textbox_Adjustment.Text = "";
+            textbox_Amount.Text = "";
         }
 
         private void button_Save_Click(object sender, EventArgs e)
@@ -89,7 +111,7 @@ namespace Software_Development_Capstone
                 {
                     IncomeOrExpense = newCredit > oldCredit ? "Income" : "Expense",
                     Type = "Class Prepay",
-                    Amount = long.Parse((newCredit - oldCredit).ToString()),
+                    Amount = long.Parse(textbox_Amount.Text),
                     Client = (from clients in context.Clients where clients.FName == clientFName && clients.LName == clientLName select clients.ClientId).First(),
                     FinanceDate = DateTime.Now.Date,
                     Desc = "Client " + clientFName + " " + clientLName + " prepaid for classes.",
@@ -102,5 +124,7 @@ namespace Software_Development_Capstone
 
             this.Close();
         }
+
+       
     }
 }

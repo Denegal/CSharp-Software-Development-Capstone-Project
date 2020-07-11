@@ -30,10 +30,10 @@
         {
             this.group_Client = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textbox_Adjustment = new System.Windows.Forms.TextBox();
+            this.textbox_Credits = new System.Windows.Forms.TextBox();
+            this.button_Remove = new System.Windows.Forms.Button();
+            this.button_Add = new System.Windows.Forms.Button();
+            this.textbox_Amount = new System.Windows.Forms.TextBox();
             this.label_NewBalance = new System.Windows.Forms.Label();
             this.label_CurrentBalance = new System.Windows.Forms.Label();
             this.combo_Client = new System.Windows.Forms.ComboBox();
@@ -50,10 +50,10 @@
             // 
             this.group_Client.BackColor = System.Drawing.Color.Transparent;
             this.group_Client.Controls.Add(this.label1);
-            this.group_Client.Controls.Add(this.textBox1);
-            this.group_Client.Controls.Add(this.button1);
-            this.group_Client.Controls.Add(this.button2);
-            this.group_Client.Controls.Add(this.textbox_Adjustment);
+            this.group_Client.Controls.Add(this.textbox_Credits);
+            this.group_Client.Controls.Add(this.button_Remove);
+            this.group_Client.Controls.Add(this.button_Add);
+            this.group_Client.Controls.Add(this.textbox_Amount);
             this.group_Client.Controls.Add(this.label_NewBalance);
             this.group_Client.Controls.Add(this.label_CurrentBalance);
             this.group_Client.Controls.Add(this.combo_Client);
@@ -79,44 +79,47 @@
             this.label1.Text = "Class Credits:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // textBox1
+            // textbox_Credits
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(164, 172);
-            this.textBox1.MaxLength = 3;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(101, 31);
-            this.textBox1.TabIndex = 59;
+            this.textbox_Credits.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textbox_Credits.Location = new System.Drawing.Point(164, 172);
+            this.textbox_Credits.MaxLength = 3;
+            this.textbox_Credits.Name = "textbox_Credits";
+            this.textbox_Credits.Size = new System.Drawing.Size(101, 31);
+            this.textbox_Credits.TabIndex = 59;
+            this.textbox_Credits.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox_Credits_KeyPress);
             // 
-            // button1
+            // button_Remove
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(355, 172);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 33);
-            this.button1.TabIndex = 58;
-            this.button1.Text = "Remove";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_Remove.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Remove.Location = new System.Drawing.Point(355, 172);
+            this.button_Remove.Name = "button_Remove";
+            this.button_Remove.Size = new System.Drawing.Size(104, 33);
+            this.button_Remove.TabIndex = 58;
+            this.button_Remove.Text = "Remove";
+            this.button_Remove.UseVisualStyleBackColor = true;
+            this.button_Remove.Click += new System.EventHandler(this.button_Remove_Click);
             // 
-            // button2
+            // button_Add
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(271, 172);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(78, 33);
-            this.button2.TabIndex = 57;
-            this.button2.Text = "Add";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_Add.Location = new System.Drawing.Point(271, 172);
+            this.button_Add.Name = "button_Add";
+            this.button_Add.Size = new System.Drawing.Size(78, 33);
+            this.button_Add.TabIndex = 57;
+            this.button_Add.Text = "Add";
+            this.button_Add.UseVisualStyleBackColor = true;
+            this.button_Add.Click += new System.EventHandler(this.button_Add_Click);
             // 
-            // textbox_Adjustment
+            // textbox_Amount
             // 
-            this.textbox_Adjustment.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textbox_Adjustment.Location = new System.Drawing.Point(164, 228);
-            this.textbox_Adjustment.MaxLength = 3;
-            this.textbox_Adjustment.Name = "textbox_Adjustment";
-            this.textbox_Adjustment.Size = new System.Drawing.Size(101, 31);
-            this.textbox_Adjustment.TabIndex = 56;
-            this.textbox_Adjustment.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox_Adjustment_KeyPress);
+            this.textbox_Amount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textbox_Amount.Location = new System.Drawing.Point(164, 228);
+            this.textbox_Amount.MaxLength = 3;
+            this.textbox_Amount.Name = "textbox_Amount";
+            this.textbox_Amount.Size = new System.Drawing.Size(101, 31);
+            this.textbox_Amount.TabIndex = 56;
+            this.textbox_Amount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textbox_Amount_KeyPress);
             // 
             // label_NewBalance
             // 
@@ -277,10 +280,10 @@
         private System.Windows.Forms.Label label_CurrentBalance;
         private System.Windows.Forms.ComboBox combo_Client;
         private System.Windows.Forms.Label label_NewBalance;
-        private System.Windows.Forms.TextBox textbox_Adjustment;
+        private System.Windows.Forms.TextBox textbox_Amount;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textbox_Credits;
+        private System.Windows.Forms.Button button_Remove;
+        private System.Windows.Forms.Button button_Add;
     }
 }
