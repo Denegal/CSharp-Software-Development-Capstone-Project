@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend_Logic", "Backend_Lo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CapstoneUnitTests", "CapstoneUnitTests\CapstoneUnitTests.csproj", "{AC8963D5-D245-4919-9578-7E37E855540A}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MC2Pilates", "..\Installer\Installer.vdproj", "{7834044E-56A7-430C-ADE4-FE324002B95D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -109,6 +111,17 @@ Global
 		{AC8963D5-D245-4919-9578-7E37E855540A}.Release|x64.Build.0 = Release|Any CPU
 		{AC8963D5-D245-4919-9578-7E37E855540A}.Release|x86.ActiveCfg = Release|Any CPU
 		{AC8963D5-D245-4919-9578-7E37E855540A}.Release|x86.Build.0 = Release|Any CPU
+		{7834044E-56A7-430C-ADE4-FE324002B95D}.Debug|Any CPU.ActiveCfg = Debug
+		{7834044E-56A7-430C-ADE4-FE324002B95D}.Debug|ARM.ActiveCfg = Debug
+		{7834044E-56A7-430C-ADE4-FE324002B95D}.Debug|ARM64.ActiveCfg = Debug
+		{7834044E-56A7-430C-ADE4-FE324002B95D}.Debug|x64.ActiveCfg = Debug
+		{7834044E-56A7-430C-ADE4-FE324002B95D}.Debug|x86.ActiveCfg = Debug
+		{7834044E-56A7-430C-ADE4-FE324002B95D}.Release|Any CPU.ActiveCfg = Release
+		{7834044E-56A7-430C-ADE4-FE324002B95D}.Release|ARM.ActiveCfg = Release
+		{7834044E-56A7-430C-ADE4-FE324002B95D}.Release|ARM64.ActiveCfg = Release
+		{7834044E-56A7-430C-ADE4-FE324002B95D}.Release|x64.ActiveCfg = Release
+		{7834044E-56A7-430C-ADE4-FE324002B95D}.Release|x64.Build.0 = Release
+		{7834044E-56A7-430C-ADE4-FE324002B95D}.Release|x86.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
