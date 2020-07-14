@@ -113,7 +113,7 @@ namespace Software_Development_Capstone
                     Type = "Class Prepay",
                     Amount = long.Parse(textbox_Amount.Text),
                     Client = (from clients in context.Clients where clients.FName == clientFName && clients.LName == clientLName select clients.ClientId).First(),
-                    FinanceDate = DateTime.Now.Date,
+                    FinanceDate = date_selector.Value.Date,
                     Desc = "Client " + clientFName + " " + clientLName + " prepaid for classes.",
                 };
 

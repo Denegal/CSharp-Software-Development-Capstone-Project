@@ -43,12 +43,16 @@
             this.label_Title = new System.Windows.Forms.Label();
             this.button_Save = new System.Windows.Forms.Button();
             this.button_Cancel = new System.Windows.Forms.Button();
+            this.date_selector = new System.Windows.Forms.DateTimePicker();
+            this.label_Date = new System.Windows.Forms.Label();
             this.group_Client.SuspendLayout();
             this.SuspendLayout();
             // 
             // group_Client
             // 
             this.group_Client.BackColor = System.Drawing.Color.Transparent;
+            this.group_Client.Controls.Add(this.date_selector);
+            this.group_Client.Controls.Add(this.label_Date);
             this.group_Client.Controls.Add(this.label1);
             this.group_Client.Controls.Add(this.textbox_Credits);
             this.group_Client.Controls.Add(this.button_Remove);
@@ -62,7 +66,7 @@
             this.group_Client.Controls.Add(this.textbox_LName);
             this.group_Client.Location = new System.Drawing.Point(7, 73);
             this.group_Client.Name = "group_Client";
-            this.group_Client.Size = new System.Drawing.Size(478, 289);
+            this.group_Client.Size = new System.Drawing.Size(478, 345);
             this.group_Client.TabIndex = 11;
             this.group_Client.TabStop = false;
             // 
@@ -217,7 +221,7 @@
             this.button_Save.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Save.ForeColor = System.Drawing.Color.White;
-            this.button_Save.Location = new System.Drawing.Point(50, 383);
+            this.button_Save.Location = new System.Drawing.Point(50, 491);
             this.button_Save.Name = "button_Save";
             this.button_Save.Size = new System.Drawing.Size(178, 87);
             this.button_Save.TabIndex = 13;
@@ -237,12 +241,35 @@
             this.button_Cancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Cancel.ForeColor = System.Drawing.Color.White;
-            this.button_Cancel.Location = new System.Drawing.Point(259, 383);
+            this.button_Cancel.Location = new System.Drawing.Point(259, 491);
             this.button_Cancel.Name = "button_Cancel";
             this.button_Cancel.Size = new System.Drawing.Size(178, 87);
             this.button_Cancel.TabIndex = 12;
             this.button_Cancel.UseVisualStyleBackColor = false;
             this.button_Cancel.Click += new System.EventHandler(this.button_Cancel_Click);
+            // 
+            // date_selector
+            // 
+            this.date_selector.Checked = false;
+            this.date_selector.CustomFormat = "\"yyyy/MM/dd\"";
+            this.date_selector.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date_selector.Location = new System.Drawing.Point(112, 286);
+            this.date_selector.Name = "date_selector";
+            this.date_selector.Size = new System.Drawing.Size(353, 29);
+            this.date_selector.TabIndex = 62;
+            // 
+            // label_Date
+            // 
+            this.label_Date.AutoSize = true;
+            this.label_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Date.ForeColor = System.Drawing.SystemColors.Control;
+            this.label_Date.Location = new System.Drawing.Point(38, 290);
+            this.label_Date.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            this.label_Date.Name = "label_Date";
+            this.label_Date.Size = new System.Drawing.Size(68, 25);
+            this.label_Date.TabIndex = 61;
+            this.label_Date.Text = "Date:";
+            this.label_Date.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // AdjustCredit
             // 
@@ -250,7 +277,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(495, 488);
+            this.ClientSize = new System.Drawing.Size(495, 596);
             this.ControlBox = false;
             this.Controls.Add(this.button_Save);
             this.Controls.Add(this.button_Cancel);
@@ -285,5 +312,7 @@
         private System.Windows.Forms.TextBox textbox_Credits;
         private System.Windows.Forms.Button button_Remove;
         private System.Windows.Forms.Button button_Add;
+        private System.Windows.Forms.DateTimePicker date_selector;
+        private System.Windows.Forms.Label label_Date;
     }
 }

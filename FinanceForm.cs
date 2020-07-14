@@ -163,9 +163,9 @@ namespace Software_Development_Capstone
             parent.Enabled = false;
         }
 
-        private void button_Search_Click(object sender, EventArgs e)
+        private void button_Search_Click(object sender, EventArgs e) 
         {
-
+            Update_datagrid(true);
         }
 
         private void checkbox_Income_Click(object sender, EventArgs e)

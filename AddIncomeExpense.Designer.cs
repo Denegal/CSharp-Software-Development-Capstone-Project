@@ -41,6 +41,8 @@
             this.label_Title = new System.Windows.Forms.Label();
             this.button_Cancel = new System.Windows.Forms.Button();
             this.button_Save = new System.Windows.Forms.Button();
+            this.date_selector = new System.Windows.Forms.DateTimePicker();
+            this.label_Date = new System.Windows.Forms.Label();
             this.group_Client.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -48,6 +50,8 @@
             // group_Client
             // 
             this.group_Client.BackColor = System.Drawing.Color.Transparent;
+            this.group_Client.Controls.Add(this.date_selector);
+            this.group_Client.Controls.Add(this.label_Date);
             this.group_Client.Controls.Add(this.label_Other);
             this.group_Client.Controls.Add(this.textbox_Other);
             this.group_Client.Controls.Add(this.combo_ClientType);
@@ -59,7 +63,7 @@
             this.group_Client.ForeColor = System.Drawing.SystemColors.Control;
             this.group_Client.Location = new System.Drawing.Point(45, 100);
             this.group_Client.Name = "group_Client";
-            this.group_Client.Size = new System.Drawing.Size(804, 340);
+            this.group_Client.Size = new System.Drawing.Size(804, 408);
             this.group_Client.TabIndex = 3;
             this.group_Client.TabStop = false;
             // 
@@ -68,7 +72,7 @@
             this.label_Other.AutoSize = true;
             this.label_Other.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Other.ForeColor = System.Drawing.SystemColors.Control;
-            this.label_Other.Location = new System.Drawing.Point(437, 57);
+            this.label_Other.Location = new System.Drawing.Point(437, 66);
             this.label_Other.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label_Other.Name = "label_Other";
             this.label_Other.Size = new System.Drawing.Size(96, 31);
@@ -80,7 +84,7 @@
             // textbox_Other
             // 
             this.textbox_Other.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textbox_Other.Location = new System.Drawing.Point(539, 62);
+            this.textbox_Other.Location = new System.Drawing.Point(539, 71);
             this.textbox_Other.MaxLength = 15;
             this.textbox_Other.Name = "textbox_Other";
             this.textbox_Other.Size = new System.Drawing.Size(239, 31);
@@ -97,7 +101,7 @@
             "Equipment",
             "Insurance",
             "Other"});
-            this.combo_ClientType.Location = new System.Drawing.Point(134, 60);
+            this.combo_ClientType.Location = new System.Drawing.Point(134, 69);
             this.combo_ClientType.Name = "combo_ClientType";
             this.combo_ClientType.Size = new System.Drawing.Size(277, 33);
             this.combo_ClientType.TabIndex = 50;
@@ -106,7 +110,7 @@
             // textbox_Desc
             // 
             this.textbox_Desc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textbox_Desc.Location = new System.Drawing.Point(107, 160);
+            this.textbox_Desc.Location = new System.Drawing.Point(107, 229);
             this.textbox_Desc.MaxLength = 250;
             this.textbox_Desc.Multiline = true;
             this.textbox_Desc.Name = "textbox_Desc";
@@ -119,7 +123,7 @@
             this.label_Desc.AutoSize = true;
             this.label_Desc.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Desc.ForeColor = System.Drawing.SystemColors.Control;
-            this.label_Desc.Location = new System.Drawing.Point(6, 113);
+            this.label_Desc.Location = new System.Drawing.Point(6, 182);
             this.label_Desc.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label_Desc.Name = "label_Desc";
             this.label_Desc.Size = new System.Drawing.Size(171, 31);
@@ -132,7 +136,7 @@
             this.label_ClientType.AutoSize = true;
             this.label_ClientType.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_ClientType.ForeColor = System.Drawing.SystemColors.Control;
-            this.label_ClientType.Location = new System.Drawing.Point(6, 57);
+            this.label_ClientType.Location = new System.Drawing.Point(29, 66);
             this.label_ClientType.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label_ClientType.Name = "label_ClientType";
             this.label_ClientType.Size = new System.Drawing.Size(99, 31);
@@ -200,7 +204,7 @@
             this.button_Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Cancel.ForeColor = System.Drawing.Color.Black;
-            this.button_Cancel.Location = new System.Drawing.Point(469, 454);
+            this.button_Cancel.Location = new System.Drawing.Point(469, 535);
             this.button_Cancel.Name = "button_Cancel";
             this.button_Cancel.Size = new System.Drawing.Size(193, 87);
             this.button_Cancel.TabIndex = 56;
@@ -221,12 +225,35 @@
             this.button_Save.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Save.ForeColor = System.Drawing.Color.Black;
-            this.button_Save.Location = new System.Drawing.Point(225, 454);
+            this.button_Save.Location = new System.Drawing.Point(225, 535);
             this.button_Save.Name = "button_Save";
             this.button_Save.Size = new System.Drawing.Size(193, 87);
             this.button_Save.TabIndex = 55;
             this.button_Save.UseVisualStyleBackColor = false;
             this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
+            // 
+            // date_selector
+            // 
+            this.date_selector.Checked = false;
+            this.date_selector.CustomFormat = "\"yyyy/MM/dd\"";
+            this.date_selector.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date_selector.Location = new System.Drawing.Point(134, 125);
+            this.date_selector.Name = "date_selector";
+            this.date_selector.Size = new System.Drawing.Size(399, 31);
+            this.date_selector.TabIndex = 54;
+            // 
+            // label_Date
+            // 
+            this.label_Date.AutoSize = true;
+            this.label_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Date.ForeColor = System.Drawing.SystemColors.Control;
+            this.label_Date.Location = new System.Drawing.Point(43, 124);
+            this.label_Date.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            this.label_Date.Name = "label_Date";
+            this.label_Date.Size = new System.Drawing.Size(85, 31);
+            this.label_Date.TabIndex = 53;
+            this.label_Date.Text = "Date:";
+            this.label_Date.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // AddIncomeExpense
             // 
@@ -236,7 +263,7 @@
             this.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CancelButton = this.button_Cancel;
-            this.ClientSize = new System.Drawing.Size(894, 553);
+            this.ClientSize = new System.Drawing.Size(894, 634);
             this.Controls.Add(this.button_Cancel);
             this.Controls.Add(this.button_Save);
             this.Controls.Add(this.label_Title);
@@ -272,5 +299,7 @@
         private System.Windows.Forms.TextBox textbox_Other;
         private System.Windows.Forms.Button button_Cancel;
         private System.Windows.Forms.Button button_Save;
+        private System.Windows.Forms.DateTimePicker date_selector;
+        private System.Windows.Forms.Label label_Date;
     }
 }

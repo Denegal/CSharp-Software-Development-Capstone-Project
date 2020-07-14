@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientsForm));
             this.dataView_Clients = new System.Windows.Forms.DataGridView();
             this.label_ClientList = new System.Windows.Forms.Label();
@@ -69,23 +69,23 @@
             this.dataView_Clients.AllowUserToDeleteRows = false;
             this.dataView_Clients.AllowUserToResizeColumns = false;
             this.dataView_Clients.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dataView_Clients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            this.dataView_Clients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataView_Clients.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataView_Clients.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataView_Clients.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataView_Clients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataView_Clients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataView_Clients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataView_Clients.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dataView_Clients.Location = new System.Drawing.Point(47, 237);
@@ -93,8 +93,8 @@
             this.dataView_Clients.Name = "dataView_Clients";
             this.dataView_Clients.ReadOnly = true;
             this.dataView_Clients.RowHeadersVisible = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataView_Clients.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataView_Clients.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataView_Clients.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataView_Clients.RowTemplate.DividerHeight = 2;
             this.dataView_Clients.RowTemplate.Height = 35;
@@ -117,6 +117,8 @@
             // 
             // box_Search
             // 
+            this.box_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.box_Search.BackColor = System.Drawing.Color.Transparent;
             this.box_Search.Controls.Add(this.textbox_Email);
             this.box_Search.Controls.Add(this.textbox_Phone);
@@ -134,7 +136,7 @@
             this.box_Search.Controls.Add(this.label1);
             this.box_Search.Controls.Add(this.label_FName);
             this.box_Search.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.box_Search.Location = new System.Drawing.Point(1049, 237);
+            this.box_Search.Location = new System.Drawing.Point(1043, 248);
             this.box_Search.Name = "box_Search";
             this.box_Search.Size = new System.Drawing.Size(379, 447);
             this.box_Search.TabIndex = 10;

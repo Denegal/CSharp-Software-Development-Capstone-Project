@@ -36,6 +36,7 @@ namespace Software_Development_Capstone
             }
 
             MinimumSize = new System.Drawing.Size(1500, 1000);
+            this.CenterToScreen();
 
             menu_bar.Enabled = true;
 
@@ -102,7 +103,14 @@ namespace Software_Development_Capstone
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            this.ActiveMdiChild.Enabled = false;
+            foreach (Form child in MdiChildren)
+            {
+                if (child != loginform)
+                {
+                    child.Close();
+                }
+            }
+
             menu_bar.Enabled = false;
 
             ChangePasswordForm changepass = new ChangePasswordForm();

@@ -78,7 +78,7 @@ namespace Software_Development_Capstone
                     if (textbox_Email.Text != "") { results.RemoveAll(client => !client.Email.ToLower().Contains(textbox_Email.Text.ToLower())); }
                     if (WaiverChecked) { results.RemoveAll(client => !client.Waiver); }
                     if (PregnantChecked) { results.RemoveAll(client => !client.Pregnant); }
-                    if (MedicalChecked) { results.RemoveAll(client => !client.MedicalCare); }
+                    if (MedicalChecked) { results.RemoveAll(client => !client.MedicalCare && !client.Injuries); }
                 }
 
 
