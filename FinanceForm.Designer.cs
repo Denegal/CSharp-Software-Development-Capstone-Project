@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FinanceForm));
             this.label_FinanceList = new System.Windows.Forms.Label();
             this.dataView_Finance = new System.Windows.Forms.DataGridView();
@@ -86,22 +86,23 @@
             this.dataView_Finance.AllowUserToDeleteRows = false;
             this.dataView_Finance.AllowUserToResizeColumns = false;
             this.dataView_Finance.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.dataView_Finance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataView_Finance.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dataView_Finance.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataView_Finance.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataView_Finance.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataView_Finance.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataView_Finance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataView_Finance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataView_Finance.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataView_Finance.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dataView_Finance.Location = new System.Drawing.Point(47, 237);
@@ -110,8 +111,8 @@
             this.dataView_Finance.Name = "dataView_Finance";
             this.dataView_Finance.ReadOnly = true;
             this.dataView_Finance.RowHeadersVisible = false;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataView_Finance.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataView_Finance.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataView_Finance.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataView_Finance.RowTemplate.DividerHeight = 2;
             this.dataView_Finance.RowTemplate.Height = 35;
@@ -123,8 +124,9 @@
             // 
             // box_Search
             // 
-            this.box_Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.box_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.box_Search.BackColor = System.Drawing.Color.Transparent;
             this.box_Search.Controls.Add(this.combobox_Type);
             this.box_Search.Controls.Add(this.textbox_ATo);
@@ -280,7 +282,9 @@
             // 
             // button_Search
             // 
-            this.button_Search.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.button_Search.AutoSize = true;
             this.button_Search.BackColor = System.Drawing.Color.Transparent;
             this.button_Search.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Search;
@@ -391,6 +395,9 @@
             // 
             // label_Total
             // 
+            this.label_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label_Total.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label_Total.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -406,7 +413,9 @@
             // 
             // button_Credit
             // 
-            this.button_Credit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button_Credit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.button_Credit.AutoSize = true;
             this.button_Credit.BackColor = System.Drawing.Color.Transparent;
             this.button_Credit.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.credits;
@@ -427,7 +436,9 @@
             // 
             // button_AddIncome
             // 
-            this.button_AddIncome.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button_AddIncome.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.button_AddIncome.AutoSize = true;
             this.button_AddIncome.BackColor = System.Drawing.Color.Transparent;
             this.button_AddIncome.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.ClientPayment;
@@ -447,7 +458,9 @@
             // 
             // button_AddExpense
             // 
-            this.button_AddExpense.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button_AddExpense.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.button_AddExpense.AutoSize = true;
             this.button_AddExpense.BackColor = System.Drawing.Color.Transparent;
             this.button_AddExpense.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Expense;
@@ -467,7 +480,9 @@
             // 
             // button_Remove
             // 
-            this.button_Remove.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button_Remove.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.button_Remove.AutoSize = true;
             this.button_Remove.BackColor = System.Drawing.Color.Transparent;
             this.button_Remove.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Delete;

@@ -35,7 +35,7 @@ namespace Software_Development_Capstone
                 return;
             }
 
-            MinimumSize = new System.Drawing.Size(1500, 1000);
+            Size = new System.Drawing.Size(1500, 1000);
             this.CenterToScreen();
 
             menu_bar.Enabled = true;
@@ -144,7 +144,7 @@ namespace Software_Development_Capstone
             menu_bar.Enabled = false;
             Program.LoggedinUser = null;
 
-            MinimumSize = new System.Drawing.Size(1000, 700);
+            //MinimumSize = new System.Drawing.Size(1000, 700);
             Size = new System.Drawing.Size(1000, 700);
 
             loginform.WindowState = FormWindowState.Maximized;
@@ -188,5 +188,6 @@ namespace Software_Development_Capstone
 
             removeuser.FormClosed += new FormClosedEventHandler(EnableForm);
         }
+
     }
 }

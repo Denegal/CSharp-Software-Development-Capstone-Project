@@ -84,7 +84,7 @@
             // 
             // button_AddClient
             // 
-            this.button_AddClient.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button_AddClient.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button_AddClient.AutoSize = true;
             this.button_AddClient.BackColor = System.Drawing.Color.Transparent;
             this.button_AddClient.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.NewClient;
@@ -95,16 +95,17 @@
             this.button_AddClient.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button_AddClient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_AddClient.ForeColor = System.Drawing.Color.White;
-            this.button_AddClient.Location = new System.Drawing.Point(322, 743);
+            this.button_AddClient.Location = new System.Drawing.Point(330, 743);
             this.button_AddClient.Name = "button_AddClient";
             this.button_AddClient.Size = new System.Drawing.Size(178, 87);
             this.button_AddClient.TabIndex = 7;
             this.button_AddClient.UseVisualStyleBackColor = false;
+            this.button_AddClient.LocationChanged += new System.EventHandler(this.button_AddClient_LocationChanged);
             this.button_AddClient.Click += new System.EventHandler(this.button_AddClient_Click);
             // 
             // button_checkin
             // 
-            this.button_checkin.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button_checkin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button_checkin.AutoSize = true;
             this.button_checkin.BackColor = System.Drawing.Color.Transparent;
             this.button_checkin.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Checkin;
@@ -124,8 +125,8 @@
             // 
             // button_Finance
             // 
-            this.button_Finance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_Finance.AutoSize = true;
+            this.button_Finance.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_Finance.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button_Finance.BackColor = System.Drawing.Color.Transparent;
             this.button_Finance.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Finance;
             this.button_Finance.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -144,8 +145,8 @@
             // 
             // button_Clients
             // 
-            this.button_Clients.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_Clients.AutoSize = true;
+            this.button_Clients.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_Clients.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.button_Clients.BackColor = System.Drawing.Color.Transparent;
             this.button_Clients.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Clients;
             this.button_Clients.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -181,6 +182,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(164)))), ((int)(((byte)(116)))), ((int)(((byte)(235)))));
             this.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -196,11 +198,13 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(500, 0);
             this.Name = "HomePageForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "HomePageForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.ResizeEnd += new System.EventHandler(this.Resized_component_check);
             ((System.ComponentModel.ISupportInitialize)(this.dataView_Clients)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Title_Logo)).EndInit();
             this.ResumeLayout(false);
