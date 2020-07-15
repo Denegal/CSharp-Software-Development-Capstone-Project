@@ -4,6 +4,11 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using iText;
+using iText.Kernel.Geom;
+using iText.Kernel.Pdf;
+using iText.Layout;
+using iText.Layout.Element;
 
 namespace Backend_Logic
 {
@@ -25,6 +30,17 @@ namespace Backend_Logic
 
                 return result.ToString().ToUpper();
             }
+        }
+
+        public static void GeneratePDF()
+        {
+            PdfWriter writer = new PdfWriter("TestReport.pdf");
+            PdfDocument Test = new PdfDocument(writer);
+            Document document = new Document(Test);
+
+            document.Add(new Paragraph("Hello World!"));
+            document.Close();
+
         }
     }
 }
