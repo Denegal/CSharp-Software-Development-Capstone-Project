@@ -24,6 +24,9 @@ namespace Software_Development_Capstone
         {
             InitializeComponent();
 
+            this.BackColor = Color.Magenta;
+            this.TransparencyKey = Color.Magenta;
+
             parent = Parent;
 
             Update_datagrid();
@@ -204,5 +207,38 @@ namespace Software_Development_Capstone
         }
 
         private void button_Search_Click(object sender, EventArgs e) => Update_datagrid(true);
+
+        private void label_ClientList_LocationChanged(object sender, EventArgs e)
+        {
+            label_ClientList.Left = dataView_Clients.Left + (dataView_Clients.Width / 2) - 175;
+            label_ClientList.Top = dataView_Clients.Top - 85;
+        }
+
+        private void box_Search_LocationChanged(object sender, EventArgs e)
+        {
+            if (box_Search.Top < label_ClientList.Top) { box_Search.Top = label_ClientList.Top; }
+            if (box_Search.Top > dataView_Clients.Top) { box_Search.Top = dataView_Clients.Top; }
+
+        }
+
+        private void button_ViewClient_LocationChanged(object sender, EventArgs e)
+        {
+            button_ViewClient.Top = box_Search.Top + 385;
+        }
+
+        private void button_EditClient_LocationChanged(object sender, EventArgs e)
+        {
+            button_EditClient.Top = box_Search.Top + 385;
+        }
+
+        private void button_AddClient_LocationChanged(object sender, EventArgs e)
+        {
+            button_AddClient.Top = box_Search.Top + 480;
+        }
+
+        private void button_RemoveClient_LocationChanged(object sender, EventArgs e)
+        {
+            button_RemoveClient.Top = box_Search.Top + 480;
+        }
     }
 }
