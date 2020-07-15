@@ -23,6 +23,8 @@ namespace Software_Development_Capstone
         {
             InitializeComponent();
 
+            this.DoubleBuffered = true;
+
             Update_datagrid();
 
             using (var context = new Backend_DB.DBEntities()) { button_Credit.Enabled = context.Clients.Count() > 0; }
@@ -39,6 +41,7 @@ namespace Software_Development_Capstone
 
             dataView_Finance.AutoResizeColumns();
 
+            FinanceForm_SizeChanged(this, new EventArgs());
         }
 
         private void Update_datagrid(bool filter = false)
@@ -192,6 +195,33 @@ namespace Software_Development_Capstone
                 checkbox_Expense.BackgroundImage = Software_Development_Capstone.Properties.Resources.checked_checkbox;
             }
             ExpenseChecked = !ExpenseChecked;
+        }
+
+        private void FinanceForm_SizeChanged(object sender, EventArgs e)
+        {
+            label_FinanceList.Left = dataView_Finance.Left + (dataView_Finance.Width / 2) - label_FinanceList.Width / 2;
+            label_FinanceList.Top = dataView_Finance.Top - 85;
+
+            if (box_Search.Top < label_FinanceList.Top) { box_Search.Top = label_FinanceList.Top; }
+            if (box_Search.Top > dataView_Finance.Top) { box_Search.Top = dataView_Finance.Top; }
+
+            box_Search.Left = dataView_Finance.Left + dataView_Finance.Width + 40;
+
+            button_AddIncome.Top = box_Search.Top + 375;
+            button_AddIncome.Left = dataView_Finance.Left + dataView_Finance.Width + 85;
+
+            button_AddExpense.Top = box_Search.Top + 375;
+            button_AddExpense.Left = dataView_Finance.Left + dataView_Finance.Width + 285;
+
+            button_Credit.Top = box_Search.Top + 470;
+            button_Credit.Left = dataView_Finance.Left + dataView_Finance.Width + 85;
+
+            button_Remove.Top = box_Search.Top + 470;
+            button_Remove.Left = dataView_Finance.Left + dataView_Finance.Width + 285;
+
+            label_Total.Width = dataView_Finance.Width;
+            label_Total.Left = dataView_Finance.Left;
+            label_Total.Top = dataView_Finance.Top + dataView_Finance.Height;
         }
     }
 }

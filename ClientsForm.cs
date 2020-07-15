@@ -24,6 +24,8 @@ namespace Software_Development_Capstone
         {
             InitializeComponent();
 
+            this.DoubleBuffered = true;
+
             this.BackColor = Color.Magenta;
             this.TransparencyKey = Color.Magenta;
 
@@ -43,6 +45,8 @@ namespace Software_Development_Capstone
             dataView_Clients.Columns[8].FillWeight = 75;
 
             dataView_Clients.AutoResizeColumns();
+
+            ClientsForm_SizedChanged(this, new EventArgs());
         }
 
         private void Update_datagrid(bool filter=false)
@@ -208,37 +212,28 @@ namespace Software_Development_Capstone
 
         private void button_Search_Click(object sender, EventArgs e) => Update_datagrid(true);
 
-        private void label_ClientList_LocationChanged(object sender, EventArgs e)
-        {
-            label_ClientList.Left = dataView_Clients.Left + (dataView_Clients.Width / 2) - 175;
-            label_ClientList.Top = dataView_Clients.Top - 85;
-        }
 
-        private void box_Search_LocationChanged(object sender, EventArgs e)
+        private void ClientsForm_SizedChanged(object sender, EventArgs e)
         {
+            label_ClientList.Left = dataView_Clients.Left + (dataView_Clients.Width / 2) - label_ClientList.Width / 2;
+            label_ClientList.Top = dataView_Clients.Top - 85;
+
             if (box_Search.Top < label_ClientList.Top) { box_Search.Top = label_ClientList.Top; }
             if (box_Search.Top > dataView_Clients.Top) { box_Search.Top = dataView_Clients.Top; }
 
-        }
+            box_Search.Left = dataView_Clients.Left + dataView_Clients.Width + 40;
 
-        private void button_ViewClient_LocationChanged(object sender, EventArgs e)
-        {
-            button_ViewClient.Top = box_Search.Top + 385;
-        }
+            button_AddClient.Top = box_Search.Top + 375;
+            button_AddClient.Left = dataView_Clients.Left + dataView_Clients.Width + 85;
 
-        private void button_EditClient_LocationChanged(object sender, EventArgs e)
-        {
-            button_EditClient.Top = box_Search.Top + 385;
-        }
+            button_EditClient.Top = box_Search.Top + 375;
+            button_EditClient.Left = dataView_Clients.Left + dataView_Clients.Width + 285;
 
-        private void button_AddClient_LocationChanged(object sender, EventArgs e)
-        {
-            button_AddClient.Top = box_Search.Top + 480;
-        }
+            button_ViewClient.Top = box_Search.Top + 470;
+            button_ViewClient.Left = dataView_Clients.Left + dataView_Clients.Width + 85;
 
-        private void button_RemoveClient_LocationChanged(object sender, EventArgs e)
-        {
-            button_RemoveClient.Top = box_Search.Top + 480;
+            button_RemoveClient.Top = box_Search.Top + 470;
+            button_RemoveClient.Left = dataView_Clients.Left + dataView_Clients.Width + 285;
         }
     }
 }

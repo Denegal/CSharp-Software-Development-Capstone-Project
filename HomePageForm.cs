@@ -118,16 +118,12 @@ namespace Software_Development_Capstone
             parent.Enabled = false;
         }
 
-        public void Resized_component_check(object sender, EventArgs e)
-        {
-            button_AddClient.Left = dataView_Clients.Left + (dataView_Clients.Size.Width / 2) - 50;
-            button_checkin.Left = dataView_Clients.Left + (dataView_Clients.Size.Width / 2) + 50;
-        }
 
         private void button_AddClient_LocationChanged(object sender, EventArgs e)
         {
             button_AddClient.Left = dataView_Clients.Left + (dataView_Clients.Size.Width / 2) - 150;
-            button_checkin.Left = dataView_Clients.Left + (dataView_Clients.Size.Width / 2) - 50;
+            button_checkin.Left = dataView_Clients.Left + (dataView_Clients.Size.Width / 2);
         }
+
     }
 }

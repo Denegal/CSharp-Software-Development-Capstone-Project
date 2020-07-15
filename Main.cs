@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Org.BouncyCastle.Asn1.Cms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,8 @@ namespace Software_Development_Capstone
         public Main()
         {
             InitializeComponent();
+
+            this.DoubleBuffered = true;
 
             loginform.MdiParent = this;
 
@@ -58,7 +61,7 @@ namespace Software_Development_Capstone
             {
                 this.ActiveMdiChild.Close();
             }
-
+            
             HomePageForm homePage = new HomePageForm(this);
 
             homePage.MdiParent = this;
