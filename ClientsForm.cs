@@ -58,7 +58,7 @@ namespace Software_Development_Capstone
             using (var context = new Backend_DB.DBEntities())
             {
                 var clients = from client in context.Clients
-                              orderby client.ClassCredit
+                              orderby client.LName, client.FName
                               select new ClientList
                               {
                                   First = client.FName,
@@ -246,13 +246,22 @@ namespace Software_Development_Capstone
             SaveFileDialog saveReportdialog = new SaveFileDialog();
             saveReportdialog.Filter = "PDF File|*.pdf";
             saveReportdialog.Title = "Save Client Report";
-            saveReportdialog.FileName = "MC2 Client Report - " + DateTime.Now.Date;
+            saveReportdialog.FileName = "MC2 Client Report - " + DateTime.Now.ToShortDateString();
             saveReportdialog.ShowDialog();
 
             if (saveReportdialog.FileName != "")
             {
-                DataTable clientTable = Utils.ListtoDataTable((List<ClientList>)dataView_Clients.DataSource);
-                Utils.GeneratePDF(saveReportdialog.FileName, clientTable);
+                try
+                {
+                    DataTable clientTable = Utils.ListtoDataTable((List<ClientList>)dataView_Clients.DataSource);
+                    Utils.GeneratePDF(saveReportdialog.FileName, clientTable, "MC2 Client Report");
+
+                    MessageBox.Show("Report generated");
+                }
+                catch
+                {
+                    MessageBox.Show("There was a problem generating the Report.");
+                }
             }
             
         }

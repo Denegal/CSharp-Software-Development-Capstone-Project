@@ -92,12 +92,27 @@ namespace Software_Development_Capstone
         private void button_Remove_Click(object sender, EventArgs e)
         {
             newCredit = newCredit > int.Parse(textbox_Credits.Text) ? newCredit - int.Parse(textbox_Credits.Text) : 0;
-            label_NewBalance.Text = "New Credit Balance: $" + newCredit.ToString();
+            label_NewBalance.Text = "New Credit Balance: " + newCredit.ToString();
             textbox_Amount.Text = "";
         }
 
         private void button_Save_Click(object sender, EventArgs e)
         {
+            if (textbox_Amount.Text == "")
+            {
+                MessageBox.Show("Error: Amount must not be blank.");
+                return;
+            }
+            else if (newCredit == oldCredit)
+            {
+                DialogResult result = MessageBox.Show($"New class credit amount is teh same as previous class credit amount. Are you sure you wish to continue?", "No Credit Change", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.No)
+                {
+                    return;
+                }
+            }
+            
+
             using (var context = new Backend_DB.DBEntities())
             {
                 var clientFName = combo_Client.SelectedItem.ToString().Split(' ')[0];

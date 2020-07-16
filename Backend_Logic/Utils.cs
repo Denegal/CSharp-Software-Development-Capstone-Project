@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using iText;
 using iText.IO.Font.Constants;
+using iText.Kernel.Colors;
 using iText.Kernel.Font;
 using iText.Kernel.Geom;
 using iText.Kernel.Pdf;
@@ -69,7 +70,7 @@ namespace Backend_Logic
             return result;
         }
 
-        public static void GeneratePDF(string filename, DataTable dataTable)
+        public static void GeneratePDF(string filename, DataTable dataTable, string reportTitle = "MC2 Report")
         {
             
             PdfWriter writer = new PdfWriter(filename);
@@ -77,9 +78,12 @@ namespace Backend_Logic
 
             using (Document document = new Document(Test))
             {
-                Text title = new Text("MC2 Report").SetFont(PdfFontFactory.CreateFont(StandardFonts.TIMES_ROMAN)).SetFontSize(18).SetTextAlignment(TextAlignment.CENTER);
-                Text timestamp = new Text("Generated: " + DateTime.Now.Date).SetFont(PdfFontFactory.CreateFont(StandardFonts.TIMES_ROMAN)).SetFontSize(14).SetTextAlignment(TextAlignment.CENTER);
-                document.Add(new Paragraph().Add(title + "\n").Add(timestamp));
+                document.SetTextAlignment(TextAlignment.CENTER);
+
+
+                Text title = new Text(reportTitle + "\n").SetFont(PdfFontFactory.CreateFont(StandardFonts.TIMES_ROMAN,true)).SetFontSize(18);
+                Text timestamp = new Text("Generated: " + DateTime.Now + "\n\n").SetFont(PdfFontFactory.CreateFont(StandardFonts.TIMES_ROMAN,true)).SetFontSize(10);
+                document.Add(new Paragraph().Add(title).Add(timestamp));
                 
                 Table table = new Table(UnitValue.CreatePercentArray(dataTable.Columns.Count)).UseAllAvailableWidth();
 
@@ -87,14 +91,33 @@ namespace Backend_Logic
                 {
                     foreach (DataColumn column in dataTable.Columns)
                     {
-                        table.AddCell(row[column].ToString());
+                        Cell cell = new Cell().Add(new Paragraph(row[column].ToString()));
+                        cell.SetTextAlignment(TextAlignment.CENTER);
+
+                        // If it is the first row (header) set to white text on black background
+                        // Alternate the remaining rows background color to make reading reports easier.
+                        if (row == dataTable.Rows[0] )
+                        {
+                            cell.SetFontColor(ColorConstants.WHITE);
+                            cell.SetBackgroundColor(ColorConstants.BLACK);
+                        }
+                        else if (table.GetNumberOfRows()%2 == 0 || (table.GetNumberOfRows() % 2 != 0 && column == dataTable.Columns[0]))
+                        {
+                            cell.SetFontColor(ColorConstants.BLACK);
+                            cell.SetBackgroundColor(ColorConstants.WHITE);
+                        }
+                        else if (table.GetNumberOfRows() % 2 == 1 || (table.GetNumberOfRows() % 2 != 1 && column == dataTable.Columns[0]))
+                        {
+                            cell.SetFontColor(ColorConstants.BLACK);
+                            cell.SetBackgroundColor(ColorConstants.LIGHT_GRAY);
+                        }
+
+                        table.AddCell(cell);
                     }  
                 }
 
                 document.Add(table);
-            }
-
-                
+            }    
 
         }
     }

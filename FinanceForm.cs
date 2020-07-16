@@ -234,14 +234,23 @@ namespace Software_Development_Capstone
             SaveFileDialog saveReportdialog = new SaveFileDialog();
             saveReportdialog.Filter = "PDF File|*.pdf";
             saveReportdialog.Title = "Save Finance Report";
-            saveReportdialog.FileName = "MC2 Finance Report - " + DateTime.Now.Date;
+            saveReportdialog.FileName = "MC2 Finance Report - " + DateTime.Now.ToShortDateString();
             saveReportdialog.ShowDialog();
 
             if (saveReportdialog.FileName != "")
             {
-                DataTable financeTable = Utils.ListtoDataTable((List<ClientList>)dataView_Finance.DataSource);
+                try
+                {
+                    DataTable financeTable = Utils.ListtoDataTable((List<FinanceList>)dataView_Finance.DataSource);
+                    Utils.GeneratePDF(saveReportdialog.FileName, financeTable, "MC2 Finances Report");
 
-                Utils.GeneratePDF(saveReportdialog.FileName, financeTable);
+                    MessageBox.Show("Report generated");
+                }
+                catch
+                {
+                    MessageBox.Show("There was a problem generating the Report.");
+                }
+                
             }
         }
     }
