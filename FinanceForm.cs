@@ -87,6 +87,7 @@ namespace Software_Development_Capstone
 
 
                 button_Remove.Enabled = results.Count > 0;
+                button_Report.Enabled = results.Count > 0;
 
                 dataView_Finance.DataSource = results;
 
@@ -219,9 +220,29 @@ namespace Software_Development_Capstone
             button_Remove.Top = box_Search.Top + 470;
             button_Remove.Left = dataView_Finance.Left + dataView_Finance.Width + 285;
 
+            button_Report.Left = dataView_Finance.Left + dataView_Finance.Width / 2 - 100;
+
             label_Total.Width = dataView_Finance.Width;
             label_Total.Left = dataView_Finance.Left;
             label_Total.Top = dataView_Finance.Top + dataView_Finance.Height;
+        }
+
+        private void button_Report_Click(object sender, EventArgs e)
+        {
+            // Displays a SaveFileDialog so the user can save the Image
+            // assigned to Button2.
+            SaveFileDialog saveReportdialog = new SaveFileDialog();
+            saveReportdialog.Filter = "PDF File|*.pdf";
+            saveReportdialog.Title = "Save Finance Report";
+            saveReportdialog.FileName = "MC2 Finance Report - " + DateTime.Now.Date;
+            saveReportdialog.ShowDialog();
+
+            if (saveReportdialog.FileName != "")
+            {
+                DataTable financeTable = Utils.ListtoDataTable((List<ClientList>)dataView_Finance.DataSource);
+
+                Utils.GeneratePDF(saveReportdialog.FileName, financeTable);
+            }
         }
     }
 }

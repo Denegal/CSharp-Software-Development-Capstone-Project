@@ -92,6 +92,7 @@ namespace Software_Development_Capstone
                 button_EditClient.Enabled = results.Count > 0;
                 button_RemoveClient.Enabled = results.Count > 0;
                 button_ViewClient.Enabled = results.Count > 0;
+                button_Report.Enabled = results.Count > 0;
 
 
                 dataView_Clients.DataSource = results;
@@ -234,6 +235,26 @@ namespace Software_Development_Capstone
 
             button_RemoveClient.Top = box_Search.Top + 470;
             button_RemoveClient.Left = dataView_Clients.Left + dataView_Clients.Width + 285;
+
+            button_Report.Left = dataView_Clients.Left + (dataView_Clients.Size.Width / 2) - 100;
+        }
+
+        private void button_Report_Click(object sender, EventArgs e)
+        {
+            // Displays a SaveFileDialog so the user can save the Image
+            // assigned to Button2.
+            SaveFileDialog saveReportdialog = new SaveFileDialog();
+            saveReportdialog.Filter = "PDF File|*.pdf";
+            saveReportdialog.Title = "Save Client Report";
+            saveReportdialog.FileName = "MC2 Client Report - " + DateTime.Now.Date;
+            saveReportdialog.ShowDialog();
+
+            if (saveReportdialog.FileName != "")
+            {
+                DataTable clientTable = Utils.ListtoDataTable((List<ClientList>)dataView_Clients.DataSource);
+                Utils.GeneratePDF(saveReportdialog.FileName, clientTable);
+            }
+            
         }
     }
 }
