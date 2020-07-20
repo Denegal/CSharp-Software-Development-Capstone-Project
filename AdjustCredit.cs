@@ -105,7 +105,7 @@ namespace Software_Development_Capstone
             }
             else if (newCredit == oldCredit)
             {
-                DialogResult result = MessageBox.Show($"New class credit amount is teh same as previous class credit amount. Are you sure you wish to continue?", "No Credit Change", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult result = MessageBox.Show($"New class credit amount is the same as previous class credit amount. Are you sure you wish to continue?", "No Credit Change", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (result == DialogResult.No)
                 {
                     return;
