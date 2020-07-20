@@ -24,12 +24,18 @@ namespace Software_Development_Capstone
             this.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button_save_Click(object sender, EventArgs e)
         {
             // If new password and retyped password do not match, display error and return
             if (textbox_NewPass1.Text != textbox_NewPass2.Text)
             {
                 MessageBox.Show("Passwords do not match!");
+                return;
+            }
+
+            if (textbox_NewPass1.Text == "")
+            {
+                MessageBox.Show("Blank Passwords not allowed for security reasons!");
                 return;
             }
 
@@ -50,7 +56,14 @@ namespace Software_Development_Capstone
                 context.SaveChanges();
 
                 Logging.AddToLog("EventLog.txt", $"{Program.LoggedinUser} successfully changed their password.");
+
+                this.Close();
             }
+        }
+
+        private void disallow_space_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = (e.KeyChar == (char)Keys.Space);
         }
     }
 }

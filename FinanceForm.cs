@@ -23,6 +23,9 @@ namespace Software_Development_Capstone
         {
             InitializeComponent();
 
+            this.BackColor = Color.Magenta;
+            this.TransparencyKey = Color.Magenta;
+
             this.DoubleBuffered = true;
 
             Update_datagrid();
@@ -41,6 +44,8 @@ namespace Software_Development_Capstone
 
             dataView_Finance.AutoResizeColumns();
 
+            combobox_Type.SelectedIndex = 1;
+
             FinanceForm_SizeChanged(this, new EventArgs());
         }
 
@@ -54,7 +59,7 @@ namespace Software_Development_Capstone
                 var finances = from finance in context.Finances
                                join clients in context.Clients on finance.Client equals clients.ClientId into clients
                                from Client in clients.DefaultIfEmpty()
-                               orderby finance.FinanceDate
+                               orderby finance.FinanceDate, finance.FinanceId
                                select new FinanceList
                                {
                                    ID = finance.FinanceId,
@@ -74,8 +79,9 @@ namespace Software_Development_Capstone
                 // each line can be read as 'remove all finances where the client does not contain what is being searched for'.
                 if (filter)
                 {
-                    if (!IncomeChecked) { results.RemoveAll(transaction => transaction.Category == "Income"); }
-                    if (!ExpenseChecked) { results.RemoveAll(transaction => transaction.Category == "Expense"); }
+
+                    if (!IncomeChecked && ExpenseChecked) { results.RemoveAll(transaction => transaction.Category == "Income"); }
+                    if (!ExpenseChecked && IncomeChecked) { results.RemoveAll(transaction => transaction.Category == "Expense"); }
                     if (textbox_Desc.Text != "") { results.RemoveAll(transaction => !transaction.Desc.ToLower().Contains(textbox_Desc.Text.ToLower())); }
                     if (date_start.Checked) { results.RemoveAll(transaction => transaction.Date < date_start.Value); }
                     if (date_end.Checked) { results.RemoveAll(transaction => transaction.Date > date_end.Value); }
@@ -234,7 +240,7 @@ namespace Software_Development_Capstone
             SaveFileDialog saveReportdialog = new SaveFileDialog();
             saveReportdialog.Filter = "PDF File|*.pdf";
             saveReportdialog.Title = "Save Finance Report";
-            saveReportdialog.FileName = "MC2 Finance Report - " + DateTime.Now.ToShortDateString();
+            saveReportdialog.FileName = "MC2 Finance Report - " + DateTime.Now.ToShortDateString().Replace('/', '-');
             saveReportdialog.ShowDialog();
 
             if (saveReportdialog.FileName != "")

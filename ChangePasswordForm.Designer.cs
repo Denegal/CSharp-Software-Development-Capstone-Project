@@ -80,6 +80,7 @@
             this.textbox_NewPass2.Size = new System.Drawing.Size(247, 31);
             this.textbox_NewPass2.TabIndex = 34;
             this.textbox_NewPass2.UseSystemPasswordChar = true;
+            this.textbox_NewPass2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.disallow_space_KeyPress);
             // 
             // label_NewPass2
             // 
@@ -118,6 +119,7 @@
             this.textbox_NewPass1.Size = new System.Drawing.Size(247, 31);
             this.textbox_NewPass1.TabIndex = 32;
             this.textbox_NewPass1.UseSystemPasswordChar = true;
+            this.textbox_NewPass1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.disallow_space_KeyPress);
             // 
             // textbox_LName
             // 
@@ -151,6 +153,7 @@
             this.textbox_OldPass.Size = new System.Drawing.Size(247, 31);
             this.textbox_OldPass.TabIndex = 30;
             this.textbox_OldPass.UseSystemPasswordChar = true;
+            this.textbox_OldPass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.disallow_space_KeyPress);
             // 
             // button_Save
             // 
@@ -170,7 +173,7 @@
             this.button_Save.Size = new System.Drawing.Size(178, 87);
             this.button_Save.TabIndex = 9;
             this.button_Save.UseVisualStyleBackColor = false;
-            this.button_Save.Click += new System.EventHandler(this.button1_Click);
+            this.button_Save.Click += new System.EventHandler(this.button_save_Click);
             // 
             // button_Cancel
             // 

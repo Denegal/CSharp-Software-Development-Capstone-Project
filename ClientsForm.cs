@@ -246,7 +246,7 @@ namespace Software_Development_Capstone
             SaveFileDialog saveReportdialog = new SaveFileDialog();
             saveReportdialog.Filter = "PDF File|*.pdf";
             saveReportdialog.Title = "Save Client Report";
-            saveReportdialog.FileName = "MC2 Client Report - " + DateTime.Now.ToShortDateString();
+            saveReportdialog.FileName = "MC2 Client Report - " + DateTime.Now.ToShortDateString().Replace('/','-');
             saveReportdialog.ShowDialog();
 
             if (saveReportdialog.FileName != "")

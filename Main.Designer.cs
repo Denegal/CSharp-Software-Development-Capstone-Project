@@ -129,7 +129,7 @@
             this.MinimumSize = new System.Drawing.Size(1000, 800);
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MC2 Pilates";
+            this.Text = "MC² Pilates";
             this.menu_bar.ResumeLayout(false);
             this.menu_bar.PerformLayout();
             this.ResumeLayout(false);

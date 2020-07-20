@@ -87,6 +87,7 @@ namespace Software_Development_Capstone
                     if (checkin_client.ClassCredit == 0)
                     {
                         MessageBox.Show("Unable to check-in client. Client does not have enough class credit.");
+                        button_checkin_Click(this, new EventArgs);
                         return;
                     }
 
@@ -99,7 +100,7 @@ namespace Software_Development_Capstone
                     Backend_DB.Finance newincome = new Backend_DB.Finance()
                     {
                         IncomeOrExpense = "Income",
-                        Type = "Private",
+                        Type = "Classes",
                         Amount = long.Parse(textbox_Cost.Text),
                         Client = (from clients in context.Clients where clients.ClientId == checkinID select clients.ClientId).First(),
                         FinanceDate = DateTime.Now.Date,

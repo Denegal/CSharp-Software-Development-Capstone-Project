@@ -25,7 +25,7 @@ namespace Software_Development_Capstone
 
                 var view_client = (from clients in context.Clients where clients.ClientId == viewClientID select clients).First();
 
-                label_Name.Text = view_client.FName + view_client.LName;
+                label_Name.Text = view_client.FName + " " + view_client.LName;
                 label_Phone.Text = view_client.Phone;
                 label_Email.Text = view_client.Email;
                 label_EContact.Text = view_client.EmergencyContact;

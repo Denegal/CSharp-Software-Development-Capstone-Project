@@ -86,14 +86,14 @@ namespace Software_Development_Capstone
         {
             newCredit += int.Parse(textbox_Credits.Text);
             label_NewBalance.Text = "New Credit Balance: " + newCredit.ToString();
-            textbox_Amount.Text = "";
+            textbox_Credits.Text = "";
         }
 
         private void button_Remove_Click(object sender, EventArgs e)
         {
             newCredit = newCredit > int.Parse(textbox_Credits.Text) ? newCredit - int.Parse(textbox_Credits.Text) : 0;
             label_NewBalance.Text = "New Credit Balance: " + newCredit.ToString();
-            textbox_Amount.Text = "";
+            textbox_Credits.Text = "";
         }
 
         private void button_Save_Click(object sender, EventArgs e)

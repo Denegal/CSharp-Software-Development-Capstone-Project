@@ -70,7 +70,7 @@ namespace Backend_Logic
             return result;
         }
 
-        public static void GeneratePDF(string filename, DataTable dataTable, string reportTitle = "MC2 Report")
+        public static void GeneratePDF(string filename, DataTable dataTable, string reportTitle = "MC² Report")
         {
             
             PdfWriter writer = new PdfWriter(filename);

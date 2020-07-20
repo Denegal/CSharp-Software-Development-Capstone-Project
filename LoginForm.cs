@@ -31,6 +31,7 @@ namespace Software_Development_Capstone
 
             textbox_password.Enabled = false;
             textbox_username.Enabled = false;
+            label_message.Text = "";
 
             using (var context = new Backend_DB.DBEntities())
             {

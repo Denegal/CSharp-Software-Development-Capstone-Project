@@ -44,13 +44,13 @@ namespace Software_Development_Capstone
 
                 var modify_client = (from clients in context.Clients where clients.ClientId == modifyClientID select clients).First();
 
-                textbox_FName.Text = modify_client.FName;
-                textbox_LName.Text = modify_client.LName;
-                textbox_Phone.Text = modify_client.Phone;
-                textbox_Email.Text = modify_client.Email;
+                textbox_FName.Text = modify_client.FName.Trim(' ');
+                textbox_LName.Text = modify_client.LName.Trim(' ');
+                textbox_Phone.Text = modify_client.Phone.Trim(' ');
+                textbox_Email.Text = modify_client.Email.Trim(' ');
 
-                textbox_EContact.Text = modify_client.EmergencyContact;
-                textbox_EContactPhone.Text = modify_client.EmergencyContactPhone;
+                textbox_EContact.Text = modify_client.EmergencyContact.Trim(' ');
+                textbox_EContactPhone.Text = modify_client.EmergencyContactPhone.Trim(' ');
 
                 if (modify_client.Waiver == 1) { checkbox_Waiver.BackgroundImage = Software_Development_Capstone.Properties.Resources.checked_checkbox; WaiverChecked = true; }
                 if (modify_client.Pregnant == 1) { checkbox_Pregnant.BackgroundImage = Software_Development_Capstone.Properties.Resources.checked_checkbox; PregnantChecked = true; }

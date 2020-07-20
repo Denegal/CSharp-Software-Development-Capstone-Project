@@ -25,7 +25,7 @@ namespace Software_Development_Capstone
                 {
                     combo_ClientType.DataSource = (from clients in context.Clients select clients.FName + " " + clients.LName).ToList();
 
-                    label_Title.Text = "Add Income";
+                    label_Title.Text = "Client Payment";
                     label_ClientType.Text = "Client";
                 }
             }

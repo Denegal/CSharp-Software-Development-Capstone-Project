@@ -63,9 +63,15 @@ namespace Software_Development_Capstone
 
                     context.Users.Add(NewUser);
 
+                    MessageBox.Show("New user added successfully");
                 }
                 else
                 {
+                    if (combo_Username.SelectedItem.ToString() == Program.LoggedinUser)
+                    {
+                        MessageBox.Show($"Cannot remove currently logged in user!", "Remove User Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
 
                     DialogResult result = MessageBox.Show($"Are you sure you wish to remove the selected User? This action cannot be undone.", "Remove User", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
@@ -74,11 +80,15 @@ namespace Software_Development_Capstone
                         var userName = combo_Username.SelectedItem.ToString();
                         var removeUser = (from users in context.Users where users.UserName == userName select users).First();
                         context.Users.Remove(removeUser);
+
+                        MessageBox.Show("User successfully removed.");
                     }
                     else return;
                 }
 
                 context.SaveChanges();
+
+                this.Close();
             }
         }
     }

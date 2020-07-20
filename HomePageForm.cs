@@ -22,6 +22,9 @@ namespace Software_Development_Capstone
         {
             InitializeComponent();
 
+            this.BackColor = Color.Magenta;
+            this.TransparencyKey = Color.Magenta;
+
             parent = Parent;
 
             Update_datagrid();

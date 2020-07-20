@@ -120,9 +120,9 @@
             this.label_welcome.ForeColor = System.Drawing.SystemColors.Control;
             this.label_welcome.Location = new System.Drawing.Point(390, 9);
             this.label_welcome.Name = "label_welcome";
-            this.label_welcome.Size = new System.Drawing.Size(253, 32);
+            this.label_welcome.Size = new System.Drawing.Size(251, 32);
             this.label_welcome.TabIndex = 7;
-            this.label_welcome.Text = "MC2 Pilates Login";
+            this.label_welcome.Text = "MC² Pilates Login";
             this.label_welcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LoginForm

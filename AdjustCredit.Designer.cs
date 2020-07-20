@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.group_Client = new System.Windows.Forms.GroupBox();
+            this.date_selector = new System.Windows.Forms.DateTimePicker();
+            this.label_Date = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textbox_Credits = new System.Windows.Forms.TextBox();
             this.button_Remove = new System.Windows.Forms.Button();
@@ -43,8 +45,6 @@
             this.label_Title = new System.Windows.Forms.Label();
             this.button_Save = new System.Windows.Forms.Button();
             this.button_Cancel = new System.Windows.Forms.Button();
-            this.date_selector = new System.Windows.Forms.DateTimePicker();
-            this.label_Date = new System.Windows.Forms.Label();
             this.group_Client.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,6 +69,29 @@
             this.group_Client.Size = new System.Drawing.Size(478, 345);
             this.group_Client.TabIndex = 11;
             this.group_Client.TabStop = false;
+            // 
+            // date_selector
+            // 
+            this.date_selector.Checked = false;
+            this.date_selector.CustomFormat = "\"yyyy/MM/dd\"";
+            this.date_selector.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.date_selector.Location = new System.Drawing.Point(112, 286);
+            this.date_selector.Name = "date_selector";
+            this.date_selector.Size = new System.Drawing.Size(353, 29);
+            this.date_selector.TabIndex = 62;
+            // 
+            // label_Date
+            // 
+            this.label_Date.AutoSize = true;
+            this.label_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Date.ForeColor = System.Drawing.SystemColors.Control;
+            this.label_Date.Location = new System.Drawing.Point(38, 290);
+            this.label_Date.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
+            this.label_Date.Name = "label_Date";
+            this.label_Date.Size = new System.Drawing.Size(68, 25);
+            this.label_Date.TabIndex = 61;
+            this.label_Date.Text = "Date:";
+            this.label_Date.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label1
             // 
@@ -248,29 +271,6 @@
             this.button_Cancel.UseVisualStyleBackColor = false;
             this.button_Cancel.Click += new System.EventHandler(this.button_Cancel_Click);
             // 
-            // date_selector
-            // 
-            this.date_selector.Checked = false;
-            this.date_selector.CustomFormat = "\"yyyy/MM/dd\"";
-            this.date_selector.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.date_selector.Location = new System.Drawing.Point(112, 286);
-            this.date_selector.Name = "date_selector";
-            this.date_selector.Size = new System.Drawing.Size(353, 29);
-            this.date_selector.TabIndex = 62;
-            // 
-            // label_Date
-            // 
-            this.label_Date.AutoSize = true;
-            this.label_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_Date.ForeColor = System.Drawing.SystemColors.Control;
-            this.label_Date.Location = new System.Drawing.Point(38, 290);
-            this.label_Date.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
-            this.label_Date.Name = "label_Date";
-            this.label_Date.Size = new System.Drawing.Size(68, 25);
-            this.label_Date.TabIndex = 61;
-            this.label_Date.Text = "Date:";
-            this.label_Date.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // AdjustCredit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -284,6 +284,7 @@
             this.Controls.Add(this.group_Client);
             this.Controls.Add(this.label_Title);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AdjustCredit";
