@@ -44,7 +44,7 @@ namespace Software_Development_Capstone
 
             dataView_Finance.AutoResizeColumns();
 
-            combobox_Type.SelectedIndex = 1;
+            combobox_Type.SelectedIndex = 0;
 
             FinanceForm_SizeChanged(this, new EventArgs());
         }
@@ -67,7 +67,7 @@ namespace Software_Development_Capstone
                                    Date = finance.FinanceDate,
                                    Amount = finance.Amount,
                                    Type = finance.Type,
-                                   Desc = finance.Desc,   
+                                   Desc = finance.Desc,
                                    Client = finance.Client == null ? "" : finance.Client1.FName + " " + finance.Client1.LName,
 
                                };
@@ -83,10 +83,10 @@ namespace Software_Development_Capstone
                     if (!IncomeChecked && ExpenseChecked) { results.RemoveAll(transaction => transaction.Category == "Income"); }
                     if (!ExpenseChecked && IncomeChecked) { results.RemoveAll(transaction => transaction.Category == "Expense"); }
                     if (textbox_Desc.Text != "") { results.RemoveAll(transaction => !transaction.Desc.ToLower().Contains(textbox_Desc.Text.ToLower())); }
-                    if (date_start.Checked) { results.RemoveAll(transaction => transaction.Date < date_start.Value); }
+                    if (date_start.Checked) { results.RemoveAll(transaction => transaction.Date < date_start.Value.AddDays(-1)); }
                     if (date_end.Checked) { results.RemoveAll(transaction => transaction.Date > date_end.Value); }
-                    if (texbox_AFrom.Text != "") { results.RemoveAll(transaction => transaction.Amount < long.Parse(texbox_AFrom.Text)); }
-                    if (textbox_ATo.Text != "") { results.RemoveAll(transaction => transaction.Amount > long.Parse(textbox_ATo.Text)); }
+                    if (texbox_AFrom.Text != "") { results.RemoveAll(transaction => Math.Abs(transaction.Amount) < long.Parse(texbox_AFrom.Text)); }
+                    if (textbox_ATo.Text != "") { results.RemoveAll(transaction => Math.Abs(transaction.Amount) > long.Parse(textbox_ATo.Text)); }
                     if (combobox_Type.SelectedIndex != 0) { results.RemoveAll(transaction => transaction.Type != combobox_Type.SelectedItem.ToString()); }
 
                 }
@@ -109,14 +109,14 @@ namespace Software_Development_Capstone
         // Cell formating to make expenses red and income green
         private void dataView_Finance_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-                if (dataView_Finance.Rows[e.RowIndex].Cells[0].Value.ToString() == "Expense")
-                {
-                    e.CellStyle.ForeColor = Color.Red;
-                }
-                else
-                {
-                    e.CellStyle.ForeColor = Color.DarkGreen;
-                }
+            if (dataView_Finance.Rows[e.RowIndex].Cells[0].Value.ToString() == "Expense")
+            {
+                e.CellStyle.ForeColor = Color.Red;
+            }
+            else
+            {
+                e.CellStyle.ForeColor = Color.DarkGreen;
+            }
 
         }
 
@@ -155,7 +155,7 @@ namespace Software_Development_Capstone
                 using (var context = new Backend_DB.DBEntities())
                 {
                     var removeid = int.Parse(dataView_Finance.SelectedCells[0].Value.ToString());
-                    
+
                     var removeFinance = (from finance in context.Finances where finance.FinanceId == removeid select finance).First();
                     context.Finances.Remove(removeFinance);
                     context.SaveChanges();
@@ -173,7 +173,7 @@ namespace Software_Development_Capstone
             parent.Enabled = false;
         }
 
-        private void button_Search_Click(object sender, EventArgs e) 
+        private void button_Search_Click(object sender, EventArgs e)
         {
             Update_datagrid(true);
         }
@@ -206,31 +206,7 @@ namespace Software_Development_Capstone
 
         private void FinanceForm_SizeChanged(object sender, EventArgs e)
         {
-            label_FinanceList.Left = dataView_Finance.Left + (dataView_Finance.Width / 2) - label_FinanceList.Width / 2;
-            label_FinanceList.Top = dataView_Finance.Top - 85;
 
-            if (box_Search.Top < label_FinanceList.Top) { box_Search.Top = label_FinanceList.Top; }
-            if (box_Search.Top > dataView_Finance.Top) { box_Search.Top = dataView_Finance.Top; }
-
-            box_Search.Left = dataView_Finance.Left + dataView_Finance.Width + 40;
-
-            button_AddIncome.Top = box_Search.Top + 375;
-            button_AddIncome.Left = dataView_Finance.Left + dataView_Finance.Width + 85;
-
-            button_AddExpense.Top = box_Search.Top + 375;
-            button_AddExpense.Left = dataView_Finance.Left + dataView_Finance.Width + 285;
-
-            button_Credit.Top = box_Search.Top + 470;
-            button_Credit.Left = dataView_Finance.Left + dataView_Finance.Width + 85;
-
-            button_Remove.Top = box_Search.Top + 470;
-            button_Remove.Left = dataView_Finance.Left + dataView_Finance.Width + 285;
-
-            button_Report.Left = dataView_Finance.Left + dataView_Finance.Width / 2 - 100;
-
-            label_Total.Width = dataView_Finance.Width;
-            label_Total.Left = dataView_Finance.Left;
-            label_Total.Top = dataView_Finance.Top + dataView_Finance.Height;
         }
 
         private void button_Report_Click(object sender, EventArgs e)
@@ -256,8 +232,44 @@ namespace Software_Development_Capstone
                 {
                     MessageBox.Show("There was a problem generating the Report.");
                 }
-                
+
             }
+        }
+
+        private void label_FinanceList_LocationChanged(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void dataView_Finance_SizeChanged(object sender, EventArgs e)
+        {
+            label_FinanceList.Left = dataView_Finance.Left + (dataView_Finance.Width / 2) - label_FinanceList.Width / 2;
+            label_FinanceList.Top = dataView_Finance.Top - 85;
+
+            if (box_Search.Top < label_FinanceList.Top) { box_Search.Top = label_FinanceList.Top; }
+            if (box_Search.Top > dataView_Finance.Top) { box_Search.Top = dataView_Finance.Top; }
+
+            box_Search.Left = dataView_Finance.Left + dataView_Finance.Width + 40;
+
+            button_AddIncome.Top = box_Search.Top + 375;
+            button_AddIncome.Left = dataView_Finance.Left + dataView_Finance.Width + 85;
+
+            button_AddExpense.Top = box_Search.Top + 375;
+            button_AddExpense.Left = dataView_Finance.Left + dataView_Finance.Width + 285;
+
+            button_Credit.Top = box_Search.Top + 470;
+            button_Credit.Left = dataView_Finance.Left + dataView_Finance.Width + 85;
+
+            button_Remove.Top = box_Search.Top + 470;
+            button_Remove.Left = dataView_Finance.Left + dataView_Finance.Width + 285;
+
+            button_Report.Top = dataView_Finance.Top + dataView_Finance.Height;
+            button_Report.Left = dataView_Finance.Left + dataView_Finance.Width / 2 - 100;
+
+            label_Total.Left = dataView_Finance.Left;
+            label_Total.Width = dataView_Finance.Width;
+            label_Total.Top = dataView_Finance.Top + dataView_Finance.Height;
         }
     }
 }

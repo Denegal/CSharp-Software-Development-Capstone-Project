@@ -122,6 +122,7 @@
             "Education",
             "Equipment",
             "Insurance",
+            "Private",
             "Other"});
             this.combo_ClientType.Location = new System.Drawing.Point(134, 69);
             this.combo_ClientType.Name = "combo_ClientType";

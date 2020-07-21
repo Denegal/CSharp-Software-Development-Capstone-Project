@@ -87,7 +87,7 @@ namespace Software_Development_Capstone
                     if (checkin_client.ClassCredit == 0)
                     {
                         MessageBox.Show("Unable to check-in client. Client does not have enough class credit.");
-                        button_checkin_Click(this, new EventArgs);
+                        checkbox_Credit_Click(this, new EventArgs());
                         return;
                     }
 

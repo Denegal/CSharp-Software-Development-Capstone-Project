@@ -1,4 +1,5 @@
 ﻿using Backend_Logic;
+using Org.BouncyCastle.Asn1.Cms;
 using Org.BouncyCastle.Crypto.Digests;
 using System;
 using System.Collections.Generic;
@@ -216,27 +217,7 @@ namespace Software_Development_Capstone
 
         private void ClientsForm_SizedChanged(object sender, EventArgs e)
         {
-            label_ClientList.Left = dataView_Clients.Left + (dataView_Clients.Width / 2) - label_ClientList.Width / 2;
-            label_ClientList.Top = dataView_Clients.Top - 85;
-
-            if (box_Search.Top < label_ClientList.Top) { box_Search.Top = label_ClientList.Top; }
-            if (box_Search.Top > dataView_Clients.Top) { box_Search.Top = dataView_Clients.Top; }
-
-            box_Search.Left = dataView_Clients.Left + dataView_Clients.Width + 40;
-
-            button_AddClient.Top = box_Search.Top + 375;
-            button_AddClient.Left = dataView_Clients.Left + dataView_Clients.Width + 85;
-
-            button_EditClient.Top = box_Search.Top + 375;
-            button_EditClient.Left = dataView_Clients.Left + dataView_Clients.Width + 285;
-
-            button_ViewClient.Top = box_Search.Top + 470;
-            button_ViewClient.Left = dataView_Clients.Left + dataView_Clients.Width + 85;
-
-            button_RemoveClient.Top = box_Search.Top + 470;
-            button_RemoveClient.Left = dataView_Clients.Left + dataView_Clients.Width + 285;
-
-            button_Report.Left = dataView_Clients.Left + (dataView_Clients.Size.Width / 2) - 100;
+        
         }
 
         private void button_Report_Click(object sender, EventArgs e)
@@ -264,6 +245,37 @@ namespace Software_Development_Capstone
                 }
             }
             
+        }
+
+        private void label_ClientList_LocationChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataView_Clients_Layout(object sender, LayoutEventArgs e)
+        {
+            label_ClientList.Left = dataView_Clients.Left + (dataView_Clients.Width / 2) - label_ClientList.Width / 2;
+            label_ClientList.Top = dataView_Clients.Top - 85;
+
+            if (box_Search.Top < label_ClientList.Top) { box_Search.Top = label_ClientList.Top; }
+            if (box_Search.Top > dataView_Clients.Top) { box_Search.Top = dataView_Clients.Top; }
+
+            box_Search.Left = dataView_Clients.Left + dataView_Clients.Width + 40;
+
+            button_AddClient.Top = box_Search.Top + 375;
+            button_AddClient.Left = dataView_Clients.Left + dataView_Clients.Width + 85;
+
+            button_EditClient.Top = box_Search.Top + 375;
+            button_EditClient.Left = dataView_Clients.Left + dataView_Clients.Width + 285;
+
+            button_ViewClient.Top = box_Search.Top + 470;
+            button_ViewClient.Left = dataView_Clients.Left + dataView_Clients.Width + 85;
+
+            button_RemoveClient.Top = box_Search.Top + 470;
+            button_RemoveClient.Left = dataView_Clients.Left + dataView_Clients.Width + 285;
+
+            button_Report.Top = dataView_Finance.Top + dataView_Finance.Height;
+            button_Report.Left = dataView_Clients.Left + (dataView_Clients.Size.Width / 2) - 100;
         }
     }
 }

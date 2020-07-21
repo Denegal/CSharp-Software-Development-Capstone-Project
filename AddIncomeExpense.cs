@@ -89,7 +89,7 @@ namespace Software_Development_Capstone
                     Backend_DB.Finance newincome = new Backend_DB.Finance()
                     {
                         IncomeOrExpense = "Income",
-                        Type = "Private",
+                        Type = "Classes",
                         Amount = long.Parse(textbox_Amount.Text),
                         Client = (from clients in context.Clients where clients.FName == clientFName && clients.LName == clientLName select clients.ClientId).First(),
                         FinanceDate = date_selector.Value.Date,
