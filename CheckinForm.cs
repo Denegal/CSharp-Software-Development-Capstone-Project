@@ -104,7 +104,7 @@ namespace Software_Development_Capstone
                         Amount = long.Parse(textbox_Cost.Text),
                         Client = (from clients in context.Clients where clients.ClientId == checkinID select clients.ClientId).First(),
                         FinanceDate = DateTime.Now.Date,
-                        Desc = "Private class given to " + label_Name.Text,
+                        Desc = "Private class given to " + label_Name.Text.Trim(' '),
                     };
 
                     context.Finances.Add(newincome);

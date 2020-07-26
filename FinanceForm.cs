@@ -67,7 +67,7 @@ namespace Software_Development_Capstone
                                    Date = finance.FinanceDate,
                                    Amount = finance.Amount,
                                    Type = finance.Type,
-                                   Desc = finance.Desc.Trim(' '),
+                                   Desc = finance.Desc,
                                    Client = finance.Client == null ? "" : finance.Client1.FName + " " + finance.Client1.LName,
 
                                };
@@ -100,6 +100,7 @@ namespace Software_Development_Capstone
                 decimal total = new decimal();
                 foreach (DataGridViewRow row in dataView_Finance.Rows)
                 {
+
                     total += decimal.Parse(row.Cells[2].Value.ToString());
                 }
                 label_Total.Text = "Total:   $ " + total;
@@ -264,12 +265,12 @@ namespace Software_Development_Capstone
             button_Remove.Top = box_Search.Top + 470;
             button_Remove.Left = dataView_Finance.Left + dataView_Finance.Width + 285;
 
-            button_Report.Top = dataView_Finance.Top + dataView_Finance.Height;
+            button_Report.Top = dataView_Finance.Top + dataView_Finance.Height + label_Total.Height;
             button_Report.Left = dataView_Finance.Left + dataView_Finance.Width / 2 - 100;
 
             label_Total.Left = dataView_Finance.Left;
             label_Total.Width = dataView_Finance.Width;
-            label_Total.Top = dataView_Finance.Top + dataView_Finance.Height + label_Total.Height;
+            label_Total.Top = dataView_Finance.Top + dataView_Finance.Height;
         }
     }
 }

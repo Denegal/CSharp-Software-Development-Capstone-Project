@@ -253,9 +253,9 @@
             this.label5.Location = new System.Drawing.Point(7, 244);
             this.label5.Margin = new System.Windows.Forms.Padding(3, 0, 3, 10);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(170, 25);
+            this.label5.Size = new System.Drawing.Size(166, 25);
             this.label5.TabIndex = 16;
-            this.label5.Text = "Medical Limits:";
+            this.label5.Text = "Medical/Injury:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label4
