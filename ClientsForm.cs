@@ -274,7 +274,7 @@ namespace Software_Development_Capstone
             button_RemoveClient.Top = box_Search.Top + 470;
             button_RemoveClient.Left = dataView_Clients.Left + dataView_Clients.Width + 285;
 
-            button_Report.Top = dataView_Finance.Top + dataView_Finance.Height;
+            button_Report.Top = dataView_Clients.Top + dataView_Clients.Height;
             button_Report.Left = dataView_Clients.Left + (dataView_Clients.Size.Width / 2) - 100;
         }
     }

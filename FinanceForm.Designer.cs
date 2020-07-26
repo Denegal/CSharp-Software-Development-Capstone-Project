@@ -541,6 +541,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Finances";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.MaximizedBoundsChanged += new System.EventHandler(this.FinanceForm_SizeChanged);
             this.ResizeEnd += new System.EventHandler(this.FinanceForm_SizeChanged);
             this.SizeChanged += new System.EventHandler(this.FinanceForm_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dataView_Finance)).EndInit();

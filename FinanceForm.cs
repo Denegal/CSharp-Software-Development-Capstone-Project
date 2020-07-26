@@ -67,7 +67,7 @@ namespace Software_Development_Capstone
                                    Date = finance.FinanceDate,
                                    Amount = finance.Amount,
                                    Type = finance.Type,
-                                   Desc = finance.Desc,
+                                   Desc = finance.Desc.Trim(' '),
                                    Client = finance.Client == null ? "" : finance.Client1.FName + " " + finance.Client1.LName,
 
                                };
@@ -269,7 +269,7 @@ namespace Software_Development_Capstone
 
             label_Total.Left = dataView_Finance.Left;
             label_Total.Width = dataView_Finance.Width;
-            label_Total.Top = dataView_Finance.Top + dataView_Finance.Height;
+            label_Total.Top = dataView_Finance.Top + dataView_Finance.Height + label_Total.Height;
         }
     }
 }

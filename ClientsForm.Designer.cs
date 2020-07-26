@@ -465,6 +465,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Clients";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.MaximizedBoundsChanged += new System.EventHandler(this.ClientsForm_SizedChanged);
             this.SizeChanged += new System.EventHandler(this.ClientsForm_SizedChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dataView_Clients)).EndInit();
             this.box_Search.ResumeLayout(false);
