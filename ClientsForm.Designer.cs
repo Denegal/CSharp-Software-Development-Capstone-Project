@@ -116,7 +116,6 @@
             this.label_ClientList.Size = new System.Drawing.Size(324, 73);
             this.label_ClientList.TabIndex = 9;
             this.label_ClientList.Text = "Client List";
-            this.label_ClientList.LocationChanged += new System.EventHandler(this.label_ClientList_LocationChanged);
             // 
             // box_Search
             // 
@@ -465,8 +464,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Clients";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.MaximizedBoundsChanged += new System.EventHandler(this.ClientsForm_SizedChanged);
-            this.SizeChanged += new System.EventHandler(this.ClientsForm_SizedChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dataView_Clients)).EndInit();
             this.box_Search.ResumeLayout(false);
             this.box_Search.PerformLayout();

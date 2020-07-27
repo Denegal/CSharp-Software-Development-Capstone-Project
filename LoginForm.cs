@@ -35,9 +35,11 @@ namespace Software_Development_Capstone
 
             using (var context = new Backend_DB.DBEntities())
             {
+                // Retrieve the password hash of the specified username
                 IEnumerable<string> password = from users in context.Users where users.UserName == textbox_username.Text select users.PasswordHash;
 
-
+                // hash the text from the password field and compare it to the hash retrieved from the database
+                // If they match, the password is correct. Hide this form. 
                 if (password.Count() > 0 && password.ElementAt(0) == Utils.GetSha1(textbox_password.Text))
                 {
 
@@ -60,6 +62,7 @@ namespace Software_Development_Capstone
             }
         }
 
+        // When user hits the enter key in the password field, run the login button click function
         private void textbox_password_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (Convert.ToInt32(e.KeyChar) == 13)

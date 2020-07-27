@@ -80,7 +80,6 @@
             this.label_FinanceList.TabIndex = 12;
             this.label_FinanceList.Text = "Finances";
             this.label_FinanceList.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label_FinanceList.LocationChanged += new System.EventHandler(this.label_FinanceList_LocationChanged);
             // 
             // dataView_Finance
             // 
@@ -541,9 +540,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Finances";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.MaximizedBoundsChanged += new System.EventHandler(this.FinanceForm_SizeChanged);
-            this.ResizeEnd += new System.EventHandler(this.FinanceForm_SizeChanged);
-            this.SizeChanged += new System.EventHandler(this.FinanceForm_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dataView_Finance)).EndInit();
             this.box_Search.ResumeLayout(false);
             this.box_Search.PerformLayout();

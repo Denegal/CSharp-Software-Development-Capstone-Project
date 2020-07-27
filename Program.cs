@@ -19,8 +19,12 @@ namespace Software_Development_Capstone
         [STAThread]
         static void Main()
         {
-            //AppDomain.CurrentDomain.SetData("DataDirectory", Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
+            //Set the DataDirectory variable to be the users application data folder.
+            //This is used in the app.config file to find the database location
+            AppDomain.CurrentDomain.SetData("DataDirectory", Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
 
+            //Run Main.cs which will take over and handle all further application processing.
+            //The main.cs form is also the MDI container which will hold all other forms.
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Main());

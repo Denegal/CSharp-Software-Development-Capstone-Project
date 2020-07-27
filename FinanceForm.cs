@@ -25,22 +25,21 @@ namespace Software_Development_Capstone
 
             parent = Parent;
 
-            this.BackColor = Color.Magenta;
-            this.TransparencyKey = Color.Magenta;
-
             this.DoubleBuffered = true;
 
             Update_datagrid();
 
+            // Only enable the credits button if there is at least one client in the database
             using (var context = new Backend_DB.DBEntities()) { button_Credit.Enabled = context.Clients.Count() > 0; }
 
+            // Formating of the datagridview and column widths to better display data
             dataView_Finance.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             dataView_Finance.Columns[0].FillWeight = 50;  // ID
             dataView_Finance.Columns[1].FillWeight = 60;  // Income/Expense
             dataView_Finance.Columns[2].FillWeight = 60;  // Amount
             dataView_Finance.Columns[3].FillWeight = 60;  // Date
-            dataView_Finance.Columns[4].FillWeight = 80; // Type
+            dataView_Finance.Columns[4].FillWeight = 80;  // Type
             dataView_Finance.Columns[5].FillWeight = 130; // Desc
             dataView_Finance.Columns[6].FillWeight = 100; // Client
 
@@ -48,14 +47,11 @@ namespace Software_Development_Capstone
 
             combobox_Type.SelectedIndex = 0;
 
-            FinanceForm_SizeChanged(this, new EventArgs());
         }
 
         private void Update_datagrid(bool filter = false)
         {
-            //TODO: Look at making list sortable when dataview column headers are clicked
-            //      by sending header name or index to function. Possibly have to use switch
-            //      statement with orderby clause.
+
             using (var context = new Backend_DB.DBEntities())
             {
                 var finances = from finance in context.Finances
@@ -76,7 +72,7 @@ namespace Software_Development_Capstone
 
                 var results = finances.ToList();
 
-                // if filtering results, edit the list before updating the dataview
+                // if filtering results (search button clicked), edit the list before updating the dataview
                 // use of lambda functions here greatly decreases the code size and increases readability
                 // each line can be read as 'remove all finances where the client does not contain what is being searched for'.
                 if (filter)
@@ -93,7 +89,7 @@ namespace Software_Development_Capstone
 
                 }
 
-
+                // only enable the remove or report buttons is there is at least one client in the list
                 button_Remove.Enabled = results.Count > 0;
                 button_Report.Enabled = results.Count > 0;
 
@@ -108,6 +104,7 @@ namespace Software_Development_Capstone
                 label_Total.Text = "Total:   $ " + total;
             }
         }
+
 
         // Cell formating to make expenses red and income green
         private void dataView_Finance_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -177,10 +174,7 @@ namespace Software_Development_Capstone
             parent.Enabled = false;
         }
 
-        private void button_Search_Click(object sender, EventArgs e)
-        {
-            Update_datagrid(true);
-        }
+        private void button_Search_Click(object sender, EventArgs e) => Update_datagrid(true);
 
         private void checkbox_Income_Click(object sender, EventArgs e)
         {
@@ -206,11 +200,6 @@ namespace Software_Development_Capstone
                 checkbox_Expense.BackgroundImage = Software_Development_Capstone.Properties.Resources.checked_checkbox;
             }
             ExpenseChecked = !ExpenseChecked;
-        }
-
-        private void FinanceForm_SizeChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void button_Report_Click(object sender, EventArgs e)
@@ -240,12 +229,9 @@ namespace Software_Development_Capstone
             }
         }
 
-        private void label_FinanceList_LocationChanged(object sender, EventArgs e)
-        {
-
-
-        }
-
+        // whenever the datagrid layout changes (size of form changed, form loaded, etc)
+        // adjust the position of the controls on the form. This helps keep the form looking correct 
+        // as the form is resized.
         private void dataView_Finance_SizeChanged(object sender, EventArgs e)
         {
             label_FinanceList.Left = dataView_Finance.Left + (dataView_Finance.Width / 2) - label_FinanceList.Width / 2;

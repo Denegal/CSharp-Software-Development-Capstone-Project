@@ -22,13 +22,11 @@ namespace Software_Development_Capstone
         {
             InitializeComponent();
 
-            this.BackColor = Color.Magenta;
-            this.TransparencyKey = Color.Magenta;
-
             parent = Parent;
-
+            
             Update_datagrid();
 
+            // Adjust the sizes of the columns to better show the data.
             dataView_Clients.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataView_Clients.Columns[0].FillWeight = 80;
             dataView_Clients.Columns[1].FillWeight = 80;
@@ -43,7 +41,7 @@ namespace Software_Development_Capstone
             dataView_Clients.AutoResizeColumns();
         }
 
-
+        // This function retrieves a list of clients from the database and formats them for the datagrid view.
         private void Update_datagrid()
         {
 
@@ -69,6 +67,7 @@ namespace Software_Development_Capstone
 
                 var results = clients.ToList();
 
+                // Only enable the check-in button if there is at least one client in the list
                 button_checkin.Enabled = results.Count > 0;
 
                 dataView_Clients.DataSource = results;
@@ -82,11 +81,14 @@ namespace Software_Development_Capstone
             parent.clientsToolStripMenuItem.PerformClick();
         }
 
+        // Finances button calls the programs menu bar item for the finances page
         private void button_Finance_Click(object sender, EventArgs e)
         {
             parent.financeToolStripMenuItem.PerformClick();
         }
 
+        // The Add Client button creates a new Add Client form to display and 
+        // disables this form. Add an event handler, EnableForm, to the Add User form close event
         private void button_AddClient_Click(object sender, EventArgs e)
         {
             AddEditClient addclientform = new AddEditClient();
@@ -96,6 +98,8 @@ namespace Software_Development_Capstone
             parent.Enabled = false;
         }
 
+        // This function is simply used to re-enable the homepage form and menu bar
+        // it is used as an event handler and tied to an open modal form close event
         private void EnableForm(object sender, FormClosedEventArgs e)
         {
             this.Enabled = true;
@@ -103,10 +107,13 @@ namespace Software_Development_Capstone
             Update_datagrid();
         }
 
+        // The checkin button creates a new checkin form, passing the selected client ID, to display and 
+        // disables this form. Add an event handler, EnableForm, to the checkin form close event
         private void button_checkin_Click(object sender, EventArgs e)
         {
             int id = -1;
 
+            // Get the ID of the currently selected client using thier first and last name
             using (var context = new Backend_DB.DBEntities())
             {
                 var firstname = dataView_Clients.SelectedCells[0].Value.ToString();
@@ -121,7 +128,8 @@ namespace Software_Development_Capstone
             parent.Enabled = false;
         }
 
-
+        // Whenever the location of the add client button changes, adjust the location of the checkin button as well
+        // This is used to help keep the form looking correct on resize
         private void button_AddClient_LocationChanged(object sender, EventArgs e)
         {
             button_AddClient.Left = dataView_Clients.Left + (dataView_Clients.Size.Width / 2) - 150;

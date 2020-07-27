@@ -27,9 +27,6 @@ namespace Software_Development_Capstone
 
             this.DoubleBuffered = true;
 
-            this.BackColor = Color.Magenta;
-            this.TransparencyKey = Color.Magenta;
-
             parent = Parent;
 
             Update_datagrid();
@@ -47,15 +44,11 @@ namespace Software_Development_Capstone
 
             dataView_Clients.AutoResizeColumns();
 
-            ClientsForm_SizedChanged(this, new EventArgs());
         }
 
         private void Update_datagrid(bool filter=false)
         {
 
-            //TODO: Look at making list sortable when dataview column headers are clicked
-            //      by sending header name or index to function. Possibly have to use switch
-            //      statement with orderby clause.
             using (var context = new Backend_DB.DBEntities())
             {
                 var clients = from client in context.Clients
@@ -75,7 +68,7 @@ namespace Software_Development_Capstone
 
                 var results = clients.ToList();
 
-                // if filtering results, edit the list before updating the dataview
+                // if filtering results (search button clicked), edit the list before updating the dataview
                 // use of lambda functions here greatly decreases the code size and increases readability
                 // each line can be read as 'remove all clients where the client does not contain what is being searched for'.
                 if (filter)
@@ -139,6 +132,7 @@ namespace Software_Development_Capstone
             }
             PregnantChecked = !PregnantChecked;
         }
+
 
         private void button_AddClient_Click(object sender, EventArgs e)
         {
@@ -212,13 +206,9 @@ namespace Software_Development_Capstone
             parent.Enabled = false;
         }
 
+        // When the search button is clicked, call the Update_datagrid function with 'true' for filtering
         private void button_Search_Click(object sender, EventArgs e) => Update_datagrid(true);
 
-
-        private void ClientsForm_SizedChanged(object sender, EventArgs e)
-        {
-        
-        }
 
         private void button_Report_Click(object sender, EventArgs e)
         {
@@ -247,11 +237,9 @@ namespace Software_Development_Capstone
             
         }
 
-        private void label_ClientList_LocationChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        // whenever the datagrid layout changes (size of form changed, form loaded, etc)
+        // adjust the position of the controls on the form. This helps keep the form looking correct 
+        // as the form is resized.
         private void dataView_Clients_Layout(object sender, LayoutEventArgs e)
         {
             label_ClientList.Left = dataView_Clients.Left + (dataView_Clients.Width / 2) - label_ClientList.Width / 2;
