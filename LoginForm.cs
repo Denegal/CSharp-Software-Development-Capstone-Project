@@ -46,6 +46,7 @@ namespace Software_Development_Capstone
                     textbox_password.Text = "";
                     textbox_username.Text = "";
                     this.Hide();
+                    
                 }
                 else
                 {

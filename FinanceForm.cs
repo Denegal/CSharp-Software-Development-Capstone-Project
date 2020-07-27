@@ -23,6 +23,8 @@ namespace Software_Development_Capstone
         {
             InitializeComponent();
 
+            parent = Parent;
+
             this.BackColor = Color.Magenta;
             this.TransparencyKey = Color.Magenta;
 
@@ -129,6 +131,7 @@ namespace Software_Development_Capstone
             addincomeform.FormClosed += new FormClosedEventHandler(EnableForm);
             this.Enabled = false;
             parent.Enabled = false;
+
         }
 
         private void EnableForm(object sender, FormClosedEventArgs e)

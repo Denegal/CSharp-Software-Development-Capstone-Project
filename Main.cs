@@ -33,7 +33,7 @@ namespace Software_Development_Capstone
 
         private void Login_Accepted(object sender, EventArgs e)
         {
-            if (loginform.Visible)
+            if (loginform.Visible || this.MdiChildren.Count() > 1)
             {
                 return;
             }
@@ -59,7 +59,14 @@ namespace Software_Development_Capstone
             }
             else
             {
-                this.ActiveMdiChild.Close();
+                //this.ActiveMdiChild.Close();
+                foreach (Form child in this.MdiChildren)
+                {
+                    if (child != loginform)
+                    {
+                        child.Close();
+                    }
+                }
             }
             
             HomePageForm homePage = new HomePageForm(this);
@@ -77,7 +84,14 @@ namespace Software_Development_Capstone
             }
             else
             {
-                this.ActiveMdiChild.Close();
+                //this.ActiveMdiChild.Close();
+                foreach (Form child in this.MdiChildren)
+                {
+                    if (child != loginform)
+                    {
+                        child.Close();
+                    }
+                }
             }
 
             ClientsForm clientspage = new ClientsForm(this);
@@ -95,17 +109,27 @@ namespace Software_Development_Capstone
             }
             else
             {
-                this.ActiveMdiChild.Close();
+                //this.ActiveMdiChild.Close();
+                foreach (Form child in this.MdiChildren)
+                {
+                    if (child != loginform)
+                    {
+                        child.Close();
+                    }
+
+                    
+                }
             }
 
-            FinanceForm financepage = new FinanceForm(this) { MdiParent = this };
+            FinanceForm financepage = new FinanceForm(this);
+            financepage.MdiParent = this;
             financepage.PerformAutoScale();
             financepage.Show();
         }
 
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            
             foreach (Form child in MdiChildren)
             {
                 if (child != loginform)
@@ -113,6 +137,7 @@ namespace Software_Development_Capstone
                     child.Close();
                 }
             }
+            
 
             menu_bar.Enabled = false;
 
@@ -156,6 +181,7 @@ namespace Software_Development_Capstone
 
         private void addUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
             foreach (Form child in MdiChildren)
             {
                 if (child != loginform)
@@ -163,6 +189,8 @@ namespace Software_Development_Capstone
                     child.Close();
                 }
             }
+            
+
             menu_bar.Enabled = false;
 
             AddRemoveUser adduser = new AddRemoveUser();
@@ -175,6 +203,7 @@ namespace Software_Development_Capstone
 
         private void removeUserToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
             foreach (Form child in MdiChildren)
             {
                 if (child != loginform)
@@ -182,6 +211,8 @@ namespace Software_Development_Capstone
                     child.Close();
                 }
             }
+            
+
             menu_bar.Enabled = false;
 
             AddRemoveUser removeuser = new AddRemoveUser(true);

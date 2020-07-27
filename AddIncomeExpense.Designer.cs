@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddIncomeExpense));
             this.group_Client = new System.Windows.Forms.GroupBox();
             this.date_selector = new System.Windows.Forms.DateTimePicker();
             this.label_Date = new System.Windows.Forms.Label();
@@ -271,6 +272,7 @@
             this.Controls.Add(this.group_Client);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddIncomeExpense";

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdjustCredit));
             this.group_Client = new System.Windows.Forms.GroupBox();
             this.date_selector = new System.Windows.Forms.DateTimePicker();
             this.label_Date = new System.Windows.Forms.Label();
@@ -258,6 +259,7 @@
             this.button_Cancel.BackColor = System.Drawing.Color.Transparent;
             this.button_Cancel.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Cancel;
             this.button_Cancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button_Cancel.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.button_Cancel.FlatAppearance.BorderSize = 0;
             this.button_Cancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -277,14 +279,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Software_Development_Capstone.Properties.Resources.Background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CancelButton = this.button_Cancel;
             this.ClientSize = new System.Drawing.Size(495, 596);
-            this.ControlBox = false;
             this.Controls.Add(this.button_Save);
             this.Controls.Add(this.button_Cancel);
             this.Controls.Add(this.group_Client);
             this.Controls.Add(this.label_Title);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AdjustCredit";
